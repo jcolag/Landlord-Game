@@ -1,0 +1,4 @@
+*.userprefs
+LL_Console/bin
+LL_Console/bin/*
+
