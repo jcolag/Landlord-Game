@@ -6,7 +6,20 @@ This will be a growing project, an implementation of Lizzy Magie's Landlord's Ga
 Usage
 -----
 
-Run it.  Play.
+1. Build.
+
+2. Run.
+
+3. Play.
+
+There isn't enough game to have instructions outside of the prompting.
+
+Build
+-----
+
+It definitely works in MonoDevelop.  It almost certainly works in SharpDevelop.  It probably works in Visual Studio, maybe with some fudging.
+
+Obviously, that needs testing.
 
 Status
 ------
