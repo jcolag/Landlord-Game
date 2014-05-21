@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Xml;
 
 namespace LL_Console
 {
@@ -7,15 +8,40 @@ namespace LL_Console
 	{
 		public static void Main (string[] args)
 		{
+			XmlDocument gamecfg = new XmlDocument ();
 			Game g = new Game ();
 			string player_name = string.Empty;
 
-			for (int i=0; i<40; i++) {
-				Location l = new Location (Location.Zoning.Residential,
-				                           "Property " + (i + 1).ToString (),
-				                           0, 0, 0, 0, 100, 10);
-				g.Add (l);
+			foreach (string arg in args) {
+				if (arg.ToLower ().EndsWith (".xml")) {
+					gamecfg.Load (arg);
+					break;
+				}
 			}
+			if (gamecfg != null) {
+				XmlNodeList dice = gamecfg.GetElementsByTagName ("Dice");
+				if (dice.Count > 0) {
+					int nDice = g.nDice,
+						xDice = g.xDice;
+					Location.IntFromXmlIfExists (dice [0], "Count", ref nDice);
+					Location.IntFromXmlIfExists (dice [0], "Sides", ref xDice);
+					g.nDice = nDice;
+					g.xDice = xDice;
+				}
+				XmlNodeList props = gamecfg.GetElementsByTagName ("Location");
+				foreach (XmlNode prop in props) {
+					Location l = new Location (prop);
+					g.Add (l);
+				}
+			} else {
+				for (int i=0; i<40; i++) {
+					Location l = new Location (Location.Zoning.Residential,
+					                           "Property " + (i + 1).ToString (),
+					                           0, 0, 0, 0, 100, 10);
+					g.Add (l);
+				}
+			}
+
 			Console.WriteLine ("Input player names, empty line when done:");
 			while (true) {
 				player_name = Console.ReadLine ();

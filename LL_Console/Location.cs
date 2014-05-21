@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Xml;
 
 namespace LL_Console
 {
@@ -18,10 +19,34 @@ namespace LL_Console
 			Unknown
 		};
 
-		private int xLeft = -1;
-		private int xRight = -1;
-		private int yTop = -1;
-		private int yBottom = -1;
+		private int _xLeft = -1;
+		public int xLeft {
+			set {
+				_xLeft = value;
+			}
+		}
+
+		private int _xRight = -1;
+		public int xRight {
+			set {
+				_xRight = value;
+			}
+		}
+
+		private int _yTop = -1;
+		public int yTop {
+			set {
+				_yTop = value;
+			}
+		}
+
+		private int _yBottom = -1;
+		public int yBottom {
+			set {
+				_yBottom = value;
+			}
+		}
+
 		private string _name = string.Empty;
 		public string Name {
 			get {
@@ -60,6 +85,9 @@ namespace LL_Console
 			}
 		}
 
+		public Location () {
+		}
+
 		public Location (Zoning zone, string name,
 		                 int left, int right, int top, int bottom,
 		                 int sale, int rent)
@@ -72,6 +100,53 @@ namespace LL_Console
 			yBottom = bottom;
 			_priceSale = sale;
 			_priceRent = rent;
+		}
+
+		public Location (XmlNode prop) {
+			string type = string.Empty;
+
+			StringFromXmlIfExists (prop, "Name", ref _name);
+			IntFromXmlIfExists (prop, "PriceSale", ref _priceSale);
+			IntFromXmlIfExists (prop, "PriceRent", ref _priceRent);
+			IntFromXmlIfExists (prop, "xLeft", ref _xLeft);
+			IntFromXmlIfExists (prop, "xRight", ref _xRight);
+			IntFromXmlIfExists (prop, "yTop", ref _yTop);
+			IntFromXmlIfExists (prop, "yBottom", ref _yBottom);
+
+			StringFromXmlIfExists (prop, "PropertyType", ref type);
+			if (!string.IsNullOrWhiteSpace (type)) {
+				Enum.Parse (Location.Zoning.Park.GetType(), type);
+			}
+		}
+
+		public static void IntFromXmlIfExists (XmlNode node, string attribute,
+		                                       ref int target) {
+			int value;
+			XmlAttribute attr = node.Attributes [attribute];
+			if (attr == null) {
+				return;
+			}
+			try {
+				value = int.Parse (attr.InnerText);
+			} catch {
+				return;
+			}
+			target = value;
+		}
+
+		public static void StringFromXmlIfExists (XmlNode node, string attribute,
+		                                   ref string target) {
+			string value;
+			XmlAttribute attr = node.Attributes [attribute];
+			if (attr == null) {
+				return;
+			}
+			try {
+				value = attr.InnerText;
+			} catch {
+				return;
+			}
+			target = value;
 		}
 	}
 }

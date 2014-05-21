@@ -13,7 +13,7 @@ namespace LL_Console
 		public string Pile2Name = "Community Chest";
 
 		public int nDice = 2;
-		public int szDice = 6;
+		public int xDice = 6;
 		private Random rand = new Random();
 
 		private Player current_player = null;
@@ -31,7 +31,7 @@ namespace LL_Console
 			Location l = p.Where;
 
 			for (i=0; i<nDice; i++) {
-				dice += rand.Next (1, 6);
+				dice += rand.Next (1, xDice);
 			}
 			for (i=0; i<dice; i++) {
 				l = Next_Location (l);
