@@ -43,6 +43,7 @@
     <Compile Include="Game.cs" />
     <Compile Include="Location.cs" />
     <Compile Include="Player.cs" />
+    <Compile Include="XmlHelper.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>

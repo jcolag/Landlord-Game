@@ -105,48 +105,18 @@ namespace LL_Console
 		public Location (XmlNode prop) {
 			string type = string.Empty;
 
-			StringFromXmlIfExists (prop, "Name", ref _name);
-			IntFromXmlIfExists (prop, "PriceSale", ref _priceSale);
-			IntFromXmlIfExists (prop, "PriceRent", ref _priceRent);
-			IntFromXmlIfExists (prop, "xLeft", ref _xLeft);
-			IntFromXmlIfExists (prop, "xRight", ref _xRight);
-			IntFromXmlIfExists (prop, "yTop", ref _yTop);
-			IntFromXmlIfExists (prop, "yBottom", ref _yBottom);
+			XmlHelper.StringFromXmlIfExists (prop, "Name", ref _name);
+			XmlHelper.IntFromXmlIfExists (prop, "PriceSale", ref _priceSale);
+			XmlHelper.IntFromXmlIfExists (prop, "PriceRent", ref _priceRent);
+			XmlHelper.IntFromXmlIfExists (prop, "xLeft", ref _xLeft);
+			XmlHelper.IntFromXmlIfExists (prop, "xRight", ref _xRight);
+			XmlHelper.IntFromXmlIfExists (prop, "yTop", ref _yTop);
+			XmlHelper.IntFromXmlIfExists (prop, "yBottom", ref _yBottom);
 
-			StringFromXmlIfExists (prop, "PropertyType", ref type);
+			XmlHelper.StringFromXmlIfExists (prop, "PropertyType", ref type);
 			if (!string.IsNullOrWhiteSpace (type)) {
 				Enum.Parse (Location.Zoning.Park.GetType(), type);
 			}
-		}
-
-		public static void IntFromXmlIfExists (XmlNode node, string attribute,
-		                                       ref int target) {
-			int value;
-			XmlAttribute attr = node.Attributes [attribute];
-			if (attr == null) {
-				return;
-			}
-			try {
-				value = int.Parse (attr.InnerText);
-			} catch {
-				return;
-			}
-			target = value;
-		}
-
-		public static void StringFromXmlIfExists (XmlNode node, string attribute,
-		                                   ref string target) {
-			string value;
-			XmlAttribute attr = node.Attributes [attribute];
-			if (attr == null) {
-				return;
-			}
-			try {
-				value = attr.InnerText;
-			} catch {
-				return;
-			}
-			target = value;
 		}
 	}
 }

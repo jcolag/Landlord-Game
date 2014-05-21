@@ -23,8 +23,8 @@ namespace LL_Console
 				if (dice.Count > 0) {
 					int nDice = g.nDice,
 						xDice = g.xDice;
-					Location.IntFromXmlIfExists (dice [0], "Count", ref nDice);
-					Location.IntFromXmlIfExists (dice [0], "Sides", ref xDice);
+					XmlHelper.IntFromXmlIfExists (dice [0], "Count", ref nDice);
+					XmlHelper.IntFromXmlIfExists (dice [0], "Sides", ref xDice);
 					g.nDice = nDice;
 					g.xDice = xDice;
 				}
