@@ -18,6 +18,19 @@ namespace LL_Console
 
 		private Player current_player = null;
 
+		public bool Continue
+		{
+			get {
+				int solvent = 0;
+				foreach (Player p in Players) {
+					if (p.Balance > 0) {
+						++ solvent;
+					}
+				}
+				return solvent > 1;
+			}
+		}
+
 		public Game () {
 		}
 
@@ -63,6 +76,9 @@ namespace LL_Console
 		{
 			int idx = (Players.IndexOf (current_player) + 1) % Players.Count;
 			current_player = Players [idx];
+			if (current_player.Balance <= 0 && Players.Count > 1) {
+				current_player = Next_Player ();
+			}
 			return current_player;
 		}
 

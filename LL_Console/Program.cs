@@ -22,7 +22,7 @@ namespace LL_Console
 				XmlNodeList dice = gamecfg.GetElementsByTagName ("Dice");
 				if (dice.Count > 0) {
 					int nDice = g.nDice,
-						xDice = g.xDice;
+					xDice = g.xDice;
 					XmlHelper.IntFromXmlIfExists (dice [0], "Count", ref nDice);
 					XmlHelper.IntFromXmlIfExists (dice [0], "Sides", ref xDice);
 					g.nDice = nDice;
@@ -54,19 +54,20 @@ namespace LL_Console
 				g.Add (p);
 			}
 			Player player = g.Who ();
-			while (true) {
+			while (g.Continue) {
 				Location landing = g.Where ();
 				string answer = string.Empty;
 
 				Console.WriteLine ("* " + player.Name + " ("
-				                   + player.Balance.ToString() + "):");
+					+ player.Balance.ToString () + "):");
 				Console.WriteLine ("Starting from " + landing.Name);
 				Console.WriteLine ("Rolls a " + g.Roll ());
 				landing = g.Where ();
 				Console.WriteLine ("Lands on " + landing.Name);
 
 				if (landing.Owner == null) {
-					Console.WriteLine ("Want to buy " + landing.Name + "?");
+					Console.WriteLine ("Want to buy " + landing.Name
+						+ " for " + landing.PriceSale + "?");
 					if (landing.PriceSale < player.Balance) {
 						answer = Console.ReadLine ();
 						if (answer.ToLower ().StartsWith ("y")) {
@@ -77,16 +78,22 @@ namespace LL_Console
 						Console.WriteLine ("Can't.  Not enough money.");
 					}
 				} else {
+					Console.WriteLine ("Owned by " + landing.Owner.Name
+						+ ", rent is $"
+						+ landing.PriceRent.ToString ());
 					player.Withdraw (landing.PriceRent);
 					landing.Owner.Deposit (landing.PriceRent);
 				}
-				Console.WriteLine ("Continue?");
-				answer = Console.ReadLine ();
-				if (!answer.ToLower ().StartsWith ("y")) {
-					break;
-				}
+//				Console.WriteLine ("Continue?");
+//				answer = Console.ReadLine ();
+//				if (!answer.ToLower ().StartsWith ("y")) {
+//					break;
+//				}
 				player = g.Next_Player ();
 			}
+			Player winner = g.Who ();
+			Console.WriteLine (winner.Name + " wins with $"
+				+ winner.Balance.ToString ());
 		}
 	}
 }
