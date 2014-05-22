@@ -22,7 +22,7 @@ namespace LL_Console
 				XmlNodeList dice = gamecfg.GetElementsByTagName ("Dice");
 				if (dice.Count > 0) {
 					int nDice = g.nDice,
-					xDice = g.xDice;
+						xDice = g.xDice;
 					XmlHelper.IntFromXmlIfExists (dice [0], "Count", ref nDice);
 					XmlHelper.IntFromXmlIfExists (dice [0], "Sides", ref xDice);
 					g.nDice = nDice;
@@ -65,7 +65,7 @@ namespace LL_Console
 				landing = g.Where ();
 				Console.WriteLine ("Lands on " + landing.Name);
 
-				if (landing.Owner == null) {
+				if (landing.CanBuy) {
 					Console.WriteLine ("Want to buy " + landing.Name
 						+ " for " + landing.PriceSale + "?");
 					if (landing.PriceSale < player.Balance) {
@@ -77,18 +77,16 @@ namespace LL_Console
 					} else {
 						Console.WriteLine ("Can't.  Not enough money.");
 					}
-				} else {
+				} else if (landing.Ownable) {
 					Console.WriteLine ("Owned by " + landing.Owner.Name
 						+ ", rent is $"
 						+ landing.PriceRent.ToString ());
 					player.Withdraw (landing.PriceRent);
 					landing.Owner.Deposit (landing.PriceRent);
 				}
-//				Console.WriteLine ("Continue?");
-//				answer = Console.ReadLine ();
-//				if (!answer.ToLower ().StartsWith ("y")) {
-//					break;
-//				}
+				if (player.Balance <= 0) {
+					Console.WriteLine (player.Name + " has gone bankrupt!");
+				}
 				player = g.Next_Player ();
 			}
 			Player winner = g.Who ();

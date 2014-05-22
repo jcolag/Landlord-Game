@@ -18,6 +18,21 @@ namespace LL_Console
 			MotherEarth,
 			Unknown
 		};
+		private List<Zoning> ownables = new List<Zoning> () { 
+			Zoning.Residential, Zoning.Railroad, Zoning.Franchise
+		};
+
+		public bool Ownable {
+			get {
+				return ownables.Contains (PropertyType);
+			}
+		}
+
+		public bool CanBuy {
+			get {
+				return Ownable && Owner == null;
+			}
+		}
 
 		private int _xLeft = -1;
 		public int xLeft {
@@ -54,6 +69,16 @@ namespace LL_Console
 			}
 		}
 
+		private int _salary = 0;
+		public int Salary {
+			get {
+				return _salary;
+			}
+			set {
+				_salary = value;
+			}
+		}
+
 		private int _priceSale = 0;
 		public int PriceSale {
 			get {
@@ -75,6 +100,15 @@ namespace LL_Console
 		}
 
 		private Zoning _propertyType = Zoning.Unknown;
+		private Zoning PropertyType {
+			get {
+				return _propertyType;
+			}
+			set {
+				_propertyType = value;
+			}
+		}
+
 		private Player _owner = null;
 		public Player Owner {
 			get {
@@ -89,9 +123,8 @@ namespace LL_Console
 		}
 
 		public Location (Zoning zone, string name,
-		                 int left, int right, int top, int bottom,
-		                 int sale, int rent)
-		{
+		                  int left, int right, int top, int bottom,
+		                  int sale, int rent) {
 			_propertyType = zone;
 			_name = name;
 			xLeft = left;
@@ -112,10 +145,12 @@ namespace LL_Console
 			XmlHelper.IntFromXmlIfExists (prop, "xRight", ref _xRight);
 			XmlHelper.IntFromXmlIfExists (prop, "yTop", ref _yTop);
 			XmlHelper.IntFromXmlIfExists (prop, "yBottom", ref _yBottom);
+			XmlHelper.IntFromXmlIfExists (prop, "Salary", ref _salary);
 
-			XmlHelper.StringFromXmlIfExists (prop, "PropertyType", ref type);
-			if (!string.IsNullOrWhiteSpace (type)) {
-				Enum.Parse (Location.Zoning.Park.GetType(), type);
+			try {
+				XmlHelper.StringFromXmlIfExists (prop, "PropertyType", ref type);
+				PropertyType = (Zoning)Enum.Parse (Zoning.Park.GetType (), type);
+			} catch {
 			}
 		}
 	}
