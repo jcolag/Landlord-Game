@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Xml;
 
 namespace LL_Console
 {
@@ -48,11 +49,34 @@ namespace LL_Console
 
 		private int AssetIndex = 0;
 
+		public Player (XmlNode node)
+		{
+			XmlHelper.StringFromXmlIfExists (node, "Name", ref _name);
+			Balance = StartingBalance;
+			XmlHelper.IntFromXmlIfExists (node, "Balance", ref StartingBalance);
+			PlayerNumber += 1;
+		}
+
 		public Player ()
 		{
-			Name = BasePlayerName + " #" + PlayerNumber.ToString ();
+			InitPlayer(BasePlayerName + " #" + PlayerNumber.ToString(), StartingBalance);
+		}
+
+		public Player (string name)
+		{
+			InitPlayer(name, StartingBalance);
+		}
+
+		public Player (string name, int balance)
+		{
+			InitPlayer(name, balance);
+		}
+
+		private void InitPlayer (string name, int balance)
+		{
+			Name = name;
+			Balance = balance;
 			PlayerNumber += 1;
-			Balance = StartingBalance;
 		}
 
 		public int AddAsset (string name)
@@ -91,6 +115,11 @@ namespace LL_Console
 				Balance += v;
 			}
 			return Balance;
+		}
+
+		public override string ToString()
+		{
+			return string.Format("Player {0} ({1}), starting at {2}", Name, Balance.ToString(), Where.Name);
 		}
 	}
 }

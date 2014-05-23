@@ -153,6 +153,25 @@ namespace LL_Console
 			} catch {
 			}
 		}
+		
+		public string PrintOnLanding (Player p, ref bool question) {
+			question = false;
+			switch (PropertyType) {
+				case Zoning.Residential:
+					if (CanBuy && p.Balance > PriceSale) {
+						question = true;
+						return "Want to buy " + Name + " for " + PriceSale + "?";
+					} else if (CanBuy) {
+						return "Can't buy " + Name + ".  Not enough money.";
+					} else if (Ownable) {
+						question = true;
+						return "Owned by " + Owner.Name	+ ", rent is $" + PriceRent.ToString()
+							+ ". [P]ay, [T]rade, or [W]ork?";
+					}
+					break;
+			}
+			return string.Empty;
+		}
 	}
 }
 
