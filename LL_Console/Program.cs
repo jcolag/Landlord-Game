@@ -11,6 +11,7 @@ namespace LL_Console
 			XmlDocument gamecfg = new XmlDocument();
 			Game g = new Game();
 			string player_name = string.Empty;
+			Location.AnswerQuestion question = null;
 
 			foreach (string arg in args) {
 				if (arg.ToLower().EndsWith(".xml")) {
@@ -70,24 +71,10 @@ namespace LL_Console
 				landing = g.Where();
 				Console.WriteLine("Lands on " + landing.Name);
 
-				if (landing.CanBuy) {
-					Console.WriteLine("Want to buy " + landing.Name
-						+ " for " + landing.PriceSale + "?");
-					if (landing.PriceSale < player.Balance) {
-						answer = Console.ReadLine();
-						if (answer.ToLower().StartsWith("y")) {
-							player.Withdraw(landing.PriceSale);
-							landing.Owner = player;
-						}
-					} else {
-						Console.WriteLine("Can't.  Not enough money.");
-					}
-				} else if (landing.Ownable) {
-					Console.WriteLine("Owned by " + landing.Owner.Name
-						+ ", rent is $"
-						+ landing.PriceRent.ToString());
-					player.Withdraw(landing.PriceRent);
-					landing.Owner.Deposit(landing.PriceRent);
+				Console.WriteLine(landing.PrintOnLanding(player, ref question));
+				if (question != null) {
+					answer = Console.ReadLine();
+					Console.WriteLine(question(player, answer));
 				}
 				if (player.Balance <= 0) {
 					Console.WriteLine(player.Name + " has gone bankrupt!");

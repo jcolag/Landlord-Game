@@ -6,6 +6,7 @@ namespace LL_Console
 {
 	public class Location
 	{
+		public delegate string AnswerQuestion(Player p, string ans);
 		public enum Zoning {
 			Residential,
 			Railroad,
@@ -154,21 +155,38 @@ namespace LL_Console
 			}
 		}
 		
-		public string PrintOnLanding (Player p, ref bool question) {
-			question = false;
+		public string PrintOnLanding (Player p, ref AnswerQuestion answerer) {
 			switch (PropertyType) {
 				case Zoning.Residential:
 					if (CanBuy && p.Balance > PriceSale) {
-						question = true;
+						answerer = BuyLocation;
 						return "Want to buy " + Name + " for " + PriceSale + "?";
 					} else if (CanBuy) {
 						return "Can't buy " + Name + ".  Not enough money.";
 					} else if (Ownable) {
-						question = true;
+						answerer = RentLocation;
 						return "Owned by " + Owner.Name	+ ", rent is $" + PriceRent.ToString()
-							+ ". [P]ay, [T]rade, or [W]ork?";
+							+ ". [P]ay?";
 					}
 					break;
+			}
+			return string.Empty;
+		}
+
+		private string BuyLocation(Player p, string answer) {
+			if (answer.ToLower().StartsWith("y")) {
+				p.Withdraw(PriceSale);
+				Owner = p;
+				return p.Name + " now owns " + Name + ".";
+			}
+			return string.Empty;
+		}
+
+		private string RentLocation(Player p, string answer) {
+			if (answer.ToLower().StartsWith("p")) {
+				p.Withdraw(PriceRent);
+				Owner.Deposit(PriceRent);
+				return "Owned by " + Owner.Name + ", rent is $" + PriceRent.ToString();
 			}
 			return string.Empty;
 		}
