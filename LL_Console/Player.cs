@@ -30,6 +30,16 @@ namespace LL_Console
 			}
 		}
 
+		public bool _inJail = false;
+		public bool InJail {
+			get {
+				return _inJail;
+			}
+			set {
+				_inJail = value;
+			}
+		}
+
 		private List<Asset> _assets = new List<Asset>();
 		private List<Asset> Assets {
 			get {
@@ -53,7 +63,7 @@ namespace LL_Console
 		{
 			XmlHelper.StringFromXmlIfExists (node, "Name", ref _name);
 			Balance = StartingBalance;
-			XmlHelper.IntFromXmlIfExists (node, "Balance", ref StartingBalance);
+			XmlHelper.IntFromXmlIfExists (node, "Balance", ref _balance);
 			PlayerNumber += 1;
 		}
 
