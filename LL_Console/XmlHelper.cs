@@ -9,6 +9,21 @@ namespace LL_Console
 		{
 		}
 
+		public static void BoolFromXmlIfExists (XmlNode node, string attribute,
+		                                        ref bool target) {
+			bool value;
+			XmlAttribute attr = node.Attributes [attribute];
+			if (attr == null) {
+				return;
+			}
+			try {
+				value = attr.InnerText.ToLower().Trim() == "true";
+			} catch {
+				return;
+			}
+			target = value;
+		}
+
 		public static void IntFromXmlIfExists (XmlNode node, string attribute,
 		                                       ref int target) {
 			int value;
