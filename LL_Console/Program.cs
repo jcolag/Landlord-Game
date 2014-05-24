@@ -11,7 +11,6 @@ namespace LL_Console
 			XmlDocument gamecfg = new XmlDocument();
 			Game g = new Game();
 			string player_name = string.Empty;
-			Location.AnswerQuestion question = null;
 
 			foreach (string arg in args) {
 				if (arg.ToLower().EndsWith(".xml")) {
@@ -63,18 +62,24 @@ namespace LL_Console
 
 			Player player = g.Who();
 			while (g.Continue) {
+				Location.AnswerQuestion question = null;
 				Location landing = g.Where();
 				string answer = string.Empty;
 
 				Console.WriteLine("* " + player.ToString());
-				Console.WriteLine("Rolls a " + g.Roll());
+				if (player.InJail) {
+					Console.WriteLine(player.Name + " is in jail!");
+				}
+				Console.WriteLine("Rolls a " + g.Roll(ref answer));
+				Console.Write(answer);
 				landing = g.Where();
 				Console.WriteLine("Lands on " + landing.Name);
 
 				Console.WriteLine(landing.PrintOnLanding(player, ref question));
-				if (question != null) {
+				while (question != null && string.IsNullOrWhiteSpace(answer)) {
 					answer = Console.ReadLine();
-					Console.WriteLine(question(player, answer));
+					answer = question(player, answer);
+					Console.WriteLine(answer);
 				}
 				if (player.Balance <= 0) {
 					Console.WriteLine(player.Name + " has gone bankrupt!");

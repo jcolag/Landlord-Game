@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Xml;
 
 namespace LL_Console
@@ -22,6 +23,16 @@ namespace LL_Console
 		private List<Zoning> ownables = new List<Zoning> () { 
 			Zoning.Residential, Zoning.Railroad, Zoning.Franchise
 		};
+
+		private static List<Location> _board = null;
+		public static List<Location> Board {
+			private get {
+				return _board;
+			}
+			set {
+				_board = value;
+			}
+		}
 
 		public bool Ownable {
 			get {
@@ -80,6 +91,16 @@ namespace LL_Console
 			}
 		}
 
+		private int _salaryOver = 0;
+		public int SalaryOver {
+			get {
+				return _salaryOver;
+			}
+			set {
+				_salaryOver = value;
+			}
+		}
+
 		private int _priceSale = 0;
 		public int PriceSale {
 			get {
@@ -97,6 +118,26 @@ namespace LL_Console
 			}
 			set {
 				_priceRent = value;
+			}
+		}
+
+		private int _tax = 0;
+		public int Tax {
+			get {
+				return _tax;
+			}
+			set {
+				_tax = value;
+			}
+		}
+
+		private bool _jail = false;
+		public bool Jail {
+			get {
+				return _jail;
+			}
+			set {
+				_jail = value;
 			}
 		}
 
@@ -142,17 +183,29 @@ namespace LL_Console
 			XmlHelper.StringFromXmlIfExists (prop, "Name", ref _name);
 			XmlHelper.IntFromXmlIfExists (prop, "PriceSale", ref _priceSale);
 			XmlHelper.IntFromXmlIfExists (prop, "PriceRent", ref _priceRent);
+			XmlHelper.IntFromXmlIfExists (prop, "Tax", ref _priceRent);
 			XmlHelper.IntFromXmlIfExists (prop, "xLeft", ref _xLeft);
 			XmlHelper.IntFromXmlIfExists (prop, "xRight", ref _xRight);
 			XmlHelper.IntFromXmlIfExists (prop, "yTop", ref _yTop);
 			XmlHelper.IntFromXmlIfExists (prop, "yBottom", ref _yBottom);
 			XmlHelper.IntFromXmlIfExists (prop, "Salary", ref _salary);
+			XmlHelper.IntFromXmlIfExists (prop, "SalaryOver", ref _salaryOver);
+			XmlHelper.BoolFromXmlIfExists (prop, "SalaryOver", ref _jail);
 
 			try {
 				XmlHelper.StringFromXmlIfExists (prop, "PropertyType", ref type);
 				PropertyType = (Zoning)Enum.Parse (Zoning.Park.GetType (), type);
 			} catch {
 			}
+		}
+
+		public string PassBy(Player p) {
+			string result = string.Empty;
+			if (PropertyType == Zoning.MotherEarth && SalaryOver > 0) {
+				p.Deposit(SalaryOver);
+				result = "Earned $" + SalaryOver + " salary!\n";
+			}
+			return result;
 		}
 		
 		public string PrintOnLanding (Player p, ref AnswerQuestion answerer) {
@@ -163,14 +216,52 @@ namespace LL_Console
 						return "Want to buy " + Name + " for " + PriceSale + "?";
 					} else if (CanBuy) {
 						return "Can't buy " + Name + ".  Not enough money.";
-					} else if (Ownable) {
+					} else if (Ownable && Owner != p) {
 						answerer = RentLocation;
-						return "Owned by " + Owner.Name	+ ", rent is $" + PriceRent.ToString()
+						return "Owned by " + Owner.Name + ", rent is $" + PriceRent.ToString()
 							+ ". [P]ay?";
+					} else if (Ownable) {
+						return p.Name + " already owns " + Name + ".";
 					}
 					break;
+				case Zoning.Railroad:
+					if (CanBuy && p.Balance > PriceSale) {
+						answerer = BuyLocation;
+						return "Want to buy " + Name + " for " + PriceSale + "?";
+					} else if (CanBuy) {
+						return "Can't buy " + Name + ".  Not enough money.";
+					} else if (Ownable && Owner != p) {
+						int rent = PriceRent;
+						var rrs = Board.Where(x => x.PropertyType == Zoning.Railroad && x.Owner == Owner);
+						int nrrs = rrs.Count();
+						for (int i=0; i<nrrs; i++) {
+							rent *= 2;
+						}
+						answerer = RentLocation;
+						return "Owned by " + Owner.Name + ", rent is $" + rent.ToString()
+							+ ". [P]ay?";
+					} else if (Ownable) {
+						return p.Name + " already owns " + Name + ".";
+					}
+					break;
+				case Zoning.Luxury:
+				case Zoning.Necessity:
+					p.Withdraw(Tax);
+					return "Tax of $" + Tax.ToString() + " levied on " + p.Name + ".";
+				case Zoning.Legacy:
+					int due = Tax > p.Balance / 10 ? p.Balance / 10 : Tax;
+					p.Withdraw(due);
+					return "Tax of $" + due.ToString() + " levied on " + p.Name + ".";
+				case Zoning.Trespassing:
+					p.InJail = true;
+					return p.Name + " was caught trespassing by Lord Blueblood and is sent to jail!";
+				case Zoning.MotherEarth:
+					p.Deposit(Salary);
+					return "Labor upon Mother Earth produces wages:  $" + Salary + ".";
 			}
 			return string.Empty;
+//	Franchise
+//	Park
 		}
 
 		private string BuyLocation(Player p, string answer) {

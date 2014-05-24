@@ -20,7 +20,7 @@
     <WarningLevel>4</WarningLevel>
     <Externalconsole>true</Externalconsole>
     <PlatformTarget>x86</PlatformTarget>
-    <Commandlineparameters>"/home/john/Documents/Mono Projects/LL_Console/basicboard.xml"</Commandlineparameters>
+    <Commandlineparameters>"/home/john/Documents/Mono Projects/LL_Console/landlord.xml"</Commandlineparameters>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
     <DebugType>full</DebugType>

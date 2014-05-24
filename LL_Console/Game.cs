@@ -32,22 +32,25 @@ namespace LL_Console
 		}
 
 		public Game () {
+			Location.Board = Board;
 		}
 
-		public int Roll () {
-			return Roll (current_player);
+		public int Roll (ref string notices) {
+			return Roll (current_player, ref notices);
 		}
 
-		public int Roll (Player p) {
+		public int Roll (Player p, ref string notices) {
 			int dice = 0,
 				i;
 			Location l = p.Where;
+			string note = string.Empty;
 
 			for (i=0; i<nDice; i++) {
 				dice += rand.Next (1, xDice);
 			}
 			for (i=0; i<dice; i++) {
-				l = Next_Location (l);
+				l = Next_Location (l, ref note, i != dice - 1);
+				notices += note;
 			}
 			p.Where = l;
 			return dice;
@@ -89,11 +92,14 @@ namespace LL_Console
 			return Players[idx];
 		}
 		
-		public Location Next_Location (Location l)
+		public Location Next_Location (Location l, ref string notices, bool transit)
 		{
 			int idx = Board.IndexOf (l) + 1;
 			if (idx >= Board.Count) {
 				idx = 0;
+			}
+			if (transit) {
+				notices = Board[idx].PassBy(current_player);
 			}
 			return Board[idx];
 		}
