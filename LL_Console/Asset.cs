@@ -11,11 +11,12 @@ namespace LL_Console
         {
             get
             {
-                return _name;
+                return this._name;
             }
+
             set
             {
-                _name = value;
+                this._name = value;
             }
         }
 
@@ -25,19 +26,19 @@ namespace LL_Console
         {
             get
             {
-                return _value;
+                return this._value;
             }
+
             set
             {
-                _value = value;
+                this._value = value;
             }
         }
 
         public Asset(string name, int value)
         {
-            Name = name;
-            Value = value;
+            this.Name = name;
+            this.Value = value;
         }
     }
 }
-

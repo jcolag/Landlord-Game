@@ -10,9 +10,9 @@ namespace LL_Console
 
         public Card(string text, int amount, bool jail)
         {
-            Text = text;
-            Amount = amount;
-            Jail = jail;
+            this.Text = text;
+            this.Amount = amount;
+            this.Jail = jail;
         }
     }
 }

@@ -8,7 +8,7 @@
     <timestamps>
       <styleCop>2014/05/26 10:00:42.000</styleCop>
       <settingsFile>2014/05/26 10:00:42.000</settingsFile>
-      <sourceFile>2014/05/26 10:34:19.000</sourceFile>
+      <sourceFile>2014/05/26 16:04:45.000</sourceFile>
       <parser>2014/05/26 10:00:42.000</parser>
       <StyleCop.CSharp.DocumentationRules>2014/05/26 10:00:42.000</StyleCop.CSharp.DocumentationRules>
       <StyleCop.CSharp.DocumentationRules.FilesHashCode>0</StyleCop.CSharp.DocumentationRules.FilesHashCode>
@@ -46,116 +46,14 @@
         <line>9</line>
         <warning>False</warning>
       </violation>
-      <violation namespace="StyleCop.CSharp.LayoutRules" rule="CurlyBracketsForMultiLineStatementsMustNotShareLine" ruleCheckId="SA1500">
-        <context>If a statement spans multiple lines, the closing curly bracket must be placed on its own line.</context>
-        <line>48</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.LayoutRules" rule="ClosingCurlyBracketMustBeFollowedByBlankLine" ruleCheckId="SA1513">
-        <context>Statements or elements wrapped in curly brackets must be followed by a blank line.</context>
-        <line>22</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.LayoutRules" rule="ClosingCurlyBracketMustBeFollowedByBlankLine" ruleCheckId="SA1513">
-        <context>Statements or elements wrapped in curly brackets must be followed by a blank line.</context>
-        <line>34</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.LayoutRules" rule="ClosingCurlyBracketMustBeFollowedByBlankLine" ruleCheckId="SA1513">
-        <context>Statements or elements wrapped in curly brackets must be followed by a blank line.</context>
-        <line>40</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.LayoutRules" rule="ClosingCurlyBracketMustBeFollowedByBlankLine" ruleCheckId="SA1513">
-        <context>Statements or elements wrapped in curly brackets must be followed by a blank line.</context>
-        <line>57</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.LayoutRules" rule="ClosingCurlyBracketMustBeFollowedByBlankLine" ruleCheckId="SA1513">
-        <context>Statements or elements wrapped in curly brackets must be followed by a blank line.</context>
-        <line>67</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.LayoutRules" rule="ClosingCurlyBracketMustBeFollowedByBlankLine" ruleCheckId="SA1513">
-        <context>Statements or elements wrapped in curly brackets must be followed by a blank line.</context>
-        <line>85</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.LayoutRules" rule="ClosingCurlyBracketMustBeFollowedByBlankLine" ruleCheckId="SA1513">
-        <context>Statements or elements wrapped in curly brackets must be followed by a blank line.</context>
-        <line>97</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.LayoutRules" rule="ClosingCurlyBracketMustBeFollowedByBlankLine" ruleCheckId="SA1513">
-        <context>Statements or elements wrapped in curly brackets must be followed by a blank line.</context>
-        <line>101</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.LayoutRules" rule="ClosingCurlyBracketMustBeFollowedByBlankLine" ruleCheckId="SA1513">
-        <context>Statements or elements wrapped in curly brackets must be followed by a blank line.</context>
-        <line>103</line>
-        <warning>False</warning>
-      </violation>
       <violation namespace="StyleCop.CSharp.NamingRules" rule="FieldNamesMustNotUseHungarianNotation" ruleCheckId="SA1305">
         <context>The variable name 'nDice' begins with a prefix that looks like Hungarian notation. Remove the prefix or add it to the list of allowed prefixes.</context>
-        <line>28</line>
+        <line>29</line>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.NamingRules" rule="FieldNamesMustNotUseHungarianNotation" ruleCheckId="SA1305">
         <context>The variable name 'xDice' begins with a prefix that looks like Hungarian notation. Remove the prefix or add it to the list of allowed prefixes.</context>
-        <line>28</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="ParametersMustBeOnSameLineOrSeparateLines" ruleCheckId="SA1117">
-        <context>All method parameters must be placed on the same line, or each parameter must be placed on a separate line.</context>
-        <line>52</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="SplitParametersMustStartOnLineAfterDeclaration" ruleCheckId="SA1116">
-        <context>If the method parameters are on separate lines, the first parameter must begin on the line beneath the name of the method.</context>
-        <line>52</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="ParameterMustFollowComma" ruleCheckId="SA1115">
-        <context>The parameter must begin on the line after the previous parameter.</context>
-        <line>54</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="CodeMustNotContainMultipleStatementsOnOneLine" ruleCheckId="SA1107">
-        <context>A line may only contain a single statement.</context>
-        <line>48</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.SpacingRules" rule="SymbolsMustBeSpacedCorrectly" ruleCheckId="SA1003">
-        <context>The spacing around the symbol '=' is invalid.</context>
-        <line>50</line>
-        <index>1629</index>
-        <endIndex>1629</endIndex>
-        <startLine>50</startLine>
-        <startColumn>27</startColumn>
-        <endLine>50</endLine>
-        <endColumn>27</endColumn>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.SpacingRules" rule="SymbolsMustBeSpacedCorrectly" ruleCheckId="SA1003">
-        <context>The spacing around the symbol '=' is invalid.</context>
-        <line>50</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.SpacingRules" rule="SymbolsMustBeSpacedCorrectly" ruleCheckId="SA1003">
-        <context>The spacing around the symbol '&lt;' is invalid.</context>
-        <line>50</line>
-        <index>1634</index>
-        <endIndex>1634</endIndex>
-        <startLine>50</startLine>
-        <startColumn>32</startColumn>
-        <endLine>50</endLine>
-        <endColumn>32</endColumn>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.SpacingRules" rule="SymbolsMustBeSpacedCorrectly" ruleCheckId="SA1003">
-        <context>The spacing around the symbol '&lt;' is invalid.</context>
-        <line>50</line>
+        <line>29</line>
         <warning>False</warning>
       </violation>
     </violations>
@@ -164,7 +62,7 @@
     <timestamps>
       <styleCop>2014/05/26 10:00:42.000</styleCop>
       <settingsFile>2014/05/26 10:00:42.000</settingsFile>
-      <sourceFile>2014/05/26 10:35:29.000</sourceFile>
+      <sourceFile>2014/05/26 16:01:36.000</sourceFile>
       <parser>2014/05/26 10:00:42.000</parser>
       <StyleCop.CSharp.DocumentationRules>2014/05/26 10:00:42.000</StyleCop.CSharp.DocumentationRules>
       <StyleCop.CSharp.DocumentationRules.FilesHashCode>0</StyleCop.CSharp.DocumentationRules.FilesHashCode>
@@ -185,16 +83,6 @@
       <violation namespace="StyleCop.CSharp.DocumentationRules" rule="FileMustHaveHeader" ruleCheckId="SA1633">
         <context>The file has no header, the header Xml is invalid, or the header is not located at the top of the file.</context>
         <line>1</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.LayoutRules" rule="CodeMustNotContainBlankLinesAtEndOfFile" ruleCheckId="SA1518">
-        <context>The code must not contain blank lines at the end of the file.</context>
-        <line>43</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.LayoutRules" rule="CodeMustNotContainMultipleBlankLinesInARow" ruleCheckId="SA1507">
-        <context>The code must not contain multiple blank lines in a row.</context>
-        <line>43</line>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.DocumentationRules" rule="ElementsMustBeDocumented" ruleCheckId="SA1600">
@@ -229,118 +117,32 @@
       </violation>
       <violation namespace="StyleCop.CSharp.OrderingRules" rule="ElementsMustAppearInTheCorrectOrder" ruleCheckId="SA1201">
         <context>All properties must be placed after all fields.</context>
-        <line>22</line>
+        <line>23</line>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.OrderingRules" rule="ElementsMustAppearInTheCorrectOrder" ruleCheckId="SA1201">
         <context>All properties must be placed after all constructors.</context>
-        <line>36</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.LayoutRules" rule="ClosingCurlyBracketMustBeFollowedByBlankLine" ruleCheckId="SA1513">
-        <context>Statements or elements wrapped in curly brackets must be followed by a blank line.</context>
-        <line>15</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
-        <context>The call to _name must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
-        <line>14</line>
-        <index>250</index>
-        <endIndex>254</endIndex>
-        <startLine>14</startLine>
-        <startColumn>24</startColumn>
-        <endLine>14</endLine>
-        <endColumn>28</endColumn>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.LayoutRules" rule="ElementsMustBeSeparatedByBlankLine" ruleCheckId="SA1516">
-        <context>Adjacent elements must be separated by a blank line.</context>
-        <line>16</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
-        <context>The call to _name must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
-        <line>18</line>
-        <index>317</index>
-        <endIndex>321</endIndex>
-        <startLine>18</startLine>
-        <startColumn>17</startColumn>
-        <endLine>18</endLine>
-        <endColumn>21</endColumn>
+        <line>38</line>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.DocumentationRules" rule="ElementsMustBeDocumented" ruleCheckId="SA1600">
         <context>The field must have a documentation header.</context>
-        <line>22</line>
+        <line>23</line>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.NamingRules" rule="FieldNamesMustNotBeginWithUnderscore" ruleCheckId="SA1309">
         <context>Field names must not start with an underscore.</context>
-        <line>22</line>
+        <line>23</line>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.DocumentationRules" rule="ElementsMustBeDocumented" ruleCheckId="SA1600">
         <context>The property must have a documentation header.</context>
-        <line>24</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.LayoutRules" rule="ClosingCurlyBracketMustBeFollowedByBlankLine" ruleCheckId="SA1513">
-        <context>Statements or elements wrapped in curly brackets must be followed by a blank line.</context>
-        <line>29</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
-        <context>The call to _value must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
-        <line>28</line>
-        <index>478</index>
-        <endIndex>483</endIndex>
-        <startLine>28</startLine>
-        <startColumn>24</startColumn>
-        <endLine>28</endLine>
-        <endColumn>29</endColumn>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.LayoutRules" rule="ElementsMustBeSeparatedByBlankLine" ruleCheckId="SA1516">
-        <context>Adjacent elements must be separated by a blank line.</context>
-        <line>30</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
-        <context>The call to _value must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
-        <line>32</line>
-        <index>546</index>
-        <endIndex>551</endIndex>
-        <startLine>32</startLine>
-        <startColumn>17</startColumn>
-        <endLine>32</endLine>
-        <endColumn>22</endColumn>
+        <line>25</line>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.DocumentationRules" rule="ElementsMustBeDocumented" ruleCheckId="SA1600">
         <context>The constructor must have a documentation header.</context>
-        <line>36</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
-        <context>The call to Name must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
         <line>38</line>
-        <index>654</index>
-        <endIndex>657</endIndex>
-        <startLine>38</startLine>
-        <startColumn>13</startColumn>
-        <endLine>38</endLine>
-        <endColumn>16</endColumn>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
-        <context>The call to Value must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
-        <line>39</line>
-        <index>679</index>
-        <endIndex>683</endIndex>
-        <startLine>39</startLine>
-        <startColumn>13</startColumn>
-        <endLine>39</endLine>
-        <endColumn>17</endColumn>
         <warning>False</warning>
       </violation>
     </violations>
@@ -349,7 +151,7 @@
     <timestamps>
       <styleCop>2014/05/26 10:00:42.000</styleCop>
       <settingsFile>2014/05/26 10:00:42.000</settingsFile>
-      <sourceFile>2014/05/26 10:35:29.000</sourceFile>
+      <sourceFile>2014/05/26 16:00:28.000</sourceFile>
       <parser>2014/05/26 10:00:42.000</parser>
       <StyleCop.CSharp.DocumentationRules>2014/05/26 10:00:42.000</StyleCop.CSharp.DocumentationRules>
       <StyleCop.CSharp.DocumentationRules.FilesHashCode>0</StyleCop.CSharp.DocumentationRules.FilesHashCode>
@@ -412,46 +214,13 @@
         <line>11</line>
         <warning>False</warning>
       </violation>
-      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
-        <context>The call to Text must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
-        <line>13</line>
-        <index>257</index>
-        <endIndex>260</endIndex>
-        <startLine>13</startLine>
-        <startColumn>13</startColumn>
-        <endLine>13</endLine>
-        <endColumn>16</endColumn>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
-        <context>The call to Amount must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
-        <line>14</line>
-        <index>282</index>
-        <endIndex>287</endIndex>
-        <startLine>14</startLine>
-        <startColumn>13</startColumn>
-        <endLine>14</endLine>
-        <endColumn>18</endColumn>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
-        <context>The call to Jail must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
-        <line>15</line>
-        <index>311</index>
-        <endIndex>314</endIndex>
-        <startLine>15</startLine>
-        <startColumn>13</startColumn>
-        <endLine>15</endLine>
-        <endColumn>16</endColumn>
-        <warning>False</warning>
-      </violation>
     </violations>
   </sourcecode>
   <sourcecode name="Game.cs" parser="StyleCop.CSharp.CsParser">
     <timestamps>
       <styleCop>2014/05/26 10:00:42.000</styleCop>
       <settingsFile>2014/05/26 10:00:42.000</settingsFile>
-      <sourceFile>2014/05/26 10:35:29.000</sourceFile>
+      <sourceFile>2014/05/26 16:10:40.000</sourceFile>
       <parser>2014/05/26 10:00:42.000</parser>
       <StyleCop.CSharp.DocumentationRules>2014/05/26 10:00:42.000</StyleCop.CSharp.DocumentationRules>
       <StyleCop.CSharp.DocumentationRules.FilesHashCode>0</StyleCop.CSharp.DocumentationRules.FilesHashCode>
@@ -472,16 +241,6 @@
       <violation namespace="StyleCop.CSharp.DocumentationRules" rule="FileMustHaveHeader" ruleCheckId="SA1633">
         <context>The file has no header, the header Xml is invalid, or the header is not located at the top of the file.</context>
         <line>1</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.LayoutRules" rule="CodeMustNotContainBlankLinesAtEndOfFile" ruleCheckId="SA1518">
-        <context>The code must not contain blank lines at the end of the file.</context>
-        <line>132</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.LayoutRules" rule="CodeMustNotContainMultipleBlankLinesInARow" ruleCheckId="SA1507">
-        <context>The code must not contain multiple blank lines in a row.</context>
-        <line>132</line>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.DocumentationRules" rule="ElementsMustBeDocumented" ruleCheckId="SA1600">
@@ -611,579 +370,62 @@
       </violation>
       <violation namespace="StyleCop.CSharp.OrderingRules" rule="ElementsMustAppearInTheCorrectOrder" ruleCheckId="SA1201">
         <context>All properties must be placed after all constructors.</context>
-        <line>35</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.LayoutRules" rule="ClosingCurlyBracketMustBeFollowedByBlankLine" ruleCheckId="SA1513">
-        <context>Statements or elements wrapped in curly brackets must be followed by a blank line.</context>
-        <line>30</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
-        <context>The call to Players must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
-        <line>24</line>
-        <index>717</index>
-        <endIndex>723</endIndex>
-        <startLine>24</startLine>
-        <startColumn>38</startColumn>
-        <endLine>24</endLine>
-        <endColumn>44</endColumn>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.SpacingRules" rule="IncrementDecrementSymbolsMustBeSpacedCorrectly" ruleCheckId="SA1020">
-        <context>Invalid spacing around the increment or decrement symbol.</context>
-        <line>28</line>
-        <index>829</index>
-        <endIndex>830</endIndex>
-        <startLine>28</startLine>
-        <startColumn>25</startColumn>
-        <endLine>28</endLine>
-        <endColumn>26</endColumn>
+        <line>36</line>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.DocumentationRules" rule="ElementsMustBeDocumented" ruleCheckId="SA1600">
         <context>The constructor must have a documentation header.</context>
-        <line>35</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
-        <context>The call to Board must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
-        <line>37</line>
-        <index>1003</index>
-        <endIndex>1007</endIndex>
-        <startLine>37</startLine>
-        <startColumn>30</startColumn>
-        <endLine>37</endLine>
-        <endColumn>34</endColumn>
+        <line>36</line>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.DocumentationRules" rule="ElementsMustBeDocumented" ruleCheckId="SA1600">
         <context>The method must have a documentation header.</context>
-        <line>40</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
-        <context>The call to Roll must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
-        <line>42</line>
-        <index>1094</index>
-        <endIndex>1097</endIndex>
-        <startLine>42</startLine>
-        <startColumn>20</startColumn>
-        <endLine>42</endLine>
-        <endColumn>23</endColumn>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
-        <context>The call to current_player must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
-        <line>42</line>
-        <index>1099</index>
-        <endIndex>1112</endIndex>
-        <startLine>42</startLine>
-        <startColumn>25</startColumn>
-        <endLine>42</endLine>
-        <endColumn>38</endColumn>
+        <line>41</line>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.DocumentationRules" rule="ElementsMustBeDocumented" ruleCheckId="SA1600">
         <context>The method must have a documentation header.</context>
-        <line>45</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.LayoutRules" rule="ClosingCurlyBracketMustBeFollowedByBlankLine" ruleCheckId="SA1513">
-        <context>Statements or elements wrapped in curly brackets must be followed by a blank line.</context>
-        <line>55</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.LayoutRules" rule="ClosingCurlyBracketMustBeFollowedByBlankLine" ruleCheckId="SA1513">
-        <context>Statements or elements wrapped in curly brackets must be followed by a blank line.</context>
-        <line>60</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
-        <context>The call to rand must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
-        <line>54</line>
-        <index>1394</index>
-        <endIndex>1397</endIndex>
-        <startLine>54</startLine>
-        <startColumn>25</startColumn>
-        <endLine>54</endLine>
-        <endColumn>28</endColumn>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
-        <context>The call to xDice must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
-        <line>54</line>
-        <index>1407</index>
-        <endIndex>1411</endIndex>
-        <startLine>54</startLine>
-        <startColumn>38</startColumn>
-        <endLine>54</endLine>
-        <endColumn>42</endColumn>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
-        <context>The call to nDice must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
-        <line>52</line>
-        <index>1344</index>
-        <endIndex>1348</endIndex>
-        <startLine>52</startLine>
-        <startColumn>25</startColumn>
-        <endLine>52</endLine>
-        <endColumn>29</endColumn>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
-        <context>The call to Next_Location must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
-        <line>58</line>
-        <index>1498</index>
-        <endIndex>1510</endIndex>
-        <startLine>58</startLine>
-        <startColumn>21</startColumn>
-        <endLine>58</endLine>
-        <endColumn>33</endColumn>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.SpacingRules" rule="SymbolsMustBeSpacedCorrectly" ruleCheckId="SA1003">
-        <context>The spacing around the symbol '=' is invalid.</context>
-        <line>52</line>
-        <index>1338</index>
-        <endIndex>1338</endIndex>
-        <startLine>52</startLine>
-        <startColumn>19</startColumn>
-        <endLine>52</endLine>
-        <endColumn>19</endColumn>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.SpacingRules" rule="SymbolsMustBeSpacedCorrectly" ruleCheckId="SA1003">
-        <context>The spacing around the symbol '=' is invalid.</context>
-        <line>52</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.SpacingRules" rule="SymbolsMustBeSpacedCorrectly" ruleCheckId="SA1003">
-        <context>The spacing around the symbol '&lt;' is invalid.</context>
-        <line>52</line>
-        <index>1343</index>
-        <endIndex>1343</endIndex>
-        <startLine>52</startLine>
-        <startColumn>24</startColumn>
-        <endLine>52</endLine>
-        <endColumn>24</endColumn>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.SpacingRules" rule="SymbolsMustBeSpacedCorrectly" ruleCheckId="SA1003">
-        <context>The spacing around the symbol '&lt;' is invalid.</context>
-        <line>52</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.SpacingRules" rule="SymbolsMustBeSpacedCorrectly" ruleCheckId="SA1003">
-        <context>The spacing around the symbol '=' is invalid.</context>
-        <line>56</line>
-        <index>1447</index>
-        <endIndex>1447</endIndex>
-        <startLine>56</startLine>
-        <startColumn>19</startColumn>
-        <endLine>56</endLine>
-        <endColumn>19</endColumn>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.SpacingRules" rule="SymbolsMustBeSpacedCorrectly" ruleCheckId="SA1003">
-        <context>The spacing around the symbol '=' is invalid.</context>
-        <line>56</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.SpacingRules" rule="SymbolsMustBeSpacedCorrectly" ruleCheckId="SA1003">
-        <context>The spacing around the symbol '&lt;' is invalid.</context>
-        <line>56</line>
-        <index>1452</index>
-        <endIndex>1452</endIndex>
-        <startLine>56</startLine>
-        <startColumn>24</startColumn>
-        <endLine>56</endLine>
-        <endColumn>24</endColumn>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.SpacingRules" rule="SymbolsMustBeSpacedCorrectly" ruleCheckId="SA1003">
-        <context>The spacing around the symbol '&lt;' is invalid.</context>
-        <line>56</line>
+        <line>46</line>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.DocumentationRules" rule="ElementsMustBeDocumented" ruleCheckId="SA1600">
         <context>The method must have a documentation header.</context>
-        <line>65</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
-        <context>The call to current_player must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
-        <line>67</line>
-        <index>1706</index>
-        <endIndex>1719</endIndex>
-        <startLine>67</startLine>
-        <startColumn>20</startColumn>
-        <endLine>67</endLine>
-        <endColumn>33</endColumn>
+        <line>68</line>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.DocumentationRules" rule="ElementsMustBeDocumented" ruleCheckId="SA1600">
         <context>The method must have a documentation header.</context>
-        <line>70</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
-        <context>The call to current_player must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
-        <line>72</line>
-        <index>1794</index>
-        <endIndex>1807</endIndex>
-        <startLine>72</startLine>
-        <startColumn>20</startColumn>
-        <endLine>72</endLine>
-        <endColumn>33</endColumn>
+        <line>73</line>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.DocumentationRules" rule="ElementsMustBeDocumented" ruleCheckId="SA1600">
         <context>The method must have a documentation header.</context>
-        <line>75</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
-        <context>The call to Players must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
-        <line>77</line>
-        <index>1883</index>
-        <endIndex>1889</endIndex>
-        <startLine>77</startLine>
-        <startColumn>13</startColumn>
-        <endLine>77</endLine>
-        <endColumn>19</endColumn>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
-        <context>The call to current_player must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
-        <line>80</line>
-        <index>1969</index>
-        <endIndex>1982</endIndex>
-        <startLine>80</startLine>
-        <startColumn>17</startColumn>
-        <endLine>80</endLine>
-        <endColumn>30</endColumn>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
-        <context>The call to current_player must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
         <line>78</line>
-        <index>1915</index>
-        <endIndex>1928</endIndex>
-        <startLine>78</startLine>
-        <startColumn>17</startColumn>
-        <endLine>78</endLine>
-        <endColumn>30</endColumn>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.DocumentationRules" rule="ElementsMustBeDocumented" ruleCheckId="SA1600">
         <context>The method must have a documentation header.</context>
-        <line>84</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
-        <context>The call to Board must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
-        <line>86</line>
-        <index>2072</index>
-        <endIndex>2076</endIndex>
-        <startLine>86</startLine>
-        <startColumn>13</startColumn>
-        <endLine>86</endLine>
-        <endColumn>17</endColumn>
+        <line>87</line>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.DocumentationRules" rule="ElementsMustBeDocumented" ruleCheckId="SA1600">
         <context>The method must have a documentation header.</context>
-        <line>89</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.LayoutRules" rule="ClosingCurlyBracketMustBeFollowedByBlankLine" ruleCheckId="SA1513">
-        <context>Statements or elements wrapped in curly brackets must be followed by a blank line.</context>
-        <line>96</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
-        <context>The call to Players must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
-        <line>91</line>
-        <index>2166</index>
-        <endIndex>2172</endIndex>
-        <startLine>91</startLine>
-        <startColumn>24</startColumn>
-        <endLine>91</endLine>
-        <endColumn>30</endColumn>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
-        <context>The call to current_player must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
-        <line>91</line>
-        <index>2182</index>
-        <endIndex>2195</endIndex>
-        <startLine>91</startLine>
-        <startColumn>40</startColumn>
-        <endLine>91</endLine>
-        <endColumn>53</endColumn>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
-        <context>The call to Players must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
-        <line>91</line>
-        <index>2205</index>
-        <endIndex>2211</endIndex>
-        <startLine>91</startLine>
-        <startColumn>63</startColumn>
-        <endLine>91</endLine>
-        <endColumn>69</endColumn>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
-        <context>The call to current_player must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
         <line>92</line>
-        <index>2232</index>
-        <endIndex>2245</endIndex>
-        <startLine>92</startLine>
-        <startColumn>13</startColumn>
-        <endLine>92</endLine>
-        <endColumn>26</endColumn>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
-        <context>The call to Players must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
-        <line>92</line>
-        <index>2249</index>
-        <endIndex>2255</endIndex>
-        <startLine>92</startLine>
-        <startColumn>30</startColumn>
-        <endLine>92</endLine>
-        <endColumn>36</endColumn>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
-        <context>The call to current_player must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
-        <line>95</line>
-        <index>2359</index>
-        <endIndex>2372</endIndex>
-        <startLine>95</startLine>
-        <startColumn>17</startColumn>
-        <endLine>95</endLine>
-        <endColumn>30</endColumn>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
-        <context>The call to Next_Player must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
-        <line>95</line>
-        <index>2376</index>
-        <endIndex>2386</endIndex>
-        <startLine>95</startLine>
-        <startColumn>34</startColumn>
-        <endLine>95</endLine>
-        <endColumn>44</endColumn>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
-        <context>The call to current_player must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
-        <line>93</line>
-        <index>2279</index>
-        <endIndex>2292</endIndex>
-        <startLine>93</startLine>
-        <startColumn>17</startColumn>
-        <endLine>93</endLine>
-        <endColumn>30</endColumn>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
-        <context>The call to Players must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
-        <line>93</line>
-        <index>2310</index>
-        <endIndex>2316</endIndex>
-        <startLine>93</startLine>
-        <startColumn>48</startColumn>
-        <endLine>93</endLine>
-        <endColumn>54</endColumn>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
-        <context>The call to current_player must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
-        <line>97</line>
-        <index>2424</index>
-        <endIndex>2437</endIndex>
-        <startLine>97</startLine>
-        <startColumn>20</startColumn>
-        <endLine>97</endLine>
-        <endColumn>33</endColumn>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.DocumentationRules" rule="ElementsMustBeDocumented" ruleCheckId="SA1600">
         <context>The method must have a documentation header.</context>
-        <line>100</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
-        <context>The call to Players must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
-        <line>102</line>
-        <index>2520</index>
-        <endIndex>2526</endIndex>
-        <startLine>102</startLine>
-        <startColumn>24</startColumn>
-        <endLine>102</endLine>
-        <endColumn>30</endColumn>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
-        <context>The call to current_player must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
-        <line>102</line>
-        <index>2536</index>
-        <endIndex>2549</endIndex>
-        <startLine>102</startLine>
-        <startColumn>40</startColumn>
-        <endLine>102</endLine>
-        <endColumn>53</endColumn>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
-        <context>The call to Players must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
-        <line>102</line>
-        <index>2554</index>
-        <endIndex>2560</endIndex>
-        <startLine>102</startLine>
-        <startColumn>58</startColumn>
-        <endLine>102</endLine>
-        <endColumn>64</endColumn>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
-        <context>The call to Players must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
-        <line>103</line>
-        <index>2591</index>
-        <endIndex>2597</endIndex>
-        <startLine>103</startLine>
-        <startColumn>19</startColumn>
-        <endLine>103</endLine>
-        <endColumn>25</endColumn>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
-        <context>The call to Players must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
         <line>104</line>
-        <index>2625</index>
-        <endIndex>2631</endIndex>
-        <startLine>104</startLine>
-        <startColumn>20</startColumn>
-        <endLine>104</endLine>
-        <endColumn>26</endColumn>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.DocumentationRules" rule="ElementsMustBeDocumented" ruleCheckId="SA1600">
         <context>The method must have a documentation header.</context>
-        <line>107</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.LayoutRules" rule="ClosingCurlyBracketMustBeFollowedByBlankLine" ruleCheckId="SA1513">
-        <context>Statements or elements wrapped in curly brackets must be followed by a blank line.</context>
-        <line>113</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.LayoutRules" rule="ClosingCurlyBracketMustBeFollowedByBlankLine" ruleCheckId="SA1513">
-        <context>Statements or elements wrapped in curly brackets must be followed by a blank line.</context>
-        <line>117</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
-        <context>The call to Board must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
-        <line>109</line>
-        <index>2766</index>
-        <endIndex>2770</endIndex>
-        <startLine>109</startLine>
-        <startColumn>23</startColumn>
-        <endLine>109</endLine>
-        <endColumn>27</endColumn>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
-        <context>The call to Board must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
-        <line>110</line>
-        <index>2811</index>
-        <endIndex>2815</endIndex>
-        <startLine>110</startLine>
-        <startColumn>24</startColumn>
-        <endLine>110</endLine>
-        <endColumn>28</endColumn>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
-        <context>The call to Board must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
-        <line>116</line>
-        <index>2942</index>
-        <endIndex>2946</endIndex>
-        <startLine>116</startLine>
-        <startColumn>27</startColumn>
-        <endLine>116</endLine>
-        <endColumn>31</endColumn>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
-        <context>The call to current_player must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
-        <line>116</line>
-        <index>2960</index>
-        <endIndex>2973</endIndex>
-        <startLine>116</startLine>
-        <startColumn>45</startColumn>
-        <endLine>116</endLine>
-        <endColumn>58</endColumn>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
-        <context>The call to Board must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
-        <line>118</line>
-        <index>3010</index>
-        <endIndex>3014</endIndex>
-        <startLine>118</startLine>
-        <startColumn>20</startColumn>
-        <endLine>118</endLine>
-        <endColumn>24</endColumn>
+        <line>111</line>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.DocumentationRules" rule="ElementsMustBeDocumented" ruleCheckId="SA1600">
         <context>The method must have a documentation header.</context>
-        <line>121</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.LayoutRules" rule="ClosingCurlyBracketMustBeFollowedByBlankLine" ruleCheckId="SA1513">
-        <context>Statements or elements wrapped in curly brackets must be followed by a blank line.</context>
         <line>127</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
-        <context>The call to Board must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
-        <line>123</line>
-        <index>3115</index>
-        <endIndex>3119</endIndex>
-        <startLine>123</startLine>
-        <startColumn>23</startColumn>
-        <endLine>123</endLine>
-        <endColumn>27</endColumn>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
-        <context>The call to Board must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
-        <line>126</line>
-        <index>3198</index>
-        <endIndex>3202</endIndex>
-        <startLine>126</startLine>
-        <startColumn>23</startColumn>
-        <endLine>126</endLine>
-        <endColumn>27</endColumn>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
-        <context>The call to Board must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
-        <line>128</line>
-        <index>3248</index>
-        <endIndex>3252</endIndex>
-        <startLine>128</startLine>
-        <startColumn>20</startColumn>
-        <endLine>128</endLine>
-        <endColumn>24</endColumn>
         <warning>False</warning>
       </violation>
     </violations>
@@ -1192,7 +434,7 @@
     <timestamps>
       <styleCop>2014/05/26 10:00:42.000</styleCop>
       <settingsFile>2014/05/26 10:00:42.000</settingsFile>
-      <sourceFile>2014/05/26 10:35:29.000</sourceFile>
+      <sourceFile>2014/05/26 16:26:01.000</sourceFile>
       <parser>2014/05/26 10:00:42.000</parser>
       <StyleCop.CSharp.DocumentationRules>2014/05/26 10:00:42.000</StyleCop.CSharp.DocumentationRules>
       <StyleCop.CSharp.DocumentationRules.FilesHashCode>0</StyleCop.CSharp.DocumentationRules.FilesHashCode>
@@ -1213,16 +455,6 @@
       <violation namespace="StyleCop.CSharp.DocumentationRules" rule="FileMustHaveHeader" ruleCheckId="SA1633">
         <context>The file has no header, the header Xml is invalid, or the header is not located at the top of the file.</context>
         <line>1</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.LayoutRules" rule="CodeMustNotContainBlankLinesAtEndOfFile" ruleCheckId="SA1518">
-        <context>The code must not contain blank lines at the end of the file.</context>
-        <line>353</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.LayoutRules" rule="CodeMustNotContainMultipleBlankLinesInARow" ruleCheckId="SA1507">
-        <context>The code must not contain multiple blank lines in a row.</context>
-        <line>353</line>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.DocumentationRules" rule="ElementsMustBeDocumented" ruleCheckId="SA1600">
@@ -1247,108 +479,87 @@
       </violation>
       <violation namespace="StyleCop.CSharp.OrderingRules" rule="ElementsMustAppearInTheCorrectOrder" ruleCheckId="SA1201">
         <context>All delegates must be placed after all fields.</context>
-        <line>59</line>
+        <line>60</line>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.OrderingRules" rule="ElementsMustAppearInTheCorrectOrder" ruleCheckId="SA1201">
         <context>All delegates must be placed after all fields.</context>
-        <line>69</line>
+        <line>70</line>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.OrderingRules" rule="ElementsMustAppearInTheCorrectOrder" ruleCheckId="SA1201">
         <context>All delegates must be placed after all fields.</context>
-        <line>79</line>
+        <line>80</line>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.OrderingRules" rule="ElementsMustAppearInTheCorrectOrder" ruleCheckId="SA1201">
         <context>All delegates must be placed after all fields.</context>
-        <line>89</line>
+        <line>90</line>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.OrderingRules" rule="ElementsMustAppearInTheCorrectOrder" ruleCheckId="SA1201">
         <context>All delegates must be placed after all fields.</context>
-        <line>99</line>
+        <line>100</line>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.OrderingRules" rule="ElementsMustAppearInTheCorrectOrder" ruleCheckId="SA1201">
         <context>All delegates must be placed after all fields.</context>
-        <line>109</line>
+        <line>110</line>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.OrderingRules" rule="ElementsMustAppearInTheCorrectOrder" ruleCheckId="SA1201">
         <context>All delegates must be placed after all fields.</context>
-        <line>123</line>
+        <line>125</line>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.OrderingRules" rule="ElementsMustAppearInTheCorrectOrder" ruleCheckId="SA1201">
         <context>All delegates must be placed after all fields.</context>
-        <line>137</line>
+        <line>140</line>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.OrderingRules" rule="ElementsMustAppearInTheCorrectOrder" ruleCheckId="SA1201">
         <context>All delegates must be placed after all fields.</context>
-        <line>151</line>
+        <line>155</line>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.OrderingRules" rule="ElementsMustAppearInTheCorrectOrder" ruleCheckId="SA1201">
         <context>All delegates must be placed after all fields.</context>
-        <line>165</line>
+        <line>170</line>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.OrderingRules" rule="ElementsMustAppearInTheCorrectOrder" ruleCheckId="SA1201">
         <context>All delegates must be placed after all fields.</context>
-        <line>179</line>
+        <line>185</line>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.OrderingRules" rule="ElementsMustAppearInTheCorrectOrder" ruleCheckId="SA1201">
         <context>All delegates must be placed after all fields.</context>
-        <line>193</line>
+        <line>200</line>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.OrderingRules" rule="ElementsMustAppearInTheCorrectOrder" ruleCheckId="SA1201">
         <context>All delegates must be placed after all fields.</context>
-        <line>207</line>
+        <line>215</line>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.OrderingRules" rule="ElementsMustAppearInTheCorrectOrder" ruleCheckId="SA1201">
         <context>All delegates must be placed after all constructors.</context>
-        <line>221</line>
+        <line>230</line>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.OrderingRules" rule="ElementsMustAppearInTheCorrectOrder" ruleCheckId="SA1201">
         <context>All delegates must be placed after all constructors.</context>
-        <line>225</line>
+        <line>234</line>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.OrderingRules" rule="ElementsMustAppearInTheCorrectOrder" ruleCheckId="SA1201">
         <context>All delegates must be placed after all constructors.</context>
-        <line>239</line>
+        <line>254</line>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.DocumentationRules" rule="ElementsMustBeDocumented" ruleCheckId="SA1600">
         <context>The enum must have a documentation header.</context>
         <line>12</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.LayoutRules" rule="CurlyBracketsForMultiLineStatementsMustNotShareLine" ruleCheckId="SA1500">
-        <context>If a statement spans multiple lines, the closing curly bracket must be placed on its own line.</context>
-        <line>23</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.LayoutRules" rule="ClosingCurlyBracketMustBeFollowedByBlankLine" ruleCheckId="SA1513">
-        <context>Statements or elements wrapped in curly brackets must be followed by a blank line.</context>
-        <line>23</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.SpacingRules" rule="ClosingCurlyBracketsMustBeSpacedCorrectly" ruleCheckId="SA1013">
-        <context>Invalid spacing around the closing curly bracket.</context>
-        <line>23</line>
-        <index>484</index>
-        <endIndex>484</endIndex>
-        <startLine>23</startLine>
-        <startColumn>20</startColumn>
-        <endLine>23</endLine>
-        <endColumn>20</endColumn>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.DocumentationRules" rule="EnumerationItemsMustBeDocumented" ruleCheckId="SA1602">
@@ -1401,27 +612,6 @@
         <line>23</line>
         <warning>False</warning>
       </violation>
-      <violation namespace="StyleCop.CSharp.LayoutRules" rule="ElementsMustBeSeparatedByBlankLine" ruleCheckId="SA1516">
-        <context>Adjacent elements must be separated by a blank line.</context>
-        <line>24</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="CodeMustNotContainEmptyStatements" ruleCheckId="SA1106">
-        <context>The code contains an extra semicolon.</context>
-        <line>24</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.SpacingRules" rule="SemicolonsMustBeSpacedCorrectly" ruleCheckId="SA1002">
-        <context>Invalid spacing around the semicolon.</context>
-        <line>24</line>
-        <index>494</index>
-        <endIndex>494</endIndex>
-        <startLine>24</startLine>
-        <startColumn>9</startColumn>
-        <endLine>24</endLine>
-        <endColumn>9</endColumn>
-        <warning>False</warning>
-      </violation>
       <violation namespace="StyleCop.CSharp.DocumentationRules" rule="ElementsMustBeDocumented" ruleCheckId="SA1600">
         <context>The field must have a documentation header.</context>
         <line>26</line>
@@ -1452,1246 +642,289 @@
         <line>31</line>
         <warning>False</warning>
       </violation>
-      <violation namespace="StyleCop.CSharp.LayoutRules" rule="ClosingCurlyBracketMustBeFollowedByBlankLine" ruleCheckId="SA1513">
-        <context>Statements or elements wrapped in curly brackets must be followed by a blank line.</context>
-        <line>36</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.LayoutRules" rule="ElementsMustBeSeparatedByBlankLine" ruleCheckId="SA1516">
-        <context>Adjacent elements must be separated by a blank line.</context>
-        <line>37</line>
+      <violation namespace="StyleCop.CSharp.DocumentationRules" rule="ElementsMustBeDocumented" ruleCheckId="SA1600">
+        <context>The property must have a documentation header.</context>
+        <line>44</line>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.DocumentationRules" rule="ElementsMustBeDocumented" ruleCheckId="SA1600">
         <context>The property must have a documentation header.</context>
-        <line>43</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
-        <context>The call to ownables must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
-        <line>47</line>
-        <index>1004</index>
-        <endIndex>1011</endIndex>
-        <startLine>47</startLine>
-        <startColumn>24</startColumn>
-        <endLine>47</endLine>
-        <endColumn>31</endColumn>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
-        <context>The call to PropertyType must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
-        <line>47</line>
-        <index>1022</index>
-        <endIndex>1033</endIndex>
-        <startLine>47</startLine>
-        <startColumn>42</startColumn>
-        <endLine>47</endLine>
-        <endColumn>53</endColumn>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.DocumentationRules" rule="ElementsMustBeDocumented" ruleCheckId="SA1600">
-        <context>The property must have a documentation header.</context>
-        <line>51</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
-        <context>The call to Ownable must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
-        <line>55</line>
-        <index>1152</index>
-        <endIndex>1158</endIndex>
-        <startLine>55</startLine>
-        <startColumn>24</startColumn>
-        <endLine>55</endLine>
-        <endColumn>30</endColumn>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
-        <context>The call to Owner must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
-        <line>55</line>
-        <index>1163</index>
-        <endIndex>1167</endIndex>
-        <startLine>55</startLine>
-        <startColumn>35</startColumn>
-        <endLine>55</endLine>
-        <endColumn>39</endColumn>
+        <line>52</line>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.DocumentationRules" rule="ElementsMustBeDocumented" ruleCheckId="SA1600">
         <context>The field must have a documentation header.</context>
-        <line>59</line>
+        <line>60</line>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.NamingRules" rule="FieldNamesMustNotBeginWithUnderscore" ruleCheckId="SA1309">
         <context>Field names must not start with an underscore.</context>
-        <line>59</line>
+        <line>60</line>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.NamingRules" rule="FieldNamesMustNotUseHungarianNotation" ruleCheckId="SA1305">
         <context>The variable name '_xLeft' begins with a prefix that looks like Hungarian notation. Remove the prefix or add it to the list of allowed prefixes.</context>
-        <line>59</line>
+        <line>60</line>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.DocumentationRules" rule="ElementsMustBeDocumented" ruleCheckId="SA1600">
         <context>The property must have a documentation header.</context>
-        <line>61</line>
+        <line>62</line>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.NamingRules" rule="ElementMustBeginWithUpperCaseLetter" ruleCheckId="SA1300">
         <context>property names begin with an upper-case letter: xLeft.</context>
-        <line>61</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
-        <context>The call to _xLeft must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
-        <line>65</line>
-        <index>1318</index>
-        <endIndex>1323</endIndex>
-        <startLine>65</startLine>
-        <startColumn>17</startColumn>
-        <endLine>65</endLine>
-        <endColumn>22</endColumn>
+        <line>62</line>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.DocumentationRules" rule="ElementsMustBeDocumented" ruleCheckId="SA1600">
         <context>The field must have a documentation header.</context>
-        <line>69</line>
+        <line>70</line>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.NamingRules" rule="FieldNamesMustNotBeginWithUnderscore" ruleCheckId="SA1309">
         <context>Field names must not start with an underscore.</context>
-        <line>69</line>
+        <line>70</line>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.NamingRules" rule="FieldNamesMustNotUseHungarianNotation" ruleCheckId="SA1305">
         <context>The variable name '_xRight' begins with a prefix that looks like Hungarian notation. Remove the prefix or add it to the list of allowed prefixes.</context>
-        <line>69</line>
+        <line>70</line>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.DocumentationRules" rule="ElementsMustBeDocumented" ruleCheckId="SA1600">
         <context>The property must have a documentation header.</context>
-        <line>71</line>
+        <line>72</line>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.NamingRules" rule="ElementMustBeginWithUpperCaseLetter" ruleCheckId="SA1300">
         <context>property names begin with an upper-case letter: xRight.</context>
-        <line>71</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
-        <context>The call to _xRight must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
-        <line>75</line>
-        <index>1476</index>
-        <endIndex>1482</endIndex>
-        <startLine>75</startLine>
-        <startColumn>17</startColumn>
-        <endLine>75</endLine>
-        <endColumn>23</endColumn>
+        <line>72</line>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.DocumentationRules" rule="ElementsMustBeDocumented" ruleCheckId="SA1600">
         <context>The field must have a documentation header.</context>
-        <line>79</line>
+        <line>80</line>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.NamingRules" rule="FieldNamesMustNotBeginWithUnderscore" ruleCheckId="SA1309">
         <context>Field names must not start with an underscore.</context>
-        <line>79</line>
+        <line>80</line>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.NamingRules" rule="FieldNamesMustNotUseHungarianNotation" ruleCheckId="SA1305">
         <context>The variable name '_yTop' begins with a prefix that looks like Hungarian notation. Remove the prefix or add it to the list of allowed prefixes.</context>
-        <line>79</line>
+        <line>80</line>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.DocumentationRules" rule="ElementsMustBeDocumented" ruleCheckId="SA1600">
         <context>The property must have a documentation header.</context>
-        <line>81</line>
+        <line>82</line>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.NamingRules" rule="ElementMustBeginWithUpperCaseLetter" ruleCheckId="SA1300">
         <context>property names begin with an upper-case letter: yTop.</context>
-        <line>81</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
-        <context>The call to _yTop must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
-        <line>85</line>
-        <index>1631</index>
-        <endIndex>1635</endIndex>
-        <startLine>85</startLine>
-        <startColumn>17</startColumn>
-        <endLine>85</endLine>
-        <endColumn>21</endColumn>
+        <line>82</line>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.DocumentationRules" rule="ElementsMustBeDocumented" ruleCheckId="SA1600">
         <context>The field must have a documentation header.</context>
-        <line>89</line>
+        <line>90</line>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.NamingRules" rule="FieldNamesMustNotBeginWithUnderscore" ruleCheckId="SA1309">
         <context>Field names must not start with an underscore.</context>
-        <line>89</line>
+        <line>90</line>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.NamingRules" rule="FieldNamesMustNotUseHungarianNotation" ruleCheckId="SA1305">
         <context>The variable name '_yBottom' begins with a prefix that looks like Hungarian notation. Remove the prefix or add it to the list of allowed prefixes.</context>
-        <line>89</line>
+        <line>90</line>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.DocumentationRules" rule="ElementsMustBeDocumented" ruleCheckId="SA1600">
         <context>The property must have a documentation header.</context>
-        <line>91</line>
+        <line>92</line>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.NamingRules" rule="ElementMustBeginWithUpperCaseLetter" ruleCheckId="SA1300">
         <context>property names begin with an upper-case letter: yBottom.</context>
-        <line>91</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
-        <context>The call to _yBottom must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
-        <line>95</line>
-        <index>1790</index>
-        <endIndex>1797</endIndex>
-        <startLine>95</startLine>
-        <startColumn>17</startColumn>
-        <endLine>95</endLine>
-        <endColumn>24</endColumn>
+        <line>92</line>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.DocumentationRules" rule="ElementsMustBeDocumented" ruleCheckId="SA1600">
         <context>The field must have a documentation header.</context>
-        <line>99</line>
+        <line>100</line>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.NamingRules" rule="FieldNamesMustNotBeginWithUnderscore" ruleCheckId="SA1309">
         <context>Field names must not start with an underscore.</context>
-        <line>99</line>
+        <line>100</line>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.DocumentationRules" rule="ElementsMustBeDocumented" ruleCheckId="SA1600">
         <context>The property must have a documentation header.</context>
-        <line>101</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
-        <context>The call to _name must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
-        <line>105</line>
-        <index>1969</index>
-        <endIndex>1973</endIndex>
-        <startLine>105</startLine>
-        <startColumn>24</startColumn>
-        <endLine>105</endLine>
-        <endColumn>28</endColumn>
+        <line>102</line>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.DocumentationRules" rule="ElementsMustBeDocumented" ruleCheckId="SA1600">
         <context>The field must have a documentation header.</context>
-        <line>109</line>
+        <line>110</line>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.NamingRules" rule="FieldNamesMustNotBeginWithUnderscore" ruleCheckId="SA1309">
         <context>Field names must not start with an underscore.</context>
-        <line>109</line>
+        <line>110</line>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.DocumentationRules" rule="ElementsMustBeDocumented" ruleCheckId="SA1600">
         <context>The property must have a documentation header.</context>
-        <line>111</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.LayoutRules" rule="ClosingCurlyBracketMustBeFollowedByBlankLine" ruleCheckId="SA1513">
-        <context>Statements or elements wrapped in curly brackets must be followed by a blank line.</context>
-        <line>116</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
-        <context>The call to _salary must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
-        <line>115</line>
-        <index>2124</index>
-        <endIndex>2130</endIndex>
-        <startLine>115</startLine>
-        <startColumn>24</startColumn>
-        <endLine>115</endLine>
-        <endColumn>30</endColumn>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.LayoutRules" rule="ElementsMustBeSeparatedByBlankLine" ruleCheckId="SA1516">
-        <context>Adjacent elements must be separated by a blank line.</context>
-        <line>117</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
-        <context>The call to _salary must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
-        <line>119</line>
-        <index>2193</index>
-        <endIndex>2199</endIndex>
-        <startLine>119</startLine>
-        <startColumn>17</startColumn>
-        <endLine>119</endLine>
-        <endColumn>23</endColumn>
+        <line>112</line>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.DocumentationRules" rule="ElementsMustBeDocumented" ruleCheckId="SA1600">
         <context>The field must have a documentation header.</context>
-        <line>123</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.NamingRules" rule="FieldNamesMustNotBeginWithUnderscore" ruleCheckId="SA1309">
-        <context>Field names must not start with an underscore.</context>
-        <line>123</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.DocumentationRules" rule="ElementsMustBeDocumented" ruleCheckId="SA1600">
-        <context>The property must have a documentation header.</context>
         <line>125</line>
         <warning>False</warning>
       </violation>
-      <violation namespace="StyleCop.CSharp.LayoutRules" rule="ClosingCurlyBracketMustBeFollowedByBlankLine" ruleCheckId="SA1513">
-        <context>Statements or elements wrapped in curly brackets must be followed by a blank line.</context>
-        <line>130</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
-        <context>The call to _salaryOver must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
-        <line>129</line>
-        <index>2366</index>
-        <endIndex>2376</endIndex>
-        <startLine>129</startLine>
-        <startColumn>24</startColumn>
-        <endLine>129</endLine>
-        <endColumn>34</endColumn>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.LayoutRules" rule="ElementsMustBeSeparatedByBlankLine" ruleCheckId="SA1516">
-        <context>Adjacent elements must be separated by a blank line.</context>
-        <line>131</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
-        <context>The call to _salaryOver must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
-        <line>133</line>
-        <index>2439</index>
-        <endIndex>2449</endIndex>
-        <startLine>133</startLine>
-        <startColumn>17</startColumn>
-        <endLine>133</endLine>
-        <endColumn>27</endColumn>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.DocumentationRules" rule="ElementsMustBeDocumented" ruleCheckId="SA1600">
-        <context>The field must have a documentation header.</context>
-        <line>137</line>
-        <warning>False</warning>
-      </violation>
       <violation namespace="StyleCop.CSharp.NamingRules" rule="FieldNamesMustNotBeginWithUnderscore" ruleCheckId="SA1309">
         <context>Field names must not start with an underscore.</context>
-        <line>137</line>
+        <line>125</line>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.DocumentationRules" rule="ElementsMustBeDocumented" ruleCheckId="SA1600">
         <context>The property must have a documentation header.</context>
-        <line>139</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.LayoutRules" rule="ClosingCurlyBracketMustBeFollowedByBlankLine" ruleCheckId="SA1513">
-        <context>Statements or elements wrapped in curly brackets must be followed by a blank line.</context>
-        <line>144</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
-        <context>The call to _priceSale must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
-        <line>143</line>
-        <index>2614</index>
-        <endIndex>2623</endIndex>
-        <startLine>143</startLine>
-        <startColumn>24</startColumn>
-        <endLine>143</endLine>
-        <endColumn>33</endColumn>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.LayoutRules" rule="ElementsMustBeSeparatedByBlankLine" ruleCheckId="SA1516">
-        <context>Adjacent elements must be separated by a blank line.</context>
-        <line>145</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
-        <context>The call to _priceSale must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
-        <line>147</line>
-        <index>2686</index>
-        <endIndex>2695</endIndex>
-        <startLine>147</startLine>
-        <startColumn>17</startColumn>
-        <endLine>147</endLine>
-        <endColumn>26</endColumn>
+        <line>127</line>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.DocumentationRules" rule="ElementsMustBeDocumented" ruleCheckId="SA1600">
         <context>The field must have a documentation header.</context>
-        <line>151</line>
+        <line>140</line>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.NamingRules" rule="FieldNamesMustNotBeginWithUnderscore" ruleCheckId="SA1309">
         <context>Field names must not start with an underscore.</context>
-        <line>151</line>
+        <line>140</line>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.DocumentationRules" rule="ElementsMustBeDocumented" ruleCheckId="SA1600">
         <context>The property must have a documentation header.</context>
-        <line>153</line>
+        <line>142</line>
         <warning>False</warning>
       </violation>
-      <violation namespace="StyleCop.CSharp.LayoutRules" rule="ClosingCurlyBracketMustBeFollowedByBlankLine" ruleCheckId="SA1513">
-        <context>Statements or elements wrapped in curly brackets must be followed by a blank line.</context>
-        <line>158</line>
+      <violation namespace="StyleCop.CSharp.DocumentationRules" rule="ElementsMustBeDocumented" ruleCheckId="SA1600">
+        <context>The field must have a documentation header.</context>
+        <line>155</line>
         <warning>False</warning>
       </violation>
-      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
-        <context>The call to _priceRent must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
+      <violation namespace="StyleCop.CSharp.NamingRules" rule="FieldNamesMustNotBeginWithUnderscore" ruleCheckId="SA1309">
+        <context>Field names must not start with an underscore.</context>
+        <line>155</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.DocumentationRules" rule="ElementsMustBeDocumented" ruleCheckId="SA1600">
+        <context>The property must have a documentation header.</context>
         <line>157</line>
-        <index>2860</index>
-        <endIndex>2869</endIndex>
-        <startLine>157</startLine>
-        <startColumn>24</startColumn>
-        <endLine>157</endLine>
-        <endColumn>33</endColumn>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.LayoutRules" rule="ElementsMustBeSeparatedByBlankLine" ruleCheckId="SA1516">
-        <context>Adjacent elements must be separated by a blank line.</context>
-        <line>159</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
-        <context>The call to _priceRent must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
-        <line>161</line>
-        <index>2932</index>
-        <endIndex>2941</endIndex>
-        <startLine>161</startLine>
-        <startColumn>17</startColumn>
-        <endLine>161</endLine>
-        <endColumn>26</endColumn>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.DocumentationRules" rule="ElementsMustBeDocumented" ruleCheckId="SA1600">
         <context>The field must have a documentation header.</context>
-        <line>165</line>
+        <line>170</line>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.NamingRules" rule="FieldNamesMustNotBeginWithUnderscore" ruleCheckId="SA1309">
         <context>Field names must not start with an underscore.</context>
-        <line>165</line>
+        <line>170</line>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.DocumentationRules" rule="ElementsMustBeDocumented" ruleCheckId="SA1600">
         <context>The property must have a documentation header.</context>
-        <line>167</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.LayoutRules" rule="ClosingCurlyBracketMustBeFollowedByBlankLine" ruleCheckId="SA1513">
-        <context>Statements or elements wrapped in curly brackets must be followed by a blank line.</context>
         <line>172</line>
         <warning>False</warning>
       </violation>
-      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
-        <context>The call to _multiplier must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
-        <line>171</line>
-        <index>3108</index>
-        <endIndex>3118</endIndex>
-        <startLine>171</startLine>
-        <startColumn>24</startColumn>
-        <endLine>171</endLine>
-        <endColumn>34</endColumn>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.LayoutRules" rule="ElementsMustBeSeparatedByBlankLine" ruleCheckId="SA1516">
-        <context>Adjacent elements must be separated by a blank line.</context>
-        <line>173</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
-        <context>The call to _multiplier must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
-        <line>175</line>
-        <index>3181</index>
-        <endIndex>3191</endIndex>
-        <startLine>175</startLine>
-        <startColumn>17</startColumn>
-        <endLine>175</endLine>
-        <endColumn>27</endColumn>
-        <warning>False</warning>
-      </violation>
       <violation namespace="StyleCop.CSharp.DocumentationRules" rule="ElementsMustBeDocumented" ruleCheckId="SA1600">
         <context>The field must have a documentation header.</context>
-        <line>179</line>
+        <line>185</line>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.NamingRules" rule="FieldNamesMustNotBeginWithUnderscore" ruleCheckId="SA1309">
         <context>Field names must not start with an underscore.</context>
-        <line>179</line>
+        <line>185</line>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.DocumentationRules" rule="ElementsMustBeDocumented" ruleCheckId="SA1600">
         <context>The property must have a documentation header.</context>
-        <line>181</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.LayoutRules" rule="ClosingCurlyBracketMustBeFollowedByBlankLine" ruleCheckId="SA1513">
-        <context>Statements or elements wrapped in curly brackets must be followed by a blank line.</context>
-        <line>186</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
-        <context>The call to _jail must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
-        <line>185</line>
-        <index>3352</index>
-        <endIndex>3356</endIndex>
-        <startLine>185</startLine>
-        <startColumn>24</startColumn>
-        <endLine>185</endLine>
-        <endColumn>28</endColumn>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.LayoutRules" rule="ElementsMustBeSeparatedByBlankLine" ruleCheckId="SA1516">
-        <context>Adjacent elements must be separated by a blank line.</context>
         <line>187</line>
         <warning>False</warning>
       </violation>
-      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
-        <context>The call to _jail must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
-        <line>189</line>
-        <index>3419</index>
-        <endIndex>3423</endIndex>
-        <startLine>189</startLine>
-        <startColumn>17</startColumn>
-        <endLine>189</endLine>
-        <endColumn>21</endColumn>
-        <warning>False</warning>
-      </violation>
       <violation namespace="StyleCop.CSharp.DocumentationRules" rule="ElementsMustBeDocumented" ruleCheckId="SA1600">
         <context>The field must have a documentation header.</context>
-        <line>193</line>
+        <line>200</line>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.NamingRules" rule="FieldNamesMustNotBeginWithUnderscore" ruleCheckId="SA1309">
         <context>Field names must not start with an underscore.</context>
-        <line>193</line>
+        <line>200</line>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.DocumentationRules" rule="ElementsMustBeDocumented" ruleCheckId="SA1600">
         <context>The property must have a documentation header.</context>
-        <line>195</line>
+        <line>202</line>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.OrderingRules" rule="ElementsMustBeOrderedByAccess" ruleCheckId="SA1202">
         <context>All private properties must be placed after all public properties.</context>
-        <line>209</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.LayoutRules" rule="ClosingCurlyBracketMustBeFollowedByBlankLine" ruleCheckId="SA1513">
-        <context>Statements or elements wrapped in curly brackets must be followed by a blank line.</context>
-        <line>200</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
-        <context>The call to _propertyType must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
-        <line>199</line>
-        <index>3614</index>
-        <endIndex>3626</endIndex>
-        <startLine>199</startLine>
-        <startColumn>24</startColumn>
-        <endLine>199</endLine>
-        <endColumn>36</endColumn>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.LayoutRules" rule="ElementsMustBeSeparatedByBlankLine" ruleCheckId="SA1516">
-        <context>Adjacent elements must be separated by a blank line.</context>
-        <line>201</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
-        <context>The call to _propertyType must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
-        <line>203</line>
-        <index>3689</index>
-        <endIndex>3701</endIndex>
-        <startLine>203</startLine>
-        <startColumn>17</startColumn>
-        <endLine>203</endLine>
-        <endColumn>29</endColumn>
+        <line>217</line>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.DocumentationRules" rule="ElementsMustBeDocumented" ruleCheckId="SA1600">
         <context>The field must have a documentation header.</context>
-        <line>207</line>
+        <line>215</line>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.NamingRules" rule="FieldNamesMustNotBeginWithUnderscore" ruleCheckId="SA1309">
         <context>Field names must not start with an underscore.</context>
-        <line>207</line>
+        <line>215</line>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.DocumentationRules" rule="ElementsMustBeDocumented" ruleCheckId="SA1600">
         <context>The property must have a documentation header.</context>
-        <line>209</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.LayoutRules" rule="ClosingCurlyBracketMustBeFollowedByBlankLine" ruleCheckId="SA1513">
-        <context>Statements or elements wrapped in curly brackets must be followed by a blank line.</context>
-        <line>214</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
-        <context>The call to _owner must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
-        <line>213</line>
-        <index>3867</index>
-        <endIndex>3872</endIndex>
-        <startLine>213</startLine>
-        <startColumn>24</startColumn>
-        <endLine>213</endLine>
-        <endColumn>29</endColumn>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.LayoutRules" rule="ElementsMustBeSeparatedByBlankLine" ruleCheckId="SA1516">
-        <context>Adjacent elements must be separated by a blank line.</context>
-        <line>215</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
-        <context>The call to _owner must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
         <line>217</line>
-        <index>3935</index>
-        <endIndex>3940</endIndex>
-        <startLine>217</startLine>
-        <startColumn>17</startColumn>
-        <endLine>217</endLine>
-        <endColumn>22</endColumn>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.DocumentationRules" rule="ElementsMustBeDocumented" ruleCheckId="SA1600">
         <context>The constructor must have a documentation header.</context>
-        <line>221</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.DocumentationRules" rule="ElementsMustBeDocumented" ruleCheckId="SA1600">
-        <context>The constructor must have a documentation header.</context>
-        <line>225</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="ParametersMustBeOnSameLineOrSeparateLines" ruleCheckId="SA1117">
-        <context>All constructor parameters must be placed on the same line, or each parameter must be placed on a separate line.</context>
-        <line>225</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="SplitParametersMustStartOnLineAfterDeclaration" ruleCheckId="SA1116">
-        <context>If the constructor parameters are on separate lines, the first parameter must begin on the line beneath the name of the constructor.</context>
-        <line>225</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="ParameterMustFollowComma" ruleCheckId="SA1115">
-        <context>The parameter must begin on the line after the previous parameter.</context>
-        <line>225</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="ParameterMustFollowComma" ruleCheckId="SA1115">
-        <context>The parameter must begin on the line after the previous parameter.</context>
-        <line>226</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="ParameterMustFollowComma" ruleCheckId="SA1115">
-        <context>The parameter must begin on the line after the previous parameter.</context>
-        <line>227</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
-        <context>The call to _propertyType must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
-        <line>229</line>
-        <index>4225</index>
-        <endIndex>4237</endIndex>
-        <startLine>229</startLine>
-        <startColumn>13</startColumn>
-        <endLine>229</endLine>
-        <endColumn>25</endColumn>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
-        <context>The call to _name must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
         <line>230</line>
-        <index>4259</index>
-        <endIndex>4263</endIndex>
-        <startLine>230</startLine>
-        <startColumn>13</startColumn>
-        <endLine>230</endLine>
-        <endColumn>17</endColumn>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
-        <context>The call to xLeft must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
-        <line>231</line>
-        <index>4285</index>
-        <endIndex>4289</endIndex>
-        <startLine>231</startLine>
-        <startColumn>13</startColumn>
-        <endLine>231</endLine>
-        <endColumn>17</endColumn>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
-        <context>The call to xRight must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
-        <line>232</line>
-        <index>4311</index>
-        <endIndex>4316</endIndex>
-        <startLine>232</startLine>
-        <startColumn>13</startColumn>
-        <endLine>232</endLine>
-        <endColumn>18</endColumn>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
-        <context>The call to yTop must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
-        <line>233</line>
-        <index>4339</index>
-        <endIndex>4342</endIndex>
-        <startLine>233</startLine>
-        <startColumn>13</startColumn>
-        <endLine>233</endLine>
-        <endColumn>16</endColumn>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
-        <context>The call to yBottom must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
-        <line>234</line>
-        <index>4363</index>
-        <endIndex>4369</endIndex>
-        <startLine>234</startLine>
-        <startColumn>13</startColumn>
-        <endLine>234</endLine>
-        <endColumn>19</endColumn>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
-        <context>The call to _priceSale must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
-        <line>235</line>
-        <index>4393</index>
-        <endIndex>4402</endIndex>
-        <startLine>235</startLine>
-        <startColumn>13</startColumn>
-        <endLine>235</endLine>
-        <endColumn>22</endColumn>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
-        <context>The call to _priceRent must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
-        <line>236</line>
-        <index>4424</index>
-        <endIndex>4433</endIndex>
-        <startLine>236</startLine>
-        <startColumn>13</startColumn>
-        <endLine>236</endLine>
-        <endColumn>22</endColumn>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.DocumentationRules" rule="ElementsMustBeDocumented" ruleCheckId="SA1600">
         <context>The constructor must have a documentation header.</context>
-        <line>239</line>
+        <line>234</line>
         <warning>False</warning>
       </violation>
-      <violation namespace="StyleCop.CSharp.LayoutRules" rule="CurlyBracketsForMultiLineStatementsMustNotShareLine" ruleCheckId="SA1500">
-        <context>If a statement spans multiple lines, the closing curly bracket must be placed on its own line.</context>
-        <line>260</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
-        <context>The call to _name must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
-        <line>243</line>
-        <index>4605</index>
-        <endIndex>4609</endIndex>
-        <startLine>243</startLine>
-        <startColumn>63</startColumn>
-        <endLine>243</endLine>
-        <endColumn>67</endColumn>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
-        <context>The call to _priceSale must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
-        <line>244</line>
-        <index>4677</index>
-        <endIndex>4686</endIndex>
-        <startLine>244</startLine>
-        <startColumn>65</startColumn>
-        <endLine>244</endLine>
-        <endColumn>74</endColumn>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
-        <context>The call to _priceRent must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
-        <line>245</line>
-        <index>4754</index>
-        <endIndex>4763</endIndex>
-        <startLine>245</startLine>
-        <startColumn>65</startColumn>
-        <endLine>245</endLine>
-        <endColumn>74</endColumn>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
-        <context>The call to _priceRent must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
-        <line>246</line>
-        <index>4825</index>
-        <endIndex>4834</endIndex>
-        <startLine>246</startLine>
-        <startColumn>59</startColumn>
-        <endLine>246</endLine>
-        <endColumn>68</endColumn>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
-        <context>The call to _multiplier must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
-        <line>247</line>
-        <index>4903</index>
-        <endIndex>4913</endIndex>
-        <startLine>247</startLine>
-        <startColumn>66</startColumn>
-        <endLine>247</endLine>
-        <endColumn>76</endColumn>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
-        <context>The call to _xLeft must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
-        <line>248</line>
-        <index>4977</index>
-        <endIndex>4982</endIndex>
-        <startLine>248</startLine>
-        <startColumn>61</startColumn>
-        <endLine>248</endLine>
-        <endColumn>66</endColumn>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
-        <context>The call to _xRight must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
-        <line>249</line>
-        <index>5047</index>
-        <endIndex>5053</endIndex>
-        <startLine>249</startLine>
-        <startColumn>62</startColumn>
-        <endLine>249</endLine>
-        <endColumn>68</endColumn>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
-        <context>The call to _yTop must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
-        <line>250</line>
-        <index>5116</index>
-        <endIndex>5120</endIndex>
-        <startLine>250</startLine>
-        <startColumn>60</startColumn>
-        <endLine>250</endLine>
-        <endColumn>64</endColumn>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
-        <context>The call to _yBottom must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
-        <line>251</line>
-        <index>5186</index>
-        <endIndex>5193</endIndex>
-        <startLine>251</startLine>
-        <startColumn>63</startColumn>
-        <endLine>251</endLine>
-        <endColumn>70</endColumn>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
-        <context>The call to _salary must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
-        <line>252</line>
-        <index>5258</index>
-        <endIndex>5264</endIndex>
-        <startLine>252</startLine>
-        <startColumn>62</startColumn>
-        <endLine>252</endLine>
-        <endColumn>68</endColumn>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
-        <context>The call to _salaryOver must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
-        <line>253</line>
-        <index>5333</index>
-        <endIndex>5343</endIndex>
-        <startLine>253</startLine>
-        <startColumn>66</startColumn>
-        <endLine>253</endLine>
-        <endColumn>76</endColumn>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
-        <context>The call to _jail must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
+      <violation namespace="StyleCop.CSharp.DocumentationRules" rule="ElementsMustBeDocumented" ruleCheckId="SA1600">
+        <context>The constructor must have a documentation header.</context>
         <line>254</line>
-        <index>5413</index>
-        <endIndex>5417</endIndex>
-        <startLine>254</startLine>
-        <startColumn>67</startColumn>
-        <endLine>254</endLine>
-        <endColumn>71</endColumn>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
-        <context>The call to PropertyType must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
-        <line>259</line>
-        <index>5549</index>
-        <endIndex>5560</endIndex>
-        <startLine>259</startLine>
-        <startColumn>17</startColumn>
-        <endLine>259</endLine>
-        <endColumn>28</endColumn>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.DocumentationRules" rule="ElementsMustBeDocumented" ruleCheckId="SA1600">
         <context>The method must have a documentation header.</context>
-        <line>265</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.LayoutRules" rule="ClosingCurlyBracketMustBeFollowedByBlankLine" ruleCheckId="SA1513">
-        <context>Statements or elements wrapped in curly brackets must be followed by a blank line.</context>
-        <line>272</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
-        <context>The call to SalaryOver must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
-        <line>270</line>
-        <index>5873</index>
-        <endIndex>5882</endIndex>
-        <startLine>270</startLine>
-        <startColumn>27</startColumn>
-        <endLine>270</endLine>
-        <endColumn>36</endColumn>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
-        <context>The call to SalaryOver must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
-        <line>271</line>
-        <index>5924</index>
-        <endIndex>5933</endIndex>
-        <startLine>271</startLine>
-        <startColumn>39</startColumn>
-        <endLine>271</endLine>
-        <endColumn>48</endColumn>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
-        <context>The call to PropertyType must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
-        <line>268</line>
-        <index>5779</index>
-        <endIndex>5790</endIndex>
-        <startLine>268</startLine>
-        <startColumn>17</startColumn>
-        <endLine>268</endLine>
-        <endColumn>28</endColumn>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
-        <context>The call to SalaryOver must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
-        <line>268</line>
-        <index>5817</index>
-        <endIndex>5826</endIndex>
-        <startLine>268</startLine>
-        <startColumn>55</startColumn>
-        <endLine>268</endLine>
-        <endColumn>64</endColumn>
+        <line>281</line>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.DocumentationRules" rule="ElementsMustBeDocumented" ruleCheckId="SA1600">
         <context>The method must have a documentation header.</context>
-        <line>276</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.LayoutRules" rule="CurlyBracketsForMultiLineStatementsMustNotShareLine" ruleCheckId="SA1500">
-        <context>If a statement spans multiple lines, the closing curly bracket must be placed on its own line.</context>
-        <line>287</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.LayoutRules" rule="ClosingCurlyBracketMustBeFollowedByBlankLine" ruleCheckId="SA1513">
-        <context>Statements or elements wrapped in curly brackets must be followed by a blank line.</context>
-        <line>301</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.LayoutRules" rule="ClosingCurlyBracketMustBeFollowedByBlankLine" ruleCheckId="SA1513">
-        <context>Statements or elements wrapped in curly brackets must be followed by a blank line.</context>
-        <line>308</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.LayoutRules" rule="ClosingCurlyBracketMustBeFollowedByBlankLine" ruleCheckId="SA1513">
-        <context>Statements or elements wrapped in curly brackets must be followed by a blank line.</context>
-        <line>326</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
-        <context>The call to BuyLocation must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
-        <line>285</line>
-        <index>6345</index>
-        <endIndex>6355</endIndex>
-        <startLine>285</startLine>
-        <startColumn>32</startColumn>
-        <endLine>285</endLine>
-        <endColumn>42</endColumn>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
-        <context>The call to Name must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
-        <line>286</line>
-        <index>6402</index>
-        <endIndex>6405</endIndex>
-        <startLine>286</startLine>
-        <startColumn>45</startColumn>
-        <endLine>286</endLine>
-        <endColumn>48</endColumn>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
-        <context>The call to PriceSale must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
-        <line>286</line>
-        <index>6419</index>
-        <endIndex>6427</endIndex>
-        <startLine>286</startLine>
-        <startColumn>62</startColumn>
-        <endLine>286</endLine>
-        <endColumn>70</endColumn>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
-        <context>The call to CanBuy must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
-        <line>283</line>
-        <index>6263</index>
-        <endIndex>6268</endIndex>
-        <startLine>283</startLine>
-        <startColumn>21</startColumn>
-        <endLine>283</endLine>
-        <endColumn>26</endColumn>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
-        <context>The call to PriceSale must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
-        <line>283</line>
-        <index>6285</index>
-        <endIndex>6293</endIndex>
-        <startLine>283</startLine>
-        <startColumn>43</startColumn>
-        <endLine>283</endLine>
-        <endColumn>51</endColumn>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
-        <context>The call to PriceRent must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
-        <line>312</line>
-        <index>7542</index>
-        <endIndex>7550</endIndex>
-        <startLine>312</startLine>
-        <startColumn>28</startColumn>
-        <endLine>312</endLine>
-        <endColumn>36</endColumn>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
-        <context>The call to PriceRent must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
-        <line>313</line>
-        <index>7590</index>
-        <endIndex>7598</endIndex>
-        <startLine>313</startLine>
-        <startColumn>37</startColumn>
-        <endLine>313</endLine>
-        <endColumn>45</endColumn>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
-        <context>The call to PriceRent must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
-        <line>315</line>
-        <index>7701</index>
-        <endIndex>7709</endIndex>
-        <startLine>315</startLine>
-        <startColumn>27</startColumn>
-        <endLine>315</endLine>
-        <endColumn>35</endColumn>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
-        <context>The call to PriceRent must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
-        <line>315</line>
-        <index>7747</index>
-        <endIndex>7755</endIndex>
-        <startLine>315</startLine>
-        <startColumn>73</startColumn>
-        <endLine>315</endLine>
-        <endColumn>81</endColumn>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
-        <context>The call to Salary must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
-        <line>322</line>
-        <index>8105</index>
-        <endIndex>8110</endIndex>
-        <startLine>322</startLine>
-        <startColumn>27</startColumn>
-        <endLine>322</endLine>
-        <endColumn>32</endColumn>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
-        <context>The call to Salary must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
-        <line>323</line>
-        <index>8184</index>
-        <endIndex>8189</endIndex>
-        <startLine>323</startLine>
-        <startColumn>71</startColumn>
-        <endLine>323</endLine>
-        <endColumn>76</endColumn>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
-        <context>The call to PropertyType must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
-        <line>278</line>
-        <index>6109</index>
-        <endIndex>6120</endIndex>
-        <startLine>278</startLine>
-        <startColumn>21</startColumn>
-        <endLine>278</endLine>
-        <endColumn>32</endColumn>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.SpacingRules" rule="SymbolsMustBeSpacedCorrectly" ruleCheckId="SA1003">
-        <context>The spacing around the symbol '=' is invalid.</context>
-        <line>297</line>
-        <index>6973</index>
-        <endIndex>6973</endIndex>
-        <startLine>297</startLine>
-        <startColumn>35</startColumn>
-        <endLine>297</endLine>
-        <endColumn>35</endColumn>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.SpacingRules" rule="SymbolsMustBeSpacedCorrectly" ruleCheckId="SA1003">
-        <context>The spacing around the symbol '=' is invalid.</context>
-        <line>297</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.SpacingRules" rule="SymbolsMustBeSpacedCorrectly" ruleCheckId="SA1003">
-        <context>The spacing around the symbol '&lt;' is invalid.</context>
-        <line>297</line>
-        <index>6978</index>
-        <endIndex>6978</endIndex>
-        <startLine>297</startLine>
-        <startColumn>40</startColumn>
-        <endLine>297</endLine>
-        <endColumn>40</endColumn>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.SpacingRules" rule="SymbolsMustBeSpacedCorrectly" ruleCheckId="SA1003">
-        <context>The spacing around the symbol '&lt;' is invalid.</context>
-        <line>297</line>
+        <line>293</line>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.DocumentationRules" rule="ElementsMustBeDocumented" ruleCheckId="SA1600">
         <context>The method must have a documentation header.</context>
-        <line>330</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.LayoutRules" rule="ClosingCurlyBracketMustBeFollowedByBlankLine" ruleCheckId="SA1513">
-        <context>Statements or elements wrapped in curly brackets must be followed by a blank line.</context>
-        <line>337</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
-        <context>The call to PriceSale must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
-        <line>334</line>
-        <index>8501</index>
-        <endIndex>8509</endIndex>
-        <startLine>334</startLine>
-        <startColumn>28</startColumn>
-        <endLine>334</endLine>
-        <endColumn>36</endColumn>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
-        <context>The call to Owner must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
-        <line>335</line>
-        <index>8529</index>
-        <endIndex>8533</endIndex>
-        <startLine>335</startLine>
-        <startColumn>17</startColumn>
-        <endLine>335</endLine>
-        <endColumn>21</endColumn>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
-        <context>The call to Name must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
-        <line>336</line>
-        <index>8587</index>
-        <endIndex>8590</endIndex>
-        <startLine>336</startLine>
-        <startColumn>48</startColumn>
-        <endLine>336</endLine>
-        <endColumn>51</endColumn>
+        <line>353</line>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.DocumentationRules" rule="ElementsMustBeDocumented" ruleCheckId="SA1600">
         <context>The method must have a documentation header.</context>
-        <line>341</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.LayoutRules" rule="ClosingCurlyBracketMustBeFollowedByBlankLine" ruleCheckId="SA1513">
-        <context>Statements or elements wrapped in curly brackets must be followed by a blank line.</context>
-        <line>348</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
-        <context>The call to PriceRent must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
-        <line>345</line>
-        <index>8819</index>
-        <endIndex>8827</endIndex>
-        <startLine>345</startLine>
-        <startColumn>28</startColumn>
-        <endLine>345</endLine>
-        <endColumn>36</endColumn>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
-        <context>The call to Owner must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
-        <line>346</line>
-        <index>8847</index>
-        <endIndex>8851</endIndex>
-        <startLine>346</startLine>
-        <startColumn>17</startColumn>
-        <endLine>346</endLine>
-        <endColumn>21</endColumn>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
-        <context>The call to PriceRent must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
-        <line>346</line>
-        <index>8861</index>
-        <endIndex>8869</endIndex>
-        <startLine>346</startLine>
-        <startColumn>31</startColumn>
-        <endLine>346</endLine>
-        <endColumn>39</endColumn>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
-        <context>The call to Owner must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
-        <line>347</line>
-        <index>8910</index>
-        <endIndex>8914</endIndex>
-        <startLine>347</startLine>
-        <startColumn>38</startColumn>
-        <endLine>347</endLine>
-        <endColumn>42</endColumn>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
-        <context>The call to PriceRent must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
-        <line>347</line>
-        <index>8939</index>
-        <endIndex>8947</endIndex>
-        <startLine>347</startLine>
-        <startColumn>67</startColumn>
-        <endLine>347</endLine>
-        <endColumn>75</endColumn>
+        <line>365</line>
         <warning>False</warning>
       </violation>
     </violations>
@@ -2700,7 +933,7 @@
     <timestamps>
       <styleCop>2014/05/26 10:00:42.000</styleCop>
       <settingsFile>2014/05/26 10:00:42.000</settingsFile>
-      <sourceFile>2014/05/26 12:25:27.000</sourceFile>
+      <sourceFile>2014/05/26 16:26:55.000</sourceFile>
       <parser>2014/05/26 10:00:42.000</parser>
       <StyleCop.CSharp.DocumentationRules>2014/05/26 10:00:42.000</StyleCop.CSharp.DocumentationRules>
       <StyleCop.CSharp.DocumentationRules.FilesHashCode>0</StyleCop.CSharp.DocumentationRules.FilesHashCode>
@@ -2996,17 +1229,6 @@
       <violation namespace="StyleCop.CSharp.DocumentationRules" rule="ElementsMustBeDocumented" ruleCheckId="SA1600">
         <context>The method must have a documentation header.</context>
         <line>143</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixLocalCallsWithThis" ruleCheckId="SA1101">
-        <context>The call to AssetIndex must begin with the 'this.' prefix to indicate that the item is a member of the class.</context>
-        <line>148</line>
-        <index>3225</index>
-        <endIndex>3234</endIndex>
-        <startLine>148</startLine>
-        <startColumn>37</startColumn>
-        <endLine>148</endLine>
-        <endColumn>46</endColumn>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.DocumentationRules" rule="ElementsMustBeDocumented" ruleCheckId="SA1600">

@@ -21,25 +21,26 @@ namespace LL_Console
             get
             {
                 int solvent = 0;
-                foreach (Player p in Players)
+                foreach (Player p in this.Players)
                 {
                     if (p.Balance > 0)
                     {
-                        ++ solvent;
+                        ++solvent;
                     }
                 }
+                
                 return solvent > 1;
             }
         }
 
         public Game()
         {
-            Location.Board = Board;
+            Location.Board = this.Board;
         }
 
         public int Roll(ref string notices)
         {
-            return Roll(current_player, ref notices);
+            return this.Roll(this.current_player, ref notices);
         }
 
         public int Roll(Player p, ref string notices)
@@ -49,84 +50,89 @@ namespace LL_Console
             Location l = p.Where;
             string note = string.Empty;
 
-            for (i=0; i<nDice; i++)
+            for (i = 0; i < this.nDice; i++)
             {
-                dice += rand.Next(1, xDice);
+                dice += this.rand.Next(1, this.xDice);
             }
-            for (i=0; i<dice; i++)
+            
+            for (i = 0; i < dice; i++)
             {
-                l = Next_Location(l, ref note, i != dice - 1);
+                l = this.Next_Location(l, ref note, i != dice - 1);
                 notices += note;
             }
+            
             p.Where = l;
             return dice;
         }
 
         public Player Who()
         {
-            return current_player;
+            return this.current_player;
         }
 
         public Location Where()
         {
-            return current_player.Where;
+            return this.current_player.Where;
         }
 
         public void Add(Player p)
         {
-            Players.Add(p);
-            if (current_player == null)
+            this.Players.Add(p);
+            if (this.current_player == null)
             {
-                current_player = p;
+                this.current_player = p;
             }
         }
 
         public void Add(Location l)
         {
-            Board.Add(l);
+            this.Board.Add(l);
         }
 
         public Player Next_Player()
         {
-            int idx = (Players.IndexOf(current_player) + 1) % Players.Count;
-            current_player = Players[idx];
-            if (current_player.Balance <= 0 && Players.Count > 1)
+            int idx = (this.Players.IndexOf(this.current_player) + 1) % this.Players.Count;
+            this.current_player = this.Players[idx];
+            if (this.current_player.Balance <= 0 && this.Players.Count > 1)
             {
-                current_player = Next_Player();
+                this.current_player = this.Next_Player();
             }
-            return current_player;
+            
+            return this.current_player;
         }
 
         public Player Prev_Player()
         {
-            int idx = (Players.IndexOf(current_player) + Players.Count - 1)
-                % Players.Count;
-            return Players[idx];
+            int idx = (this.Players.IndexOf(this.current_player) + this.Players.Count - 1)
+                % this.Players.Count;
+            return this.Players[idx];
         }
 
         public Location Next_Location(Location l, ref string notices, bool transit)
         {
-            int idx = Board.IndexOf(l) + 1;
-            if (idx >= Board.Count)
+            int idx = this.Board.IndexOf(l) + 1;
+            if (idx >= this.Board.Count)
             {
                 idx = 0;
             }
+            
             if (transit)
             {
-                notices = Board[idx].PassBy(current_player);
+                notices = this.Board[idx].PassBy(this.current_player);
             }
-            return Board[idx];
+            
+            return this.Board[idx];
         }
 
         public Location Prev_Location(Location l)
         {
-            int idx = Board.IndexOf(l) - 1;
+            int idx = this.Board.IndexOf(l) - 1;
             if (idx < 0)
             {
-                idx = Board.Count - 1;
+                idx = this.Board.Count - 1;
             }
-            return Board[idx];
+            
+            return this.Board[idx];
         }
     }
 }
-

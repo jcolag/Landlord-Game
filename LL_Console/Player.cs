@@ -145,7 +145,7 @@ namespace LL_Console
             this.Balance -= amount;
             while (this.Balance <= 0 && this.AssetIndex < this.Assets.Count)
             {
-                int v = this.Assets[AssetIndex].Value;
+                int v = this.Assets[this.AssetIndex].Value;
                 this.AssetIndex += 1;
                 this.Balance += v;
             }

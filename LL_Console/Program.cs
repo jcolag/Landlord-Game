@@ -20,6 +20,7 @@ namespace LL_Console
                     break;
                 }
             }
+
             if (gamecfg != null)
             {
                 XmlNodeList dice = gamecfg.GetElementsByTagName("Dice");
@@ -32,12 +33,14 @@ namespace LL_Console
                     g.nDice = nDice;
                     g.xDice = xDice;
                 }
+
                 XmlNodeList props = gamecfg.GetElementsByTagName("Location");
                 foreach (XmlNode prop in props)
                 {
                     Location l = new Location(prop);
                     g.Add(l);
                 }
+
                 XmlNodeList peeps = gamecfg.GetElementsByTagName("Player");
                 foreach (XmlNode pers in peeps)
                 {
@@ -45,16 +48,24 @@ namespace LL_Console
                     p.Where = g.Board[0];
                     g.Add(p);
                 }
-            } else
+            }
+            else
             {
-                for (int i=0; i<40; i++)
+                for (int i = 0; i < 40; i++)
                 {
-                    Location l = new Location(Location.Zoning.Residential,
-                                                              "Property " + (i + 1).ToString(),
-                                                              0, 0, 0, 0, 100, 10);
+                    Location l = new Location(
+                        Location.Zoning.Residential,
+                        "Property " + (i + 1).ToString(),
+                        0,
+                        0,
+                        0,
+                        0,
+                        100,
+                        10);
                     g.Add(l);
                 }
             }
+
             if (g.Players.Count < 2)
             {
                 Console.WriteLine("Input player names, empty line when done:");
@@ -65,6 +76,7 @@ namespace LL_Console
                     {
                         break;
                     }
+
                     Player p = new Player(player_name);
                     p.Where = g.Board[0];
                     g.Add(p);
@@ -83,6 +95,7 @@ namespace LL_Console
                 {
                     Console.WriteLine(player.Name + " is in jail!");
                 }
+
                 Console.WriteLine("Rolls a " + g.Roll(ref answer));
                 Console.Write(answer);
                 landing = g.Where();
@@ -95,12 +108,15 @@ namespace LL_Console
                     answer = question(player, answer);
                     Console.WriteLine(answer);
                 }
+
                 if (player.Balance <= 0)
                 {
                     Console.WriteLine(player.Name + " has gone bankrupt!");
                 }
+
                 player = g.Next_Player();
             }
+
             Player winner = g.Who();
             Console.WriteLine(winner.Name + " wins with $"
                 + winner.Balance.ToString());
