@@ -1,135 +1,155 @@
-using System;
-using System.Collections.Generic;
-using System.Xml;
-
 namespace LL_Console
 {
-	public class Player
-	{
-		static int StartingBalance = 1500;
-		static int PlayerNumber = 1;
-		static string BasePlayerName = "Player";
+    using System;
+    using System.Collections.Generic;
+    using System.Xml;
 
-		private string _name = string.Empty;
-		public string Name {
-			get {
-				return _name;
-			}
-			set {
-				_name = value;
-			}
-		}
+    public class Player
+    {
+        static int StartingBalance = 1500;
+        static int PlayerNumber = 1;
+        static string BasePlayerName = "Player";
+        private string _name = string.Empty;
 
-		private int _balance = 0;
-		public int Balance {
-			get {
-				return _balance;
-			}
-			private set {
-				_balance = value;
-			}
-		}
+        public string Name
+        {
+            get
+            {
+                return _name;
+            }
+            set
+            {
+                _name = value;
+            }
+        }
 
-		public bool _inJail = false;
-		public bool InJail {
-			get {
-				return _inJail;
-			}
-			set {
-				_inJail = value;
-			}
-		}
+        private int _balance = 0;
 
-		private List<Asset> _assets = new List<Asset>();
-		private List<Asset> Assets {
-			get {
-				return _assets;
-			}
-		}
+        public int Balance
+        {
+            get
+            {
+                return _balance;
+            }
+            private set
+            {
+                _balance = value;
+            }
+        }
 
-		private Location _where;
-		public Location Where {
-			get {
-				return _where;
-			}
-			set {
-				_where = value;
-			}
-		}
+        public bool _inJail = false;
 
-		private int AssetIndex = 0;
+        public bool InJail
+        {
+            get
+            {
+                return _inJail;
+            }
+            set
+            {
+                _inJail = value;
+            }
+        }
 
-		public Player (XmlNode node)
-		{
-			XmlHelper.StringFromXmlIfExists (node, "Name", ref _name);
-			Balance = StartingBalance;
-			XmlHelper.IntFromXmlIfExists (node, "Balance", ref _balance);
-			PlayerNumber += 1;
-		}
+        private List<Asset> _assets = new List<Asset>();
 
-		public Player ()
-		{
-			InitPlayer(BasePlayerName + " #" + PlayerNumber.ToString(), StartingBalance);
-		}
+        private List<Asset> Assets
+        {
+            get
+            {
+                return _assets;
+            }
+        }
 
-		public Player (string name)
-		{
-			InitPlayer(name, StartingBalance);
-		}
+        private Location _where;
 
-		public Player (string name, int balance)
-		{
-			InitPlayer(name, balance);
-		}
+        public Location Where
+        {
+            get
+            {
+                return _where;
+            }
+            set
+            {
+                _where = value;
+            }
+        }
 
-		private void InitPlayer (string name, int balance)
-		{
-			Name = name;
-			Balance = balance;
-			PlayerNumber += 1;
-		}
+        private int AssetIndex = 0;
 
-		public int AddAsset (string name)
-		{
-			return AddAsset (name, Asset.BaseValue);
-		}
+        public Player(XmlNode node)
+        {
+            XmlHelper.StringFromXmlIfExists(node, "Name", ref _name);
+            Balance = StartingBalance;
+            XmlHelper.IntFromXmlIfExists(node, "Balance", ref _balance);
+            PlayerNumber += 1;
+        }
 
-		public int AddAsset(string name, int value)
-		{
-			Asset a = new Asset(name, value);
-			Assets.Add (a);
-			Balance -= value;
-			return Assets.Count;
-		}
+        public Player()
+        {
+            InitPlayer(BasePlayerName + " #" + PlayerNumber.ToString(), StartingBalance);
+        }
 
-		public int AddAssets (List<string> names)
-		{
-			foreach (string name in names) {
-				AddAsset (name);
-			}
-			return Assets.Count;
-		}
+        public Player(string name)
+        {
+            InitPlayer(name, StartingBalance);
+        }
 
-		public int Deposit (int amount)
-		{
-			Balance += amount;
-			return Balance;
-		}
+        public Player(string name, int balance)
+        {
+            InitPlayer(name, balance);
+        }
 
-		public int Withdraw (int amount)
-		{
-			Balance -= amount;
-			while (Balance <= 0 && AssetIndex < Assets.Count) {
-				int v = Assets[AssetIndex].Value;
-				AssetIndex += 1;
-				Balance += v;
-			}
-			return Balance;
-		}
+        private void InitPlayer(string name, int balance)
+        {
+            Name = name;
+            Balance = balance;
+            PlayerNumber += 1;
+        }
 
-		public override string ToString()
-		{
-			return string.Format("Player {0} ({1}), starting at {2}", Name, Balance.ToString(), Where.Name);
-		}
-	}
+        public int AddAsset(string name)
+        {
+            return AddAsset(name, Asset.BaseValue);
+        }
+
+        public int AddAsset(string name, int value)
+        {
+            Asset a = new Asset(name, value);
+            Assets.Add(a);
+            Balance -= value;
+            return Assets.Count;
+        }
+
+        public int AddAssets(List<string> names)
+        {
+            foreach (string name in names)
+            {
+                AddAsset(name);
+            }
+            return Assets.Count;
+        }
+
+        public int Deposit(int amount)
+        {
+            Balance += amount;
+            return Balance;
+        }
+
+        public int Withdraw(int amount)
+        {
+            Balance -= amount;
+            while (Balance <= 0 && AssetIndex < Assets.Count)
+            {
+                int v = Assets[AssetIndex].Value;
+                AssetIndex += 1;
+                Balance += v;
+            }
+            return Balance;
+        }
+
+        public override string ToString()
+        {
+            return string.Format("Player {0} ({1}), starting at {2}", Name, Balance.ToString(), Where.Name);
+        }
+    }
 }
