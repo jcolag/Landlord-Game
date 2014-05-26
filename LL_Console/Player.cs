@@ -15,11 +15,12 @@ namespace LL_Console
         {
             get
             {
-                return _name;
+                return this._name;
             }
+
             set
             {
-                _name = value;
+                this._name = value;
             }
         }
 
@@ -29,11 +30,12 @@ namespace LL_Console
         {
             get
             {
-                return _balance;
+                return this._balance;
             }
+
             private set
             {
-                _balance = value;
+                this._balance = value;
             }
         }
 
@@ -43,11 +45,12 @@ namespace LL_Console
         {
             get
             {
-                return _inJail;
+                return this._inJail;
             }
+
             set
             {
-                _inJail = value;
+                this._inJail = value;
             }
         }
 
@@ -57,7 +60,7 @@ namespace LL_Console
         {
             get
             {
-                return _assets;
+                return this._assets;
             }
         }
 
@@ -67,11 +70,12 @@ namespace LL_Console
         {
             get
             {
-                return _where;
+                return this._where;
             }
+
             set
             {
-                _where = value;
+                this._where = value;
             }
         }
 
@@ -79,77 +83,83 @@ namespace LL_Console
 
         public Player(XmlNode node)
         {
-            XmlHelper.StringFromXmlIfExists(node, "Name", ref _name);
-            Balance = StartingBalance;
-            XmlHelper.IntFromXmlIfExists(node, "Balance", ref _balance);
+            XmlHelper.StringFromXmlIfExists(node, "Name", ref this._name);
+            this.Balance = StartingBalance;
+            XmlHelper.IntFromXmlIfExists(node, "Balance", ref this._balance);
             PlayerNumber += 1;
         }
 
         public Player()
         {
-            InitPlayer(BasePlayerName + " #" + PlayerNumber.ToString(), StartingBalance);
+            this.InitPlayer(BasePlayerName + " #" + PlayerNumber.ToString(), StartingBalance);
         }
 
         public Player(string name)
         {
-            InitPlayer(name, StartingBalance);
+            this.InitPlayer(name, StartingBalance);
         }
 
         public Player(string name, int balance)
         {
-            InitPlayer(name, balance);
+            this.InitPlayer(name, balance);
         }
 
         private void InitPlayer(string name, int balance)
         {
-            Name = name;
-            Balance = balance;
+            this.Name = name;
+            this.Balance = balance;
             PlayerNumber += 1;
         }
 
         public int AddAsset(string name)
         {
-            return AddAsset(name, Asset.BaseValue);
+            return this.AddAsset(name, Asset.BaseValue);
         }
 
         public int AddAsset(string name, int value)
         {
             Asset a = new Asset(name, value);
-            Assets.Add(a);
-            Balance -= value;
-            return Assets.Count;
+            this.Assets.Add(a);
+            this.Balance -= value;
+            return this.Assets.Count;
         }
 
         public int AddAssets(List<string> names)
         {
             foreach (string name in names)
             {
-                AddAsset(name);
+                this.AddAsset(name);
             }
-            return Assets.Count;
+
+            return this.Assets.Count;
         }
 
         public int Deposit(int amount)
         {
-            Balance += amount;
-            return Balance;
+            this.Balance += amount;
+            return this.Balance;
         }
 
         public int Withdraw(int amount)
         {
-            Balance -= amount;
-            while (Balance <= 0 && AssetIndex < Assets.Count)
+            this.Balance -= amount;
+            while (this.Balance <= 0 && this.AssetIndex < this.Assets.Count)
             {
-                int v = Assets[AssetIndex].Value;
-                AssetIndex += 1;
-                Balance += v;
+                int v = this.Assets[AssetIndex].Value;
+                this.AssetIndex += 1;
+                this.Balance += v;
             }
-            return Balance;
+
+            return this.Balance;
         }
 
         public override string ToString()
         {
-            return string.Format("Player {0} ({1}), starting at {2}", Name, Balance.ToString(), Where.Name);
+            return string.Format(
+                "Player {0} ({1}), starting at {2}",
+                this.Name,
+                this.Balance.ToString(),
+                this.Where.Name);
         }
     }
 }
