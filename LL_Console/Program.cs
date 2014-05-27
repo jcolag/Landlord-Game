@@ -8,7 +8,7 @@ namespace LL_Console
     using System.Collections.Generic;
     using System.Xml;
 
-    class MainClass
+    class Program
     {
         public static void Main(string[] args)
         {
