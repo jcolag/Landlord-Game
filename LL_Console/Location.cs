@@ -1,3 +1,7 @@
+// <copyright file="Location.cs" company="John Colagioia">
+//     John.Colagioia.net. Licensed under the GPLv3
+// </copyright>
+// <author>John Colagioia</author>
 namespace LL_Console
 {
     using System;
