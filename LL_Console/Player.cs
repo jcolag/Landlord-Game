@@ -10,86 +10,22 @@ namespace LL_Console
 
     public class Player
     {
-        static int StartingBalance = 1500;
-        static int PlayerNumber = 1;
-        static string BasePlayerName = "Player";
-        private string _name = string.Empty;
+        private static int startingBalance = 1500;
+        private static int playerNumber = 1;
+        private static string basePlayerName = "Player";
+        private List<Asset> assets = new List<Asset>();
 
-        public string Name
-        {
-            get
-            {
-                return this._name;
-            }
-
-            set
-            {
-                this._name = value;
-            }
-        }
-
-        private int _balance = 0;
-
-        public int Balance
-        {
-            get
-            {
-                return this._balance;
-            }
-
-            private set
-            {
-                this._balance = value;
-            }
-        }
-
-        public bool _inJail = false;
-
-        public bool InJail
-        {
-            get
-            {
-                return this._inJail;
-            }
-
-            set
-            {
-                this._inJail = value;
-            }
-        }
-
-        private List<Asset> _assets = new List<Asset>();
-
-        private List<Asset> Assets
-        {
-            get
-            {
-                return this._assets;
-            }
-        }
-
-        private Location _where;
-
-        public Location Where
-        {
-            get
-            {
-                return this._where;
-            }
-
-            set
-            {
-                this._where = value;
-            }
-        }
-
-        private int AssetIndex = 0;
+        private string name = string.Empty;
+        private int balance = 0;
+        private bool inJail = false;
+        private Location where;
+        private int assetIndex = 0;
 
         public Player(XmlNode node)
         {
-            XmlHelper.StringFromXmlIfExists(node, "Name", ref this._name);
+            XmlHelper.StringFromXmlIfExists(node, "Name", ref this.name);
             this.Balance = StartingBalance;
-            XmlHelper.IntFromXmlIfExists(node, "Balance", ref this._balance);
+            XmlHelper.IntFromXmlIfExists(node, "Balance", ref this.balance);
             PlayerNumber += 1;
         }
 
@@ -108,11 +44,103 @@ namespace LL_Console
             this.InitPlayer(name, balance);
         }
 
-        private void InitPlayer(string name, int balance)
+        public static int StartingBalance
         {
-            this.Name = name;
-            this.Balance = balance;
-            PlayerNumber += 1;
+            get
+            {
+                return this.startingBalance;
+            }
+
+            set
+            {
+                this.startingBalance = value;
+            }
+        }
+
+        public static int PlayerNumber
+        {
+            get
+            {
+                return this.playerNumber;
+            }
+
+            set
+            {
+                this.playerNumber = value;
+            }
+        }
+
+        public static string BasePlayerName
+        {
+            get
+            {
+                return this.basePlayerName;
+            }
+
+            set
+            {
+                this.basePlayerName = value;
+            }
+        }
+
+        public string Name
+        {
+            get
+            {
+                return this.name;
+            }
+
+            set
+            {
+                this.name = value;
+            }
+        }
+
+        public int Balance
+        {
+            get
+            {
+                return this.balance;
+            }
+
+            private set
+            {
+                this.balance = value;
+            }
+        }
+
+        public bool InJail
+        {
+            get
+            {
+                return this.inJail;
+            }
+
+            set
+            {
+                this.inJail = value;
+            }
+        }
+
+        public Location Where
+        {
+            get
+            {
+                return this.where;
+            }
+
+            set
+            {
+                this.where = value;
+            }
+        }
+
+        private List<Asset> Assets
+        {
+            get
+            {
+                return this.assets;
+            }
         }
 
         public int AddAsset(string name)
@@ -147,10 +175,10 @@ namespace LL_Console
         public int Withdraw(int amount)
         {
             this.Balance -= amount;
-            while (this.Balance <= 0 && this.AssetIndex < this.Assets.Count)
+            while (this.Balance <= 0 && this.assetIndex < this.Assets.Count)
             {
-                int v = this.Assets[this.AssetIndex].Value;
-                this.AssetIndex += 1;
+                int v = this.Assets[this.assetIndex].Value;
+                this.assetIndex += 1;
                 this.Balance += v;
             }
 
@@ -164,6 +192,13 @@ namespace LL_Console
                 this.Name,
                 this.Balance.ToString(),
                 this.Where.Name);
+        }
+        
+        private void InitPlayer(string name, int balance)
+        {
+            this.Name = name;
+            this.Balance = balance;
+            PlayerNumber += 1;
         }
     }
 }

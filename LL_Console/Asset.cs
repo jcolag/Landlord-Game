@@ -8,41 +8,53 @@ namespace LL_Console
 
     public class Asset
     {
-        public static int BaseValue = 100;
-        private string _name = string.Empty;
+        private static int baseValue = 100;
+        private string name = string.Empty;
+        private int value = 0;
+        
+        public Asset(string name, int value)
+        {
+            this.Name = name;
+            this.Value = value;
+        }
+
+        public static int BaseValue
+        {
+            get
+            {
+                return baseValue;
+            }
+
+            set
+            {
+                baseValue = value;
+            }
+        }
 
         public string Name
         {
             get
             {
-                return this._name;
+                return this.name;
             }
 
             set
             {
-                this._name = value;
+                this.name = value;
             }
         }
-
-        private int _value = 0;
 
         public int Value
         {
             get
             {
-                return this._value;
+                return this.value;
             }
 
             set
             {
-                this._value = value;
+                this.value = value;
             }
-        }
-
-        public Asset(string name, int value)
-        {
-            this.Name = name;
-            this.Value = value;
         }
     }
 }

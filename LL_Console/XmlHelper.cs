@@ -9,7 +9,7 @@ namespace LL_Console
 
     public class XmlHelper
     {
-        private XmlHelper ()
+        private XmlHelper()
         {
         }
 

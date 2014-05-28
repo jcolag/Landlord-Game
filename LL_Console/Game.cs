@@ -9,16 +9,16 @@ namespace LL_Console
 
     public class Game
     {
-        public List<Location> Board = new List<Location>();
-        public List<Player> Players = new List<Player>();
-        public List<Card> Pile1 = new List<Card>();
-        public List<Card> Pile2 = new List<Card>();
-        public string Pile1Name = "Chance";
-        public string Pile2Name = "Community Chest";
-        public int nDice = 2;
-        public int xDice = 6;
+        private List<Location> board = new List<Location>();
+        private List<Player> players = new List<Player>();
+        private List<Card> pile1 = new List<Card>();
+        private List<Card> pile2 = new List<Card>();
+        private string pile1Name = "Chance";
+        private string pile2Name = "Community Chest";
+        private int diceCount = 2;
+        private int diceSides = 6;
         private Random rand = new Random();
-        private Player current_player = null;
+        private Player currentPlayer = null;
 
         public bool Continue
         {
@@ -42,9 +42,113 @@ namespace LL_Console
             Location.Board = this.Board;
         }
 
+        public List<Location> Board
+        {
+            get
+            {
+                return this.board;
+            }
+
+            set
+            {
+                this.board = value;
+            }
+        }
+
+        public List<Player> Players
+        {
+            get
+            {
+                return this.players;
+            }
+
+            set
+            {
+                this.players = value;
+            }
+        }
+
+        public List<Card> Pile1
+        {
+            get
+            {
+                return this.pile1;
+            }
+
+            set
+            {
+                this.pile1 = value;
+            }
+        }
+
+        public List<Card> Pile2
+        {
+            get
+            {
+                return this.pile2;
+            }
+
+            set
+            {
+                this.pile2 = value;
+            }
+        }
+
+        public string Pile1Name
+        {
+            get
+            {
+                return this.pile1Name;
+            }
+
+            set
+            {
+                this.pile1Name = value;
+            }
+        }
+
+        public string Pile2Name
+        {
+            get
+            {
+                return this.pile2Name;
+            }
+
+            set
+            {
+                this.pile2Name = value;
+            }
+        }
+
+        public int DiceCount
+        {
+            get
+            {
+                return this.diceCount;
+            }
+
+            set
+            {
+                this.diceCount = value;
+            }
+        }
+
+        public int DiceSides
+        {
+            get
+            {
+                return this.diceSides;
+            }
+
+            set
+            {
+                this.diceSides = value;
+            }
+        }
+
         public int Roll(ref string notices)
         {
-            return this.Roll(this.current_player, ref notices);
+            return this.Roll(this.currentPlayer, ref notices);
         }
 
         public int Roll(Player p, ref string notices)
@@ -54,9 +158,9 @@ namespace LL_Console
             Location l = p.Where;
             string note = string.Empty;
 
-            for (i = 0; i < this.nDice; i++)
+            for (i = 0; i < this.diceCount; i++)
             {
-                dice += this.rand.Next(1, this.xDice);
+                dice += this.rand.Next(1, this.diceSides);
             }
             
             for (i = 0; i < dice; i++)
@@ -71,20 +175,20 @@ namespace LL_Console
 
         public Player Who()
         {
-            return this.current_player;
+            return this.currentPlayer;
         }
 
         public Location Where()
         {
-            return this.current_player.Where;
+            return this.currentPlayer.Where;
         }
 
         public void Add(Player p)
         {
             this.Players.Add(p);
-            if (this.current_player == null)
+            if (this.currentPlayer == null)
             {
-                this.current_player = p;
+                this.currentPlayer = p;
             }
         }
 
@@ -95,19 +199,19 @@ namespace LL_Console
 
         public Player Next_Player()
         {
-            int idx = (this.Players.IndexOf(this.current_player) + 1) % this.Players.Count;
-            this.current_player = this.Players[idx];
-            if (this.current_player.Balance <= 0 && this.Players.Count > 1)
+            int idx = (this.Players.IndexOf(this.currentPlayer) + 1) % this.Players.Count;
+            this.currentPlayer = this.Players[idx];
+            if (this.currentPlayer.Balance <= 0 && this.Players.Count > 1)
             {
-                this.current_player = this.Next_Player();
+                this.currentPlayer = this.Next_Player();
             }
             
-            return this.current_player;
+            return this.currentPlayer;
         }
 
         public Player Prev_Player()
         {
-            int idx = (this.Players.IndexOf(this.current_player) + this.Players.Count - 1)
+            int idx = (this.Players.IndexOf(this.currentPlayer) + this.Players.Count - 1)
                 % this.Players.Count;
             return this.Players[idx];
         }
@@ -122,7 +226,7 @@ namespace LL_Console
             
             if (transit)
             {
-                notices = this.Board[idx].PassBy(this.current_player);
+                notices = this.Board[idx].PassBy(this.currentPlayer);
             }
             
             return this.Board[idx];

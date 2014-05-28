@@ -8,7 +8,7 @@ namespace LL_Console
     using System.Collections.Generic;
     using System.Xml;
 
-    class Program
+    public class Program
     {
         public static void Main(string[] args)
         {
@@ -30,12 +30,12 @@ namespace LL_Console
                 XmlNodeList dice = gamecfg.GetElementsByTagName("Dice");
                 if (dice.Count > 0)
                 {
-                    int nDice = g.nDice,
-                    xDice = g.xDice;
-                    XmlHelper.IntFromXmlIfExists(dice[0], "Count", ref nDice);
-                    XmlHelper.IntFromXmlIfExists(dice[0], "Sides", ref xDice);
-                    g.nDice = nDice;
-                    g.xDice = xDice;
+                    int diceCount = g.nDice;
+                    int diceSides = g.xDice;
+                    XmlHelper.IntFromXmlIfExists(dice[0], "Count", ref diceCount);
+                    XmlHelper.IntFromXmlIfExists(dice[0], "Sides", ref diceSides);
+                    g.nDice = diceCount;
+                    g.xDice = diceSides;
                 }
 
                 XmlNodeList props = gamecfg.GetElementsByTagName("Location");

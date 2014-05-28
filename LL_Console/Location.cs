@@ -11,6 +11,79 @@ namespace LL_Console
 
     public class Location
     {
+        private static List<Location> board = null;
+        private int left = -1;
+        private int right = -1;
+        private int top = -1;
+        private int bottom = -1;
+        private string name = string.Empty;
+        private int salary = 0;
+        private int salaryOver = 0;
+        private int priceSale = 0;
+        private int priceRent = 0;
+        private int multiplier = 1;
+        private bool jail = false;
+        private Zoning propertyType = Zoning.Unknown;
+        private Player owner = null;
+
+        private List<Zoning> ownables = new List<Zoning>()
+        { 
+            Zoning.Residential,
+            Zoning.Railroad,
+            Zoning.Franchise
+        };
+
+        public Location()
+        {
+        }
+
+        public Location(
+            Zoning zone,
+            string name,
+            int left,
+            int right,
+            int top,
+            int bottom,
+            int sale,
+            int rent)
+        {
+            this.propertyType = zone;
+            this.name = name;
+            this.Left = left;
+            this.Right = right;
+            this.Top = top;
+            this.Bottom = bottom;
+            this.priceSale = sale;
+            this.priceRent = rent;
+        }
+
+        public Location(XmlNode prop)
+        {
+            string type = string.Empty;
+
+            XmlHelper.StringFromXmlIfExists(prop, "Name", ref this.name);
+            XmlHelper.IntFromXmlIfExists(prop, "PriceSale", ref this.priceSale);
+            XmlHelper.IntFromXmlIfExists(prop, "PriceRent", ref this.priceRent);
+            XmlHelper.IntFromXmlIfExists(prop, "Tax", ref this.priceRent);
+            XmlHelper.IntFromXmlIfExists(prop, "Multiplier", ref this.multiplier);
+            XmlHelper.IntFromXmlIfExists(prop, "xLeft", ref this.left);
+            XmlHelper.IntFromXmlIfExists(prop, "xRight", ref this.right);
+            XmlHelper.IntFromXmlIfExists(prop, "yTop", ref this.top);
+            XmlHelper.IntFromXmlIfExists(prop, "yBottom", ref this.bottom);
+            XmlHelper.IntFromXmlIfExists(prop, "Salary", ref this.salary);
+            XmlHelper.IntFromXmlIfExists(prop, "SalaryOver", ref this.salaryOver);
+            XmlHelper.BoolFromXmlIfExists(prop, "SalaryOver", ref this.jail);
+
+            try
+            {
+                XmlHelper.StringFromXmlIfExists(prop, "PropertyType", ref type);
+                this.PropertyType = (Zoning)Enum.Parse(Zoning.Park.GetType(), type);
+            }
+            catch
+            {
+            }
+        }
+
         public delegate string AnswerQuestion(Player p, string ans);
 
         public enum Zoning
@@ -27,21 +100,16 @@ namespace LL_Console
             Unknown
         }
 
-        private List<Zoning> ownables = new List<Zoning>() { 
-            Zoning.Residential, Zoning.Railroad, Zoning.Franchise
-        };
-        private static List<Location> _board = null;
-
         public static List<Location> Board
         {
             private get
             {
-                return _board;
+                return board;
             }
-            
+
             set
             {
-                _board = value;
+                board = value;
             }
         }
 
@@ -61,224 +129,147 @@ namespace LL_Console
             }
         }
 
-        private int _xLeft = -1;
-
-        public int xLeft
+        public int Left
         {
             set
             {
-                this._xLeft = value;
+                this.left = value;
             }
         }
 
-        private int _xRight = -1;
-
-        public int xRight
+        public int Right
         {
             set
             {
-                this._xRight = value;
+                this.right = value;
             }
         }
 
-        private int _yTop = -1;
-
-        public int yTop
+        public int Top
         {
             set
             {
-                this._yTop = value;
+                this.top = value;
             }
         }
 
-        private int _yBottom = -1;
-
-        public int yBottom
+        public int Bottom
         {
             set
             {
-                this._yBottom = value;
+                this.bottom = value;
             }
         }
-
-        private string _name = string.Empty;
 
         public string Name
         {
             get
             {
-                return this._name;
+                return this.name;
             }
         }
-
-        private int _salary = 0;
 
         public int Salary
         {
             get
             {
-                return this._salary;
+                return this.salary;
             }
-            
+
             set
             {
-                this._salary = value;
+                this.salary = value;
             }
         }
-
-        private int _salaryOver = 0;
 
         public int SalaryOver
         {
             get
             {
-                return this._salaryOver;
+                return this.salaryOver;
             }
-            
+
             set
             {
-                this._salaryOver = value;
+                this.salaryOver = value;
             }
         }
-
-        private int _priceSale = 0;
 
         public int PriceSale
         {
             get
             {
-                return this._priceSale;
+                return this.priceSale;
             }
-            
+
             set
             {
-                this._priceSale = value;
+                this.priceSale = value;
             }
         }
-
-        private int _priceRent = 0;
 
         public int PriceRent
         {
             get
             {
-                return this._priceRent;
+                return this.priceRent;
             }
-            
+
             set
             {
-                this._priceRent = value;
+                this.priceRent = value;
             }
         }
-
-        private int _multiplier = 1;
 
         public int Multiplier
         {
             get
             {
-                return this._multiplier;
+                return this.multiplier;
             }
-            
+
             set
             {
-                this._multiplier = value;
+                this.multiplier = value;
             }
         }
-
-        private bool _jail = false;
 
         public bool Jail
         {
             get
             {
-                return this._jail;
+                return this.jail;
             }
-            
+
             set
             {
-                this._jail = value;
+                this.jail = value;
             }
         }
-
-        private Zoning _propertyType = Zoning.Unknown;
-
-        private Zoning PropertyType
-        {
-            get
-            {
-                return this._propertyType;
-            }
-            
-            set
-            {
-                this._propertyType = value;
-            }
-        }
-
-        private Player _owner = null;
 
         public Player Owner
         {
             get
             {
-                return this._owner;
+                return this.owner;
             }
-            
+
             set
             {
-                this._owner = value;
+                this.owner = value;
             }
         }
 
-        public Location()
+        private Zoning PropertyType
         {
-        }
-
-        public Location(
-            Zoning zone,
-            string name,
-            int left,
-            int right,
-            int top,
-            int bottom,
-            int sale,
-            int rent)
-        {
-            this._propertyType = zone;
-            this._name = name;
-            this.xLeft = left;
-            this.xRight = right;
-            this.yTop = top;
-            this.yBottom = bottom;
-            this._priceSale = sale;
-            this._priceRent = rent;
-        }
-
-        public Location(XmlNode prop)
-        {
-            string type = string.Empty;
-
-            XmlHelper.StringFromXmlIfExists(prop, "Name", ref this._name);
-            XmlHelper.IntFromXmlIfExists(prop, "PriceSale", ref this._priceSale);
-            XmlHelper.IntFromXmlIfExists(prop, "PriceRent", ref this._priceRent);
-            XmlHelper.IntFromXmlIfExists(prop, "Tax", ref this._priceRent);
-            XmlHelper.IntFromXmlIfExists(prop, "Multiplier", ref this._multiplier);
-            XmlHelper.IntFromXmlIfExists(prop, "xLeft", ref this._xLeft);
-            XmlHelper.IntFromXmlIfExists(prop, "xRight", ref this._xRight);
-            XmlHelper.IntFromXmlIfExists(prop, "yTop", ref this._yTop);
-            XmlHelper.IntFromXmlIfExists(prop, "yBottom", ref this._yBottom);
-            XmlHelper.IntFromXmlIfExists(prop, "Salary", ref this._salary);
-            XmlHelper.IntFromXmlIfExists(prop, "SalaryOver", ref this._salaryOver);
-            XmlHelper.BoolFromXmlIfExists(prop, "SalaryOver", ref this._jail);
-
-            try
+            get
             {
-                XmlHelper.StringFromXmlIfExists(prop, "PropertyType", ref type);
-                this.PropertyType = (Zoning)Enum.Parse(Zoning.Park.GetType(), type);
+                return this.propertyType;
             }
-            catch
+
+            set
             {
+                this.propertyType = value;
             }
         }
 
