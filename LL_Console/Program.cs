@@ -2,14 +2,24 @@
 //     John.Colagioia.net. Licensed under the GPLv3
 // </copyright>
 // <author>John Colagioia</author>
-namespace LL_Console
+namespace LlConsole
 {
     using System;
     using System.Collections.Generic;
     using System.Xml;
 
+    /// <summary>
+    /// Program.
+    /// If that isn't self-explanatory, you shouldn't be reading this.
+    /// </summary>
     public class Program
     {
+        /// <summary>
+        /// The entry point of the program, where the program control starts and ends.
+        /// Initializes the game, preferably from an XML file, and goes into the main
+        /// loop.
+        /// </summary>
+        /// <param name="args">The command-line arguments.</param>
         public static void Main(string[] args)
         {
             XmlDocument gamecfg = new XmlDocument();

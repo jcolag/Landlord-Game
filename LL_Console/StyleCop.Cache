@@ -8,7 +8,7 @@
     <timestamps>
       <styleCop>2014/05/26 10:00:42.000</styleCop>
       <settingsFile>2014/05/26 10:00:42.000</settingsFile>
-      <sourceFile>2014/05/27 12:23:25.000</sourceFile>
+      <sourceFile>2014/05/28 08:09:11.000</sourceFile>
       <parser>2014/05/26 10:00:42.000</parser>
       <StyleCop.CSharp.DocumentationRules>2014/05/26 10:00:42.000</StyleCop.CSharp.DocumentationRules>
       <StyleCop.CSharp.DocumentationRules.FilesHashCode>0</StyleCop.CSharp.DocumentationRules.FilesHashCode>
@@ -25,24 +25,13 @@
       <StyleCop.CSharp.SpacingRules>2014/05/26 10:00:42.000</StyleCop.CSharp.SpacingRules>
       <StyleCop.CSharp.SpacingRules.FilesHashCode>0</StyleCop.CSharp.SpacingRules.FilesHashCode>
     </timestamps>
-    <violations>
-      <violation namespace="StyleCop.CSharp.DocumentationRules" rule="ElementsMustBeDocumented" ruleCheckId="SA1600">
-        <context>The class must have a documentation header.</context>
-        <line>11</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.DocumentationRules" rule="ElementsMustBeDocumented" ruleCheckId="SA1600">
-        <context>The method must have a documentation header.</context>
-        <line>13</line>
-        <warning>False</warning>
-      </violation>
-    </violations>
+    <violations />
   </sourcecode>
   <sourcecode name="Asset.cs" parser="StyleCop.CSharp.CsParser">
     <timestamps>
       <styleCop>2014/05/26 10:00:42.000</styleCop>
       <settingsFile>2014/05/26 10:00:42.000</settingsFile>
-      <sourceFile>2014/05/27 12:28:48.000</sourceFile>
+      <sourceFile>2014/05/28 08:13:56.000</sourceFile>
       <parser>2014/05/26 10:00:42.000</parser>
       <StyleCop.CSharp.DocumentationRules>2014/05/26 10:00:42.000</StyleCop.CSharp.DocumentationRules>
       <StyleCop.CSharp.DocumentationRules.FilesHashCode>0</StyleCop.CSharp.DocumentationRules.FilesHashCode>
@@ -59,54 +48,13 @@
       <StyleCop.CSharp.SpacingRules>2014/05/26 10:00:42.000</StyleCop.CSharp.SpacingRules>
       <StyleCop.CSharp.SpacingRules.FilesHashCode>0</StyleCop.CSharp.SpacingRules.FilesHashCode>
     </timestamps>
-    <violations>
-      <violation namespace="StyleCop.CSharp.DocumentationRules" rule="ElementsMustBeDocumented" ruleCheckId="SA1600">
-        <context>The class must have a documentation header.</context>
-        <line>9</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.DocumentationRules" rule="ElementsMustBeDocumented" ruleCheckId="SA1600">
-        <context>The field must have a documentation header.</context>
-        <line>11</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.DocumentationRules" rule="ElementsMustBeDocumented" ruleCheckId="SA1600">
-        <context>The field must have a documentation header.</context>
-        <line>12</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.DocumentationRules" rule="ElementsMustBeDocumented" ruleCheckId="SA1600">
-        <context>The field must have a documentation header.</context>
-        <line>13</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.DocumentationRules" rule="ElementsMustBeDocumented" ruleCheckId="SA1600">
-        <context>The constructor must have a documentation header.</context>
-        <line>15</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.DocumentationRules" rule="ElementsMustBeDocumented" ruleCheckId="SA1600">
-        <context>The property must have a documentation header.</context>
-        <line>21</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.DocumentationRules" rule="ElementsMustBeDocumented" ruleCheckId="SA1600">
-        <context>The property must have a documentation header.</context>
-        <line>34</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.DocumentationRules" rule="ElementsMustBeDocumented" ruleCheckId="SA1600">
-        <context>The property must have a documentation header.</context>
-        <line>47</line>
-        <warning>False</warning>
-      </violation>
-    </violations>
+    <violations />
   </sourcecode>
   <sourcecode name="Card.cs" parser="StyleCop.CSharp.CsParser">
     <timestamps>
       <styleCop>2014/05/26 10:00:42.000</styleCop>
       <settingsFile>2014/05/26 10:00:42.000</settingsFile>
-      <sourceFile>2014/05/27 12:30:42.000</sourceFile>
+      <sourceFile>2014/05/28 08:16:58.000</sourceFile>
       <parser>2014/05/26 10:00:42.000</parser>
       <StyleCop.CSharp.DocumentationRules>2014/05/26 10:00:42.000</StyleCop.CSharp.DocumentationRules>
       <StyleCop.CSharp.DocumentationRules.FilesHashCode>0</StyleCop.CSharp.DocumentationRules.FilesHashCode>
@@ -123,54 +71,13 @@
       <StyleCop.CSharp.SpacingRules>2014/05/26 10:00:42.000</StyleCop.CSharp.SpacingRules>
       <StyleCop.CSharp.SpacingRules.FilesHashCode>0</StyleCop.CSharp.SpacingRules.FilesHashCode>
     </timestamps>
-    <violations>
-      <violation namespace="StyleCop.CSharp.DocumentationRules" rule="ElementsMustBeDocumented" ruleCheckId="SA1600">
-        <context>The class must have a documentation header.</context>
-        <line>9</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.DocumentationRules" rule="ElementsMustBeDocumented" ruleCheckId="SA1600">
-        <context>The field must have a documentation header.</context>
-        <line>11</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.DocumentationRules" rule="ElementsMustBeDocumented" ruleCheckId="SA1600">
-        <context>The field must have a documentation header.</context>
-        <line>12</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.DocumentationRules" rule="ElementsMustBeDocumented" ruleCheckId="SA1600">
-        <context>The field must have a documentation header.</context>
-        <line>13</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.DocumentationRules" rule="ElementsMustBeDocumented" ruleCheckId="SA1600">
-        <context>The constructor must have a documentation header.</context>
-        <line>15</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.DocumentationRules" rule="ElementsMustBeDocumented" ruleCheckId="SA1600">
-        <context>The property must have a documentation header.</context>
-        <line>22</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.DocumentationRules" rule="ElementsMustBeDocumented" ruleCheckId="SA1600">
-        <context>The property must have a documentation header.</context>
-        <line>35</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.DocumentationRules" rule="ElementsMustBeDocumented" ruleCheckId="SA1600">
-        <context>The property must have a documentation header.</context>
-        <line>48</line>
-        <warning>False</warning>
-      </violation>
-    </violations>
+    <violations />
   </sourcecode>
   <sourcecode name="Game.cs" parser="StyleCop.CSharp.CsParser">
     <timestamps>
       <styleCop>2014/05/26 10:00:42.000</styleCop>
       <settingsFile>2014/05/26 10:00:42.000</settingsFile>
-      <sourceFile>2014/05/27 12:36:50.000</sourceFile>
+      <sourceFile>2014/05/28 08:09:11.000</sourceFile>
       <parser>2014/05/26 10:00:42.000</parser>
       <StyleCop.CSharp.DocumentationRules>2014/05/26 10:00:42.000</StyleCop.CSharp.DocumentationRules>
       <StyleCop.CSharp.DocumentationRules.FilesHashCode>0</StyleCop.CSharp.DocumentationRules.FilesHashCode>
@@ -354,7 +261,7 @@
     <timestamps>
       <styleCop>2014/05/26 10:00:42.000</styleCop>
       <settingsFile>2014/05/26 10:00:42.000</settingsFile>
-      <sourceFile>2014/05/27 12:52:18.000</sourceFile>
+      <sourceFile>2014/05/28 08:09:11.000</sourceFile>
       <parser>2014/05/26 10:00:42.000</parser>
       <StyleCop.CSharp.DocumentationRules>2014/05/26 10:00:42.000</StyleCop.CSharp.DocumentationRules>
       <StyleCop.CSharp.DocumentationRules.FilesHashCode>0</StyleCop.CSharp.DocumentationRules.FilesHashCode>
@@ -633,7 +540,7 @@
     <timestamps>
       <styleCop>2014/05/26 10:00:42.000</styleCop>
       <settingsFile>2014/05/26 10:00:42.000</settingsFile>
-      <sourceFile>2014/05/27 12:59:25.000</sourceFile>
+      <sourceFile>2014/05/28 08:09:11.000</sourceFile>
       <parser>2014/05/26 10:00:42.000</parser>
       <StyleCop.CSharp.DocumentationRules>2014/05/26 10:00:42.000</StyleCop.CSharp.DocumentationRules>
       <StyleCop.CSharp.DocumentationRules.FilesHashCode>0</StyleCop.CSharp.DocumentationRules.FilesHashCode>
@@ -802,7 +709,7 @@
     <timestamps>
       <styleCop>2014/05/26 10:00:42.000</styleCop>
       <settingsFile>2014/05/26 10:00:42.000</settingsFile>
-      <sourceFile>2014/05/27 13:00:37.000</sourceFile>
+      <sourceFile>2014/05/28 08:20:43.000</sourceFile>
       <parser>2014/05/26 10:00:42.000</parser>
       <StyleCop.CSharp.DocumentationRules>2014/05/26 10:00:42.000</StyleCop.CSharp.DocumentationRules>
       <StyleCop.CSharp.DocumentationRules.FilesHashCode>0</StyleCop.CSharp.DocumentationRules.FilesHashCode>
@@ -819,33 +726,7 @@
       <StyleCop.CSharp.SpacingRules>2014/05/26 10:00:42.000</StyleCop.CSharp.SpacingRules>
       <StyleCop.CSharp.SpacingRules.FilesHashCode>0</StyleCop.CSharp.SpacingRules.FilesHashCode>
     </timestamps>
-    <violations>
-      <violation namespace="StyleCop.CSharp.DocumentationRules" rule="ElementsMustBeDocumented" ruleCheckId="SA1600">
-        <context>The class must have a documentation header.</context>
-        <line>10</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.DocumentationRules" rule="ElementsMustBeDocumented" ruleCheckId="SA1600">
-        <context>The constructor must have a documentation header.</context>
-        <line>12</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.DocumentationRules" rule="ElementsMustBeDocumented" ruleCheckId="SA1600">
-        <context>The method must have a documentation header.</context>
-        <line>16</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.DocumentationRules" rule="ElementsMustBeDocumented" ruleCheckId="SA1600">
-        <context>The method must have a documentation header.</context>
-        <line>40</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.DocumentationRules" rule="ElementsMustBeDocumented" ruleCheckId="SA1600">
-        <context>The method must have a documentation header.</context>
-        <line>64</line>
-        <warning>False</warning>
-      </violation>
-    </violations>
+    <violations />
   </sourcecode>
   <sourcecode name="AssemblyInfo.cs" parser="StyleCop.CSharp.CsParser">
     <timestamps>

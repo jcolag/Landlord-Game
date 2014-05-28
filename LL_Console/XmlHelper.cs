@@ -2,17 +2,30 @@
 //     John.Colagioia.net. Licensed under the GPLv3
 // </copyright>
 // <author>John Colagioia</author>
-namespace LL_Console
+namespace LlConsole
 {
     using System;
     using System.Xml;
 
+    /// <summary>
+    /// Xml helper class, containing easier input routines.
+    /// </summary>
     public class XmlHelper
     {
+        /// <summary>
+        /// Prevents a default instance of the <see cref="LlConsole.XmlHelper"/> class from being created.
+        /// The methods are all static, so you probably never need this.
+        /// </summary>
         private XmlHelper()
         {
         }
 
+        /// <summary>
+        /// Read boolean from xml if it exists.
+        /// </summary>
+        /// <param name="node">The XML node.</param>
+        /// <param name="attribute">The Attribute of interest.</param>
+        /// <param name="target">Location to store the boolean.</param>
         public static void BoolFromXmlIfExists(
             XmlNode node,
             string attribute,
@@ -37,6 +50,12 @@ namespace LL_Console
             target = value;
         }
 
+        /// <summary>
+        /// Read integer from xml if it exists.
+        /// </summary>
+        /// <param name="node">The XML node.</param>
+        /// <param name="attribute">The Attribute of interest.</param>
+        /// <param name="target">Location to store the integer.</param>
         public static void IntFromXmlIfExists(
             XmlNode node,
             string attribute,
@@ -61,6 +80,12 @@ namespace LL_Console
             target = value;
         }
 
+        /// <summary>
+        /// Read string from xml if it exists.
+        /// </summary>
+        /// <param name="node">The XML node.</param>
+        /// <param name="attribute">The Attribute of interest.</param>
+        /// <param name="target">Location to store the string.</param>
         public static void StringFromXmlIfExists(
             XmlNode node,
             string attribute,

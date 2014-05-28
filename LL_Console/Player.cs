@@ -2,7 +2,7 @@
 //     John.Colagioia.net. Licensed under the GPLv3
 // </copyright>
 // <author>John Colagioia</author>
-namespace LL_Console
+namespace LlConsole
 {
     using System;
     using System.Collections.Generic;
