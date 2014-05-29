@@ -40,12 +40,12 @@ namespace LlConsole
                 XmlNodeList dice = gamecfg.GetElementsByTagName("Dice");
                 if (dice.Count > 0)
                 {
-                    int diceCount = g.nDice;
-                    int diceSides = g.xDice;
+                    int diceCount = g.DiceCount;
+                    int diceSides = g.DiceSides;
                     XmlHelper.IntFromXmlIfExists(dice[0], "Count", ref diceCount);
                     XmlHelper.IntFromXmlIfExists(dice[0], "Sides", ref diceSides);
-                    g.nDice = diceCount;
-                    g.xDice = diceSides;
+                    g.DiceCount = diceCount;
+                    g.DiceSides = diceSides;
                 }
 
                 XmlNodeList props = gamecfg.GetElementsByTagName("Location");

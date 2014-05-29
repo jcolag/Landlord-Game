@@ -105,12 +105,12 @@ namespace LlConsole
                 {
                         get
                         {
-                                return this.startingBalance;
+                                return Player.startingBalance;
                         }
 
                         set
                         {
-                                this.startingBalance = value;
+                                Player.startingBalance = value;
                         }
                 }
 
@@ -122,12 +122,12 @@ namespace LlConsole
                 {
                         get
                         {
-                                return this.playerNumber;
+                                return Player.playerNumber;
                         }
 
                         set
                         {
-                                this.playerNumber = value;
+                                Player.playerNumber = value;
                         }
                 }
 
@@ -139,12 +139,12 @@ namespace LlConsole
                 {
                         get
                         {
-                                return this.basePlayerName;
+                                return Player.basePlayerName;
                         }
 
                         set
                         {
-                                this.basePlayerName = value;
+                                Player.basePlayerName = value;
                         }
                 }
 
