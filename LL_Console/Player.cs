@@ -232,21 +232,21 @@ namespace LlConsole
                 /// Adds the asset to the player's stash.
                 /// </summary>
                 /// <returns>The number of assets.</returns>
-                /// <param name="name">The asset's name.</param>
-                public int AddAsset(string name)
+                /// <param name="assetName">The asset's name.</param>
+                public int AddAsset(string assetName)
                 {
-                        return this.AddAsset(name, Asset.BaseValue);
+                        return this.AddAsset(assetName, Asset.BaseValue);
                 }
 
                 /// <summary>
                 /// Adds the asset to the player's stash.
                 /// </summary>
                 /// <returns>The number of assets.</returns>
-                /// <param name="name">The asset's name.</param>
+                /// <param name="assetName">The asset's name.</param>
                 /// <param name="value">The asset's value.</param>
-                public int AddAsset(string name, int value)
+                public int AddAsset(string assetName, int value)
                 {
-                        Asset a = new Asset(name, value);
+                        Asset a = new Asset(assetName, value);
                         this.Assets.Add(a);
                         this.Balance -= value;
                         return this.Assets.Count;
@@ -259,9 +259,9 @@ namespace LlConsole
                 /// <param name="names">The asset names.</param>
                 public int AddAssets(List<string> names)
                 {
-                        foreach (string name in names)
+                        foreach (string assetName in names)
                         {
-                                this.AddAsset(name);
+                                this.AddAsset(assetName);
                         }
 
                         return this.Assets.Count;
@@ -314,12 +314,12 @@ namespace LlConsole
                 /// <summary>
                 /// Initializess the player.
                 /// </summary>
-                /// <param name="name">The player's name.</param>
-                /// <param name="balance">The player's starting balance.</param>
-                private void InitPlayer(string name, int balance)
+                /// <param name="playerName">The player's name.</param>
+                /// <param name="playerBalance">The player's starting balance.</param>
+                private void InitPlayer(string playerName, int playerBalance)
                 {
-                        this.Name = name;
-                        this.Balance = balance;
+                        this.Name = playerName;
+                        this.Balance = playerBalance;
                         PlayerNumber += 1;
                 }
         }

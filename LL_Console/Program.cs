@@ -5,7 +5,6 @@
 namespace LlConsole
 {
         using System;
-        using System.Collections.Generic;
         using System.Xml;
 
         /// <summary>
@@ -22,8 +21,8 @@ namespace LlConsole
                 /// <param name="args">The command-line arguments.</param>
                 public static void Main(string[] args)
                 {
-                        XmlDocument gamecfg = new XmlDocument();
-                        Game g = new Game();
+                        var gamecfg = new XmlDocument();
+                        var g = new Game();
                         string player_name = string.Empty;
 
                         foreach (string arg in args)
@@ -51,14 +50,14 @@ namespace LlConsole
                                 XmlNodeList props = gamecfg.GetElementsByTagName("Location");
                                 foreach (XmlNode prop in props)
                                 {
-                                        Location l = new Location(prop);
+                                        var l = new Location(prop);
                                         g.Add(l);
                                 }
 
                                 XmlNodeList peeps = gamecfg.GetElementsByTagName("Player");
                                 foreach (XmlNode pers in peeps)
                                 {
-                                        Player p = new Player(pers);
+                                        var p = new Player(pers);
                                         p.Where = g.Board[0];
                                         g.Add(p);
                                 }
@@ -67,7 +66,7 @@ namespace LlConsole
                         {
                                 for (int i = 0; i < 40; i++)
                                 {
-                                        Location l = new Location(
+                                        var l = new Location(
                                                 Location.Zoning.Residential,
                                                 "Property " + (i + 1).ToString(),
                                                 0,
@@ -91,7 +90,7 @@ namespace LlConsole
                                                 break;
                                         }
 
-                                        Player p = new Player(player_name);
+                                        var p = new Player(player_name);
                                         p.Where = g.Board[0];
                                         g.Add(p);
                                 }
