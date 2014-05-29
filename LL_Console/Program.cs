@@ -109,7 +109,7 @@ namespace LlConsole
                                         Console.WriteLine(player.Name + " is in jail!");
                                 }
 
-                                Console.WriteLine("Rolls a " + g.Roll(ref answer));
+                                Console.WriteLine("Rolls a " + g.Roll(ref answer).ToString());
                                 Console.Write(answer);
                                 landing = g.Where();
                                 Console.WriteLine("Lands on " + landing.Name);

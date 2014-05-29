@@ -477,7 +477,7 @@ namespace LlConsole
                         if (this.PropertyType == Zoning.MotherEarth && this.SalaryOver > 0)
                         {
                                 p.Deposit(this.SalaryOver);
-                                result = "Earned $" + this.SalaryOver + " salary!\n";
+                                result = "Earned $" + this.SalaryOver.ToString() + " salary!\n";
                         }
             
                         return result;
@@ -501,7 +501,8 @@ namespace LlConsole
                                 if (this.CanBuy && p.Balance > this.PriceSale)
                                 {
                                         answerer = this.BuyLocation;
-                                        return "Want to buy " + this.Name + " for " + this.PriceSale + "?";
+                                        return "Want to buy " + this.Name + " for " +
+                                                this.PriceSale.ToString() + "?";
                                 }
                                 else if (this.CanBuy)
                                 {
@@ -510,9 +511,12 @@ namespace LlConsole
                                 else if (Ownable && Owner != p)
                                 {
                                         int rent = PriceRent;
-                                        if (this.PropertyType == Zoning.Franchise || this.PropertyType == Zoning.Railroad)
+                                        if (this.PropertyType == Zoning.Franchise ||
+                                            this.PropertyType == Zoning.Railroad)
                                         {
-                                                var rrs = Board.Where(x => x.PropertyType == PropertyType && x.Owner == Owner);
+                                                var rrs = Board.Where(x =>
+                                                                      x.PropertyType == PropertyType &&
+                                                                      x.Owner == Owner);
                                                 int nrrs = rrs.Count();
                                                 for (int i = 0; i < nrrs; i++)
                                                 {
@@ -521,8 +525,8 @@ namespace LlConsole
                                         }
 
                                         answerer = RentLocation;
-                                        return "Owned by " + Owner.Name + ", rent is $" + PriceRent.ToString()
-                                                + ". [P]ay?";
+                                        return "Owned by " + Owner.Name + ", rent is $" +
+                                                PriceRent.ToString() + ". [P]ay?";
                                 } else if (Ownable)
                                 {
                                         return p.Name + " already owns " + Name + ".";
@@ -542,7 +546,8 @@ namespace LlConsole
                                 return p.Name + " was caught trespassing by Lord Blueblood and is sent to jail!";
                         case Zoning.MotherEarth:
                                 p.Deposit(this.Salary);
-                                return "Labor upon Mother Earth produces wages:  $" + this.Salary + ".";
+                                return "Labor upon Mother Earth produces wages:  $" +
+                                        this.Salary.ToString() + ".";
                         case Zoning.Park:
                                 return "Spending a day at the park.";
                         }
