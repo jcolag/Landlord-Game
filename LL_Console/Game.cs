@@ -257,7 +257,7 @@ namespace LlConsole
             
                         for (i = 0; i < dice; i++)
                         {
-                                l = this.Next_Location(l, ref note, i != dice - 1);
+                                l = this.NextLocation(l, ref note, i != dice - 1);
                                 notices += note;
                         }
             
@@ -309,13 +309,13 @@ namespace LlConsole
                 /// Update the current player to the next.
                 /// </summary>
                 /// <returns>The player.</returns>
-                public Player Next_Player()
+                public Player NextPlayer()
                 {
                         int idx = (this.Players.IndexOf(this.currentPlayer) + 1) % this.Players.Count;
                         this.currentPlayer = this.Players[idx];
                         if (this.currentPlayer.Balance <= 0 && this.Players.Count > 1)
                         {
-                                this.currentPlayer = this.Next_Player();
+                                this.currentPlayer = this.NextPlayer();
                         }
             
                         return this.currentPlayer;
@@ -325,7 +325,7 @@ namespace LlConsole
                 /// Find the previous player.
                 /// </summary>
                 /// <returns>The player.</returns>
-                public Player Prev_Player()
+                public Player PrevPlayer()
                 {
                         int idx = (this.Players.IndexOf(this.currentPlayer) + this.Players.Count - 1)
                                 % this.Players.Count;
@@ -339,7 +339,7 @@ namespace LlConsole
                 /// <param name="l">The current location.</param>
                 /// <param name="notices">Return value for printable notices.</param>
                 /// <param name="transit">If set to <c>true</c> transit.</param>
-                public Location Next_Location(Location l, ref string notices, bool transit)
+                public Location NextLocation(Location l, ref string notices, bool transit)
                 {
                         int idx = this.Board.IndexOf(l) + 1;
                         if (idx >= this.Board.Count)
@@ -360,7 +360,7 @@ namespace LlConsole
                 /// </summary>
                 /// <returns>The location.</returns>
                 /// <param name="l">The current location.</param>
-                public Location Prev_Location(Location l)
+                public Location PrevLocation(Location l)
                 {
                         int idx = this.Board.IndexOf(l) - 1;
                         if (idx < 0)

@@ -127,7 +127,7 @@ namespace LlConsole
                                         Console.WriteLine(player.Name + " has gone bankrupt!");
                                 }
 
-                                player = g.Next_Player();
+                                player = g.NextPlayer();
                         }
 
                         Player winner = g.Who();
