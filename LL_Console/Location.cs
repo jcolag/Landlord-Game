@@ -88,7 +88,7 @@ namespace LlConsole
                 /// <summary>
                 /// The kinds of properties that can be owned by a player.
                 /// </summary>
-                private List<Zoning> ownables = new List<Zoning>()
+                private List<Zoning> ownables = new List<Zoning>
                 { 
                         Zoning.Residential,
                         Zoning.Railroad,
@@ -106,29 +106,29 @@ namespace LlConsole
                 /// Initializes a new instance of the <see cref="LlConsole.Location"/> class.
                 /// </summary>
                 /// <param name="zone">The kind of property.</param>
-                /// <param name="name">The name of the property.</param>
-                /// <param name="left">Left coordinate.</param>
-                /// <param name="right">Right coordinate.</param>
-                /// <param name="top">Top coordinate.</param>
-                /// <param name="bottom">Bottom coordinate.</param>
+                /// <param name="propertyName">The name of the property.</param>
+                /// <param name="leftCoord">Left coordinate.</param>
+                /// <param name="rightCoord">Right coordinate.</param>
+                /// <param name="topCoord">Top coordinate.</param>
+                /// <param name="bottomCoord">Bottom coordinate.</param>
                 /// <param name="sale">Sale price.</param>
                 /// <param name="rent">Rental price.</param>
                 public Location(
                         Zoning zone,
-                        string name,
-                        int left,
-                        int right,
-                        int top,
-                        int bottom,
+                        string propertyName,
+                        int leftCoord,
+                        int rightCoord,
+                        int topCoord,
+                        int bottomCoord,
                         int sale,
                         int rent)
                 {
                         this.propertyType = zone;
-                        this.name = name;
-                        this.Left = left;
-                        this.Right = right;
-                        this.Top = top;
-                        this.Bottom = bottom;
+                        this.name = propertyName;
+                        this.SetLeft(leftCoord);
+                        this.SetRight(rightCoord);
+                        this.SetTop(topCoord);
+                        this.SetBottom(bottomCoord);
                         this.priceSale = sale;
                         this.priceRent = rent;
                 }
@@ -175,6 +175,7 @@ namespace LlConsole
                 /// <summary>
                 /// Different kinds of properties, representing their role in the game.
                 /// </summary>
+                [Serializable]
                 public enum Zoning
                 {
                         /// <summary>
@@ -266,54 +267,6 @@ namespace LlConsole
                         get
                         {
                                 return this.Ownable && this.Owner == null;
-                        }
-                }
-
-                /// <summary>
-                /// Sets the left coordinate.
-                /// </summary>
-                /// <value>The left.</value>
-                public int Left
-                {
-                        set
-                        {
-                                this.left = value;
-                        }
-                }
-
-                /// <summary>
-                /// Sets the right coordinate.
-                /// </summary>
-                /// <value>The right.</value>
-                public int Right
-                {
-                        set
-                        {
-                                this.right = value;
-                        }
-                }
-
-                /// <summary>
-                /// Sets the top coordinate.
-                /// </summary>
-                /// <value>The top.</value>
-                public int Top
-                {
-                        set
-                        {
-                                this.top = value;
-                        }
-                }
-
-                /// <summary>
-                /// Sets the bottom coordinate.
-                /// </summary>
-                /// <value>The bottom.</value>
-                public int Bottom
-                {
-                        set
-                        {
-                                this.bottom = value;
                         }
                 }
 
@@ -467,6 +420,42 @@ namespace LlConsole
                 }
 
                 /// <summary>
+                /// Sets the left coordinate.
+                /// </summary>
+                /// <param name="leftCoord">Left coordinate.</param>
+                public void SetLeft(int leftCoord)
+                {
+                        this.left = leftCoord;
+                }
+
+                /// <summary>
+                /// Sets the right coordinate.
+                /// </summary>
+                /// <param name="rightCoord">Right coordinate.</param>
+                public void SetRight(int rightCoord)
+                {
+                        this.right = rightCoord;
+                }
+
+                /// <summary>
+                /// Sets the top coordinate.
+                /// </summary>
+                /// <param name="topCoord">Top coordinate.</param>
+                public void SetTop(int topCoord)
+                {
+                        this.top = topCoord;
+                }
+
+                /// <summary>
+                /// Sets the bottom coordinate.
+                /// </summary>
+                /// <param name="bottomCoord">Bottom coordinate.</param>
+                public void SetBottom(int bottomCoord)
+                {
+                        this.bottom = bottomCoord;
+                }
+
+                /// <summary>
                 /// Handle situations where a player passes a location but does not land there.
                 /// </summary>
                 /// <returns>A printable string documenting what happened.</returns>
@@ -474,10 +463,16 @@ namespace LlConsole
                 public string PassBy(Player p)
                 {
                         string result = string.Empty;
+                        //if (p == null)
+                        //{
+                        //        return string.Empty;
+                        //}
+
                         if (this.PropertyType == Zoning.MotherEarth && this.SalaryOver > 0)
                         {
                                 p.Deposit(this.SalaryOver);
-                                result = "Earned $" + this.SalaryOver.ToString() + " salary!\n";
+                                result = "Earned $" + this.SalaryOver.ToString() + " salary!" +
+                                        Environment.NewLine;
                         }
             
                         return result;
@@ -493,22 +488,25 @@ namespace LlConsole
                 /// </param>
                 public string PrintOnLanding(Player p, ref AnswerQuestion answerer)
                 {
+                        bool canBuy = this.CanBuy;
+                        bool ownable = this.Ownable;
+
                         switch (this.PropertyType)
                         {
                         case Zoning.Residential:
                         case Zoning.Railroad:
                         case Zoning.Franchise:
-                                if (this.CanBuy && p.Balance > this.PriceSale)
+                                if (canBuy && p.Balance > this.PriceSale)
                                 {
                                         answerer = this.BuyLocation;
                                         return "Want to buy " + this.Name + " for " +
                                                 this.PriceSale.ToString() + "?";
                                 }
-                                else if (this.CanBuy)
+                                else if (canBuy)
                                 {
                                         return "Can't buy " + Name + ".  Not enough money.";
                                 }
-                                else if (Ownable && Owner != p)
+                                else if (ownable && Owner != p)
                                 {
                                         int rent = PriceRent;
                                         if (this.PropertyType == Zoning.Franchise ||
@@ -527,7 +525,7 @@ namespace LlConsole
                                         answerer = RentLocation;
                                         return "Owned by " + Owner.Name + ", rent is $" +
                                                 PriceRent.ToString() + ". [P]ay?";
-                                } else if (Ownable)
+                                } else if (ownable)
                                 {
                                         return p.Name + " already owns " + Name + ".";
                                 }
@@ -563,7 +561,7 @@ namespace LlConsole
                 /// <param name="answer">The player's answer.</param>
                 private string BuyLocation(Player p, string answer)
                 {
-                        if (answer.ToLower().StartsWith("y"))
+                        if (answer.ToLower(System.Globalization.CultureInfo.CurrentCulture).StartsWith("y", StringComparison.CurrentCulture))
                         {
                                 p.Withdraw(this.PriceSale);
                                 this.Owner = p;
@@ -581,7 +579,7 @@ namespace LlConsole
                 /// <param name="answer">The player's answer.</param>
                 private string RentLocation(Player p, string answer)
                 {
-                        if (answer.ToLower().StartsWith("p"))
+                        if (answer.ToLower(System.Globalization.CultureInfo.CurrentCulture).StartsWith("p", StringComparison.CurrentCulture))
                         {
                                 p.Withdraw(this.PriceRent);
                                 this.Owner.Deposit(this.PriceRent);

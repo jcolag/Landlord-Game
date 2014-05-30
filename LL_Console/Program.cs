@@ -11,7 +11,7 @@ namespace LlConsole
         /// Program.
         /// If that isn't self-explanatory, you shouldn't be reading this.
         /// </summary>
-        public class Program
+        internal static class Program
         {
                 /// <summary>
                 /// The entry point of the program, where the program control starts and ends.
@@ -27,7 +27,7 @@ namespace LlConsole
 
                         foreach (string arg in args)
                         {
-                                if (arg.ToLower().EndsWith(".xml"))
+                                if (arg.ToLower(System.Globalization.CultureInfo.CurrentCulture).EndsWith(".xml", StringComparison.CurrentCulture))
                                 {
                                         gamecfg.Load(arg);
                                         break;
@@ -115,6 +115,7 @@ namespace LlConsole
                                 Console.WriteLine("Lands on " + landing.Name);
 
                                 Console.WriteLine(landing.PrintOnLanding(player, ref question));
+                                answer = string.Empty;
                                 while (question != null && string.IsNullOrWhiteSpace(answer))
                                 {
                                         answer = Console.ReadLine();

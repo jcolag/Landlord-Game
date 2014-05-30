@@ -81,20 +81,20 @@ namespace LlConsole
                 /// <summary>
                 /// Initializes a new instance of the <see cref="LlConsole.Player"/> class.
                 /// </summary>
-                /// <param name="name">The player's name.</param>
-                public Player(string name)
+                /// <param name="playerName">The player's name.</param>
+                public Player(string playerName)
                 {
-                        this.InitPlayer(name, StartingBalance);
+                        this.InitPlayer(playerName, StartingBalance);
                 }
 
                 /// <summary>
                 /// Initializes a new instance of the <see cref="LlConsole.Player"/> class.
                 /// </summary>
-                /// <param name="name">The player's name.</param>
-                /// <param name="balance">The player's starting balance.</param>
-                public Player(string name, int balance)
+                /// <param name="playerName">The player's name.</param>
+                /// <param name="playerBalance">The player's starting balance.</param>
+                public Player(string playerName, int playerBalance)
                 {
-                        this.InitPlayer(name, balance);
+                        this.InitPlayer(playerName, playerBalance);
                 }
 
                 /// <summary>
@@ -253,21 +253,6 @@ namespace LlConsole
                 }
 
                 /// <summary>
-                /// Adds multiple assets to the player's list.
-                /// </summary>
-                /// <returns>The number of assets.</returns>
-                /// <param name="names">The asset names.</param>
-                public int AddAssets(List<string> names)
-                {
-                        foreach (string assetName in names)
-                        {
-                                this.AddAsset(assetName);
-                        }
-
-                        return this.Assets.Count;
-                }
-
-                /// <summary>
                 /// Deposit the specified amount to the player's balance.
                 /// </summary>
                 /// <returns>The new balance.</returns>
@@ -305,6 +290,7 @@ namespace LlConsole
                 public override string ToString()
                 {
                         return string.Format(
+                                System.Globalization.CultureInfo.CurrentCulture,
                                 "Player {0} ({1}), starting at {2}",
                                 this.Name,
                                 this.Balance.ToString(),

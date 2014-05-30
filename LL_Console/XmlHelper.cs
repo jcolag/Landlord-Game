@@ -10,16 +10,8 @@ namespace LlConsole
         /// <summary>
         /// Xml helper class, containing easier input routines.
         /// </summary>
-        public class XmlHelper
+        public static class XmlHelper
         {
-                /// <summary>
-                /// Prevents a default instance of the <see cref="LlConsole.XmlHelper"/> class from being created.
-                /// The methods are all static, so you probably never need this.
-                /// </summary>
-                private XmlHelper()
-                {
-                }
-
                 /// <summary>
                 /// Read a value from XML if the value exists.
                 /// </summary>
@@ -42,7 +34,10 @@ namespace LlConsole
                         try
                         {
                                 string xmlValue = attr.InnerText.Trim();
-                                value = (T)Convert.ChangeType(xmlValue, Convert.GetTypeCode(target));
+                                value = (T)Convert.ChangeType(
+                                        xmlValue,
+                                        Convert.GetTypeCode(target),
+                                        System.Globalization.CultureInfo.CurrentCulture);
                         }
                         catch
                         {

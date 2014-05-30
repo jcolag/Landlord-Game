@@ -15,6 +15,8 @@ using System.Runtime.CompilerServices;
 [assembly: AssemblyCopyright("John Colagioia")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
+[assembly: System.CLSCompliant(true)]
+[assembly: System.Runtime.InteropServices.ComVisible(false)]
 //// The assembly version has the format "{Major}.{Minor}.{Build}.{Revision}".
 //// The form "{Major}.{Minor}.*" will automatically update the build and revision,
 //// and "{Major}.{Minor}.{Build}.*" will update just the revision.

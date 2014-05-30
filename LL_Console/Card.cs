@@ -29,14 +29,14 @@ namespace LlConsole
         /// <summary>
         /// Initializes a new instance of the <see cref="LlConsole.Card"/> class.
         /// </summary>
-        /// <param name="text">Text on the card.</param>
-        /// <param name="amount">Amount to modify player balance.</param>
-        /// <param name="jail">If set to <c>true</c>, send player to jail.</param>
-        public Card(string text, int amount, bool jail)
+        /// <param name="contents">Text on the card.</param>
+        /// <param name="award">Amount to modify player balance.</param>
+        /// <param name="sendToJail">If set to <c>true</c>, send player to jail.</param>
+        public Card(string contents, int award, bool sendToJail)
         {
-            this.Text = text;
-            this.Amount = amount;
-            this.Jail = jail;
+            this.Text = contents;
+            this.Amount = award;
+            this.Jail = sendToJail;
         }
 
         /// <summary>

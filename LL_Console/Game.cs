@@ -250,11 +250,17 @@ namespace LlConsole
                         Location l = p.Where;
                         string note = string.Empty;
 
+                        notices = string.Empty;
                         for (i = 0; i < this.diceCount; i++)
                         {
                                 dice += this.rand.Next(1, this.diceSides);
                         }
-            
+
+                        if (p == null)
+                        {
+                                return dice;
+                        }
+
                         for (i = 0; i < dice; i++)
                         {
                                 l = this.NextLocation(l, ref note, i != dice - 1);
