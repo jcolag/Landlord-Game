@@ -82,7 +82,7 @@ namespace LlConsole
                                 int solvent = 0;
                                 foreach (Player p in this.Players)
                                 {
-                                        if (p.Balance > 0)
+                                        if (p.Balance >= 0)
                                         {
                                                 ++solvent;
                                         }
