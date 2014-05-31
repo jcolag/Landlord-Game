@@ -99,7 +99,7 @@ namespace LlConsole
                         Player player = g.Who();
                         while (g.Continue)
                         {
-                                AnswerQuestion question = null;
+                                Func<Player, string, string> question = null;
                                 Location landing = g.Where();
                                 string answer = string.Empty;
 
