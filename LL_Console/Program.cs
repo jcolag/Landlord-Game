@@ -67,7 +67,7 @@ namespace LlConsole
                                 for (int i = 0; i < 40; i++)
                                 {
                                         var l = new Location(
-                                                Location.Zoning.Residential,
+                                                Zoning.Residential,
                                                 "Property " + (i + 1).ToString(),
                                                 0,
                                                 0,
@@ -99,7 +99,7 @@ namespace LlConsole
                         Player player = g.Who();
                         while (g.Continue)
                         {
-                                Location.AnswerQuestion question = null;
+                                AnswerQuestion question = null;
                                 Location landing = g.Where();
                                 string answer = string.Empty;
 
