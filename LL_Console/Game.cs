@@ -92,7 +92,7 @@ namespace LlConsole
                 }
 
                 /// <summary>
-                /// Gets or sets the board locations.
+                /// Gets the board locations.
                 /// </summary>
                 /// <value>The board.</value>
                 public List<Location> Board
@@ -101,15 +101,10 @@ namespace LlConsole
                         {
                                 return this.board;
                         }
-
-                        set
-                        {
-                                this.board = value;
-                        }
                 }
 
                 /// <summary>
-                /// Gets or sets the player list.
+                /// Gets the player list.
                 /// </summary>
                 /// <value>The players.</value>
                 public List<Player> Players
@@ -118,15 +113,10 @@ namespace LlConsole
                         {
                                 return this.players;
                         }
-
-                        set
-                        {
-                                this.players = value;
-                        }
                 }
 
                 /// <summary>
-                /// Gets or sets the first card pile.
+                /// Gets the first card pile.
                 /// </summary>
                 /// <value>The pile1.</value>
                 public List<Card> Pile1
@@ -135,15 +125,10 @@ namespace LlConsole
                         {
                                 return this.pile1;
                         }
-
-                        set
-                        {
-                                this.pile1 = value;
-                        }
                 }
 
                 /// <summary>
-                /// Gets or sets the second card pile.
+                /// Gets the second card pile.
                 /// </summary>
                 /// <value>The pile2.</value>
                 public List<Card> Pile2
@@ -151,11 +136,6 @@ namespace LlConsole
                         get
                         {
                                 return this.pile2;
-                        }
-
-                        set
-                        {
-                                this.pile2 = value;
                         }
                 }
 
@@ -247,7 +227,7 @@ namespace LlConsole
                 {
                         int dice = 0,
                         i;
-                        Location l = p.Where;
+                        Location l;
                         string note = string.Empty;
 
                         notices = string.Empty;
@@ -261,6 +241,7 @@ namespace LlConsole
                                 return dice;
                         }
 
+                        l = p.Where;
                         for (i = 0; i < dice; i++)
                         {
                                 l = this.NextLocation(l, ref note, i != dice - 1);

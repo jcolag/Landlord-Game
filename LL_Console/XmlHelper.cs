@@ -25,7 +25,14 @@ namespace LlConsole
                         ref T target)
                 {
                         T value;
-                        XmlAttribute attr = node.Attributes[attribute];
+                        XmlAttribute attr;
+
+                        if (node == null)
+                        {
+                                return;
+                        }
+
+                        attr = node.Attributes[attribute];
                         if (attr == null)
                         {
                                 return;

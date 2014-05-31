@@ -456,6 +456,11 @@ namespace LlConsole
                 {
                         string result = string.Empty;
 
+                        if (p == null)
+                        {
+                                return result;
+                        }
+
                         if (this.PropertyType == Zoning.MotherEarth && this.SalaryOver > 0)
                         {
                                 p.Deposit(this.SalaryOver);
@@ -478,6 +483,11 @@ namespace LlConsole
                 {
                         bool canBuy = this.CanBuy;
                         bool ownable = this.Ownable;
+
+                        if (p == null)
+                        {
+                                return string.Empty;
+                        }
 
                         switch (this.PropertyType)
                         {
