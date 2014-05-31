@@ -79,7 +79,7 @@ namespace LlConsole
                                 }
                         }
 
-                        if (g.Players.Count < 2)
+                        if (g.PlayerCount < 2)
                         {
                                 Console.WriteLine("Input player names, empty line when done:");
                                 while (true)

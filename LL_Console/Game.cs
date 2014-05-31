@@ -6,6 +6,7 @@ namespace LlConsole
 {
         using System;
         using System.Collections.Generic;
+        using System.Collections.ObjectModel;
 
         /// <summary>
         /// Game represents a full game.
@@ -15,7 +16,7 @@ namespace LlConsole
                 /// <summary>
                 /// The board, specifically the locations on the board.
                 /// </summary>
-                private List<Location> board = new List<Location>();
+                private Collection<Location> board = new Collection<Location>();
 
                 /// <summary>
                 /// The players.
@@ -67,7 +68,7 @@ namespace LlConsole
                 /// </summary>
                 public Game()
                 {
-                        Location.Board = this.Board;
+                        Location.SetBoard(this.Board);
                 }
 
                 /// <summary>
@@ -95,47 +96,11 @@ namespace LlConsole
                 /// Gets the board locations.
                 /// </summary>
                 /// <value>The board.</value>
-                public List<Location> Board
+                public Collection<Location> Board
                 {
                         get
                         {
                                 return this.board;
-                        }
-                }
-
-                /// <summary>
-                /// Gets the player list.
-                /// </summary>
-                /// <value>The players.</value>
-                public List<Player> Players
-                {
-                        get
-                        {
-                                return this.players;
-                        }
-                }
-
-                /// <summary>
-                /// Gets the first card pile.
-                /// </summary>
-                /// <value>The pile1.</value>
-                public List<Card> Pile1
-                {
-                        get
-                        {
-                                return this.pile1;
-                        }
-                }
-
-                /// <summary>
-                /// Gets the second card pile.
-                /// </summary>
-                /// <value>The pile2.</value>
-                public List<Card> Pile2
-                {
-                        get
-                        {
-                                return this.pile2;
                         }
                 }
 
@@ -204,6 +169,54 @@ namespace LlConsole
                         set
                         {
                                 this.diceSides = value;
+                        }
+                }
+
+                /// <summary>
+                /// Gets the player count.
+                /// </summary>
+                /// <value>The player count.</value>
+                public int PlayerCount
+                {
+                        get
+                        {
+                                return this.Players.Count;
+                        }
+                }
+
+                /// <summary>
+                /// Gets the player list.
+                /// </summary>
+                /// <value>The players.</value>
+                private List<Player> Players
+                {
+                        get
+                        {
+                                return this.players;
+                        }
+                }
+
+                /// <summary>
+                /// Gets the first card pile.
+                /// </summary>
+                /// <value>The pile1.</value>
+                private List<Card> Pile1
+                {
+                        get
+                        {
+                                return this.pile1;
+                        }
+                }
+
+                /// <summary>
+                /// Gets the second card pile.
+                /// </summary>
+                /// <value>The pile2.</value>
+                private List<Card> Pile2
+                {
+                        get
+                        {
+                                return this.pile2;
                         }
                 }
 

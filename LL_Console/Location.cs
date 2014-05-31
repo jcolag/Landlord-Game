@@ -6,6 +6,7 @@ namespace LlConsole
 {
         using System;
         using System.Collections.Generic;
+        using System.Collections.ObjectModel;
         using System.Linq;
         using System.Xml;
 
@@ -74,7 +75,7 @@ namespace LlConsole
                 /// <summary>
                 /// The board.
                 /// </summary>
-                private static List<Location> board;
+                private static Collection<Location> board;
 
                 /// <summary>
                 /// The left coordinate of the location's box.
@@ -218,23 +219,6 @@ namespace LlConsole
                         }
                         catch
                         {
-                        }
-                }
-
-                /// <summary>
-                /// Gets or sets the board.  Get is internal-use only.
-                /// </summary>
-                /// <value>The board.</value>
-                public static List<Location> Board
-                {
-                        private get
-                        {
-                                return board;
-                        }
-
-                        set
-                        {
-                                board = value;
                         }
                 }
 
@@ -412,6 +396,15 @@ namespace LlConsole
                 }
 
                 /// <summary>
+                /// Sets the board.
+                /// </summary>
+                /// <param name="theBoard">The board.</param>
+                public static void SetBoard(Collection<Location> theBoard)
+                {
+                        Location.board = theBoard;
+                }
+
+                /// <summary>
                 /// Sets the left coordinate.
                 /// </summary>
                 /// <param name="leftCoord">Left coordinate.</param>
@@ -510,7 +503,7 @@ namespace LlConsole
                                         if (this.PropertyType == Zoning.Franchise ||
                                             this.PropertyType == Zoning.Railroad)
                                         {
-                                                var rrs = Board.Where(x =>
+                                                var rrs = board.Where(x =>
                                                                       x.PropertyType == PropertyType &&
                                                                       x.Owner == Owner);
                                                 int nrrs = rrs.Count();
