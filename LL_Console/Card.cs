@@ -19,12 +19,12 @@ namespace LlConsole
         /// <summary>
         /// The amount to add to or remove from the current player's balance.
         /// </summary>
-        private int amount = 0;
+        private int amount;
 
         /// <summary>
         /// If set, the card sends the player to jail.
         /// </summary>
-        private bool jail = false;
+        private bool jail;
         
         /// <summary>
         /// Initializes a new instance of the <see cref="LlConsole.Card"/> class.

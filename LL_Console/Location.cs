@@ -17,7 +17,7 @@ namespace LlConsole
                 /// <summary>
                 /// The board.
                 /// </summary>
-                private static List<Location> board = null;
+                private static List<Location> board;
 
                 /// <summary>
                 /// The left coordinate of the location's box.
@@ -47,22 +47,22 @@ namespace LlConsole
                 /// <summary>
                 /// The salary paid to the player landing this location.
                 /// </summary>
-                private int salary = 0;
+                private int salary;
 
                 /// <summary>
                 /// The salary paid to the player passing over this location.
                 /// </summary>
-                private int salaryOver = 0;
+                private int salaryOver;
 
                 /// <summary>
                 /// The price to buy the property.
                 /// </summary>
-                private int priceSale = 0;
+                private int priceSale;
 
                 /// <summary>
                 /// The price to rent (land on) the property.
                 /// </summary>
-                private int priceRent = 0;
+                private int priceRent;
 
                 /// <summary>
                 /// The multiplier to the rental price if multiple properties of
@@ -73,7 +73,7 @@ namespace LlConsole
                 /// <summary>
                 /// Whether the property also represents a jail.
                 /// </summary>
-                private bool jail = false;
+                private bool jail;
 
                 /// <summary>
                 /// The type of the property.
@@ -83,7 +83,7 @@ namespace LlConsole
                 /// <summary>
                 /// The owner of the property.
                 /// </summary>
-                private Player owner = null;
+                private Player owner;
 
                 /// <summary>
                 /// The kinds of properties that can be owned by a player.
@@ -463,10 +463,6 @@ namespace LlConsole
                 public string PassBy(Player p)
                 {
                         string result = string.Empty;
-                        //if (p == null)
-                        //{
-                        //        return string.Empty;
-                        //}
 
                         if (this.PropertyType == Zoning.MotherEarth && this.SalaryOver > 0)
                         {

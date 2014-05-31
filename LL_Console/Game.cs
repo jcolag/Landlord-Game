@@ -60,7 +60,7 @@ namespace LlConsole
                 /// <summary>
                 /// The current player.
                 /// </summary>
-                private Player currentPlayer = null;
+                private Player currentPlayer;
 
                 /// <summary>
                 /// Initializes a new instance of the <see cref="LlConsole.Game"/> class.

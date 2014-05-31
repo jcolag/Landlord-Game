@@ -25,7 +25,7 @@ namespace LlConsole
                 /// <summary>
                 /// The asset's value, defaulting to baseValue, above.
                 /// </summary>
-                private int exchange = 0;
+                private int exchange;
 
                 /// <summary>
                 /// Initializes a new instance of the <see cref="LlConsole.Asset"/> class.

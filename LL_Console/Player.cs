@@ -41,12 +41,12 @@ namespace LlConsole
                 /// <summary>
                 /// The player's cash balance.
                 /// </summary>
-                private int balance = 0;
+                private int balance;
 
                 /// <summary>
                 /// Whether the player is in jail.
                 /// </summary>
-                private bool inJail = false;
+                private bool inJail;
 
                 /// <summary>
                 /// The location where the player currently is.
@@ -56,7 +56,7 @@ namespace LlConsole
                 /// <summary>
                 /// The index of the asset of interest.
                 /// </summary>
-                private int assetIndex = 0;
+                private int assetIndex;
 
                 /// <summary>
                 /// Initializes a new instance of the <see cref="LlConsole.Player"/> class.
