@@ -306,6 +306,17 @@ namespace LlConsole
                 }
 
                 /// <summary>
+                /// Add the specified card to the correct.
+                /// </summary>
+                /// <param name="c">The new card.</param>
+                /// <param name="secondPile">If set to <c>true</c>, use the second pile.</param>
+                public void Add(Card c, bool secondPile)
+                {
+                        List<Card> pile = secondPile ? this.Pile2 : this.Pile1;
+                        pile.Add(c);
+                }
+
+                /// <summary>
                 /// Update the current player to the next.
                 /// </summary>
                 /// <returns>The player.</returns>

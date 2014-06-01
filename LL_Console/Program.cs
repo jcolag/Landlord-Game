@@ -61,6 +61,20 @@ namespace LlConsole
                                         p.Where = g.Board[0];
                                         g.Add(p);
                                 }
+
+                                XmlNodeList cards = gamecfg.GetElementsByTagName("FirstCard");
+                                foreach (XmlNode card in cards)
+                                {
+                                        var c = new Card(card);
+                                        g.Add(c, false);
+                                }
+                                
+                                cards = gamecfg.GetElementsByTagName("SecondCard");
+                                foreach (XmlNode card in cards)
+                                {
+                                        var c = new Card(card);
+                                        g.Add(c, true);
+                                }
                         }
                         else
                         {

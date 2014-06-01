@@ -5,6 +5,7 @@
 namespace LlConsole
 {
         using System;
+        using System.Xml;
 
         /// <summary>
         /// Card represents any special actions in the game.
@@ -15,10 +16,12 @@ namespace LlConsole
                 /// The text to be shown on the card.
                 /// </summary>
                 private string text = string.Empty;
+
                 /// <summary>
                 /// The amount to add to or remove from the current player's balance.
                 /// </summary>
                 private int amount;
+
                 /// <summary>
                 /// If set, the card sends the player to jail.
                 /// </summary>
@@ -35,6 +38,17 @@ namespace LlConsole
                         this.Text = contents;
                         this.Amount = award;
                         this.Jail = sendToJail;
+                }
+
+                /// <summary>
+                /// Initializes a new instance of the <see cref="LlConsole.Card"/> class.
+                /// </summary>
+                /// <param name="node">XML Node.</param>
+                public Card(XmlNode node)
+                {
+                        XmlHelper.FromXmlIfExists<string>(node, "Text", ref this.text);
+                        XmlHelper.FromXmlIfExists<int>(node, "Amount", ref this.amount);
+                        XmlHelper.FromXmlIfExists<bool>(node, "Jail", ref this.jail);
                 }
 
                 /// <summary>
