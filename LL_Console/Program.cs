@@ -23,7 +23,7 @@ namespace LlConsole
                 {
                         var gamecfg = new XmlDocument();
                         var g = new Game();
-                        string player_name = string.Empty;
+                        string playerName = string.Empty;
 
                         foreach (string arg in args)
                         {
@@ -84,13 +84,13 @@ namespace LlConsole
                                 Console.WriteLine("Input player names, empty line when done:");
                                 while (true)
                                 {
-                                        player_name = Console.ReadLine();
-                                        if (string.IsNullOrWhiteSpace(player_name))
+                                        playerName = Console.ReadLine();
+                                        if (string.IsNullOrWhiteSpace(playerName))
                                         {
                                                 break;
                                         }
 
-                                        var p = new Player(player_name);
+                                        var p = new Player(playerName);
                                         p.Where = g.Board[0];
                                         g.Add(p);
                                 }
@@ -109,7 +109,7 @@ namespace LlConsole
                                         Console.WriteLine(player.Name + " is in jail!");
                                 }
 
-                                Console.WriteLine("Rolls a " + g.Roll(ref answer).ToString());
+                                Console.WriteLine("Rolls a " + g.Roll(out answer).ToString());
                                 Console.Write(answer);
                                 landing = g.Where();
                                 Console.WriteLine("Lands on " + landing.Name);

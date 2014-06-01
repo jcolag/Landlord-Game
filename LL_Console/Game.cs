@@ -225,9 +225,9 @@ namespace LlConsole
                 /// </summary>
                 /// <param name="notices">Return value for printable notices.</param>
                 /// <returns>The rolled value.</returns>
-                public int Roll(ref string notices)
+                public int Roll(out string notices)
                 {
-                        return this.Roll(this.currentPlayer, ref notices);
+                        return this.Roll(this.currentPlayer, out notices);
                 }
 
                 /// <summary>
@@ -236,7 +236,7 @@ namespace LlConsole
                 /// <param name="p">The current player.</param>
                 /// <param name="notices">Return value for printable notices.</param>
                 /// <returns>The rolled value.</returns>
-                public int Roll(Player p, ref string notices)
+                public int Roll(Player p, out string notices)
                 {
                         int dice = 0,
                         i;
@@ -369,6 +369,27 @@ namespace LlConsole
                         }
             
                         return this.Board[idx];
+                }
+
+                /// <summary>
+                /// Draws the card.
+                /// </summary>
+                /// <returns>The card.</returns>
+                /// <param name="secondPile">If set to <c>true</c>, use second pile.</param>
+                /// <param name="reshuffle">If set to <c>true</c>, reshuffle the deck.</param>
+                /// <param name="replace">If set to <c>true</c>, replace the card.</param>
+                public Card DrawCard(bool secondPile, bool reshuffle, bool replace)
+                {
+                        List<Card> pile = secondPile ? this.Pile2 : this.Pile1;
+                        int index = reshuffle ? this.rand.Next(pile.Count) : 0;
+                        Card c = pile[index];
+                        pile.Remove(c);
+                        if (replace)
+                        {
+                                pile.Add(c);
+                        }
+
+                        return c;
                 }
         }
 }

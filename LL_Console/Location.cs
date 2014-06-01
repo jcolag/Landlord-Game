@@ -210,7 +210,7 @@ namespace LlConsole
                         XmlHelper.FromXmlIfExists<int>(prop, "yBottom", ref this.bottom);
                         XmlHelper.FromXmlIfExists<int>(prop, "Salary", ref this.salary);
                         XmlHelper.FromXmlIfExists<int>(prop, "SalaryOver", ref this.salaryOver);
-                        XmlHelper.FromXmlIfExists<bool>(prop, "SalaryOver", ref this.jail);
+                        XmlHelper.FromXmlIfExists<bool>(prop, "Jail", ref this.jail);
 
                         XmlHelper.FromXmlIfExists<string>(prop, "PropertyType", ref type);
                         try
