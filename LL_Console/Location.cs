@@ -212,12 +212,18 @@ namespace LlConsole
                         XmlHelper.FromXmlIfExists<int>(prop, "SalaryOver", ref this.salaryOver);
                         XmlHelper.FromXmlIfExists<bool>(prop, "SalaryOver", ref this.jail);
 
+                        XmlHelper.FromXmlIfExists<string>(prop, "PropertyType", ref type);
                         try
                         {
-                                XmlHelper.FromXmlIfExists<string>(prop, "PropertyType", ref type);
                                 this.PropertyType = (Zoning)Enum.Parse(Zoning.Park.GetType(), type);
                         }
-                        catch
+                        catch (ArgumentNullException)
+                        {
+                        }
+                        catch (ArgumentException)
+                        {
+                        }
+                        catch (OverflowException)
                         {
                         }
                 }

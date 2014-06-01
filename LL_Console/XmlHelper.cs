@@ -46,7 +46,7 @@ namespace LlConsole
                                         Convert.GetTypeCode(target),
                                         System.Globalization.CultureInfo.CurrentCulture);
                         }
-                        catch
+                        catch (XmlException)
                         {
                                 return;
                         }
