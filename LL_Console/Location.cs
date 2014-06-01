@@ -199,20 +199,20 @@ namespace LlConsole
                 {
                         string type = string.Empty;
 
-                        XmlHelper.FromXmlIfExists<string>(prop, "Name", ref this.name);
-                        XmlHelper.FromXmlIfExists<int>(prop, "PriceSale", ref this.priceSale);
-                        XmlHelper.FromXmlIfExists<int>(prop, "PriceRent", ref this.priceRent);
-                        XmlHelper.FromXmlIfExists<int>(prop, "Tax", ref this.priceRent);
-                        XmlHelper.FromXmlIfExists<int>(prop, "Multiplier", ref this.multiplier);
-                        XmlHelper.FromXmlIfExists<int>(prop, "xLeft", ref this.left);
-                        XmlHelper.FromXmlIfExists<int>(prop, "xRight", ref this.right);
-                        XmlHelper.FromXmlIfExists<int>(prop, "yTop", ref this.top);
-                        XmlHelper.FromXmlIfExists<int>(prop, "yBottom", ref this.bottom);
-                        XmlHelper.FromXmlIfExists<int>(prop, "Salary", ref this.salary);
-                        XmlHelper.FromXmlIfExists<int>(prop, "SalaryOver", ref this.salaryOver);
-                        XmlHelper.FromXmlIfExists<bool>(prop, "Jail", ref this.jail);
+                        this.name = XmlHelper.FromXmlIfExists<string>(prop, "Name", this.name);
+                        this.PriceSale = XmlHelper.FromXmlIfExists<int>(prop, "PriceSale", this.priceSale);
+                        this.PriceRent = XmlHelper.FromXmlIfExists<int>(prop, "PriceRent", this.priceRent);
+                        this.priceRent = XmlHelper.FromXmlIfExists<int>(prop, "Tax", this.priceRent);
+                        this.Multiplier = XmlHelper.FromXmlIfExists<int>(prop, "Multiplier", this.multiplier);
+                        this.left = XmlHelper.FromXmlIfExists<int>(prop, "xLeft", this.left);
+                        this.right = XmlHelper.FromXmlIfExists<int>(prop, "xRight", this.right);
+                        this.top = XmlHelper.FromXmlIfExists<int>(prop, "yTop", this.top);
+                        this.bottom = XmlHelper.FromXmlIfExists<int>(prop, "yBottom", this.bottom);
+                        this.Salary = XmlHelper.FromXmlIfExists<int>(prop, "Salary", this.salary);
+                        this.SalaryOver = XmlHelper.FromXmlIfExists<int>(prop, "SalaryOver", this.salaryOver);
+                        this.Jail = XmlHelper.FromXmlIfExists<bool>(prop, "Jail", this.jail);
 
-                        XmlHelper.FromXmlIfExists<string>(prop, "PropertyType", ref type);
+                        type = XmlHelper.FromXmlIfExists<string>(prop, "PropertyType", type);
                         try
                         {
                                 this.PropertyType = (Zoning)Enum.Parse(Zoning.Park.GetType(), type);

@@ -46,9 +46,9 @@ namespace LlConsole
                 /// <param name="node">XML Node.</param>
                 public Card(XmlNode node)
                 {
-                        XmlHelper.FromXmlIfExists<string>(node, "Text", ref this.text);
-                        XmlHelper.FromXmlIfExists<int>(node, "Amount", ref this.amount);
-                        XmlHelper.FromXmlIfExists<bool>(node, "Jail", ref this.jail);
+                        this.Text = XmlHelper.FromXmlIfExists<string>(node, "Text", this.text);
+                        this.Amount = XmlHelper.FromXmlIfExists<int>(node, "Amount", this.amount);
+                        this.Jail = XmlHelper.FromXmlIfExists<bool>(node, "Jail", this.jail);
                 }
 
                 /// <summary>

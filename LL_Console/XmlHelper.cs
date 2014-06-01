@@ -17,25 +17,26 @@ namespace LlConsole
                 /// </summary>
                 /// <param name="node">The XML node.</param>
                 /// <param name="attribute">The Attribute of interest.</param>
-                /// <param name="target">Location to store the value.</param>
+                /// <param name="target">Default value.</param>
                 /// <typeparam name="T">The type of value and target's type.</typeparam>
-                public static void FromXmlIfExists<T>(
+                /// <returns>The found value or default</returns>
+                public static T FromXmlIfExists<T>(
                         XmlNode node,
                         string attribute,
-                        ref T target)
+                        T target)
                 {
                         T value;
                         XmlAttribute attr;
 
                         if (node == null)
                         {
-                                return;
+                                return target;
                         }
 
                         attr = node.Attributes[attribute];
                         if (attr == null)
                         {
-                                return;
+                                return target;
                         }
 
                         try
@@ -48,10 +49,10 @@ namespace LlConsole
                         }
                         catch (XmlException)
                         {
-                                return;
+                                return target;
                         }
 
-                        target = value;
+                        return value;
                 }
         }
 }

@@ -64,9 +64,8 @@ namespace LlConsole
                 /// <param name="node">XML node with player information.</param>
                 public Player(XmlNode node)
                 {
-                        XmlHelper.FromXmlIfExists<string>(node, "Name", ref this.name);
-                        this.Balance = StartingBalance;
-                        XmlHelper.FromXmlIfExists<int>(node, "Balance", ref this.balance);
+                        this.Name = XmlHelper.FromXmlIfExists<string>(node, "Name", this.name);
+                        this.Balance = XmlHelper.FromXmlIfExists<int>(node, "Balance", StartingBalance);
                         PlayerNumber += 1;
                 }
 

@@ -41,8 +41,8 @@ namespace LlConsole
                                 {
                                         int diceCount = g.DiceCount;
                                         int diceSides = g.DiceSides;
-                                        XmlHelper.FromXmlIfExists<int>(dice[0], "Count", ref diceCount);
-                                        XmlHelper.FromXmlIfExists<int>(dice[0], "Sides", ref diceSides);
+                                        diceCount = XmlHelper.FromXmlIfExists<int>(dice[0], "Count", diceCount);
+                                        diceSides = XmlHelper.FromXmlIfExists<int>(dice[0], "Sides", diceSides);
                                         g.DiceCount = diceCount;
                                         g.DiceSides = diceSides;
                                 }
