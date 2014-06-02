@@ -100,7 +100,7 @@ namespace LlConsole
                                         Console.WriteLine(answer);
                                 }
 
-                                if (player.Balance <= 0)
+                                if (player.Balance < 0)
                                 {
                                         Console.WriteLine(player.Name + " has gone bankrupt!");
                                 }
