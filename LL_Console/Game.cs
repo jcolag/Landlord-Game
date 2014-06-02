@@ -7,6 +7,7 @@ namespace LlConsole
         using System;
         using System.Collections.Generic;
         using System.Collections.ObjectModel;
+        using System.Xml;
 
         /// <summary>
         /// Game represents a full game.
@@ -69,6 +70,58 @@ namespace LlConsole
                 public Game()
                 {
                         Location.SetBoard(this.Board);
+                }
+
+                /// <summary>
+                /// Initializes a new instance of the <see cref="LlConsole.Game"/> class.
+                /// </summary>
+                /// <param name="configuration">XML configuration.</param>
+                public Game(XmlDocument configuration)
+                {
+                        if (configuration == null)
+                        {
+                                throw new ArgumentNullException(
+                                        "configuration",
+                                        "Cannot create new game with empty XML");
+                        }
+
+                        XmlNodeList dice = configuration.GetElementsByTagName("Dice");
+                        if (dice.Count > 0)
+                        {
+                                this.diceCount = XmlHelper.FromXmlIfExists<int>(dice[0], "Count", this.diceCount);
+                                this.diceSides = XmlHelper.FromXmlIfExists<int>(dice[0], "Sides", this.diceSides);
+                        }
+
+                        XmlNodeList props = configuration.GetElementsByTagName("Location");
+                        foreach (XmlNode prop in props)
+                        {
+                                var l = new Location(prop);
+                                this.Add(l);
+                        }
+
+                        Location.SetBoard(this.Board);
+
+                        XmlNodeList peeps = configuration.GetElementsByTagName("Player");
+                        foreach (XmlNode pers in peeps)
+                        {
+                                var p = new Player(pers);
+                                p.Where = this.Board[0];
+                                this.Add(p);
+                        }
+
+                        XmlNodeList cards = configuration.GetElementsByTagName("FirstCard");
+                        foreach (XmlNode card in cards)
+                        {
+                                var c = new Card(card);
+                                this.Add(c, false);
+                        }
+
+                        cards = configuration.GetElementsByTagName("SecondCard");
+                        foreach (XmlNode card in cards)
+                        {
+                                var c = new Card(card);
+                                this.Add(c, true);
+                        }
                 }
 
                 /// <summary>
@@ -223,46 +276,40 @@ namespace LlConsole
                 /// <summary>
                 /// Roll the dice, returning the value and a printable notice.
                 /// </summary>
-                /// <param name="notices">Return value for printable notices.</param>
                 /// <returns>The rolled value.</returns>
-                public int Roll(out string notices)
+                public string Roll()
                 {
-                        return this.Roll(this.currentPlayer, out notices);
+                        return this.Roll(this.currentPlayer);
                 }
 
                 /// <summary>
                 /// Roll the dice, returning the value and a printable notice.
                 /// </summary>
                 /// <param name="p">The current player.</param>
-                /// <param name="notices">Return value for printable notices.</param>
                 /// <returns>The rolled value.</returns>
-                public int Roll(Player p, out string notices)
+                public string Roll(Player p)
                 {
-                        int dice = 0,
-                        i;
-                        Location l;
-                        string note = string.Empty;
+                        int dice = 0;
+                        int i;
+                        string notices = string.Empty;
 
-                        notices = string.Empty;
                         for (i = 0; i < this.diceCount; i++)
                         {
                                 dice += this.rand.Next(1, this.diceSides);
                         }
 
+                        notices = "Rolls a " + dice.ToString() + "." + Environment.NewLine;
                         if (p == null)
                         {
-                                return dice;
+                                return notices;
                         }
 
-                        l = p.Where;
                         for (i = 0; i < dice; i++)
                         {
-                                l = this.NextLocation(l, ref note, i != dice - 1);
-                                notices += note;
+                                notices += this.NextLocation(p, i != dice - 1);
                         }
             
-                        p.Where = l;
-                        return dice;
+                        return notices;
                 }
 
                 /// <summary>
@@ -347,12 +394,19 @@ namespace LlConsole
                 /// Find the next location.
                 /// </summary>
                 /// <returns>The location.</returns>
-                /// <param name="l">The current location.</param>
-                /// <param name="notices">Return value for printable notices.</param>
+                /// <param name="p">The moving player.</param>
                 /// <param name="transit">If set to <c>true</c> transit.</param>
-                public Location NextLocation(Location l, ref string notices, bool transit)
+                public string NextLocation(Player p, bool transit)
                 {
-                        int idx = this.Board.IndexOf(l) + 1;
+                        string note = string.Empty;
+                        int idx;
+
+                        if (p == null)
+                        {
+                                return note;
+                        }
+
+                        idx = this.Board.IndexOf(p.Where) + 1;
                         if (idx >= this.Board.Count)
                         {
                                 idx = 0;
@@ -360,26 +414,11 @@ namespace LlConsole
             
                         if (transit)
                         {
-                                notices = this.Board[idx].PassBy(this.currentPlayer);
+                                note = this.Board[idx].PassBy(this.currentPlayer);
                         }
-            
-                        return this.Board[idx];
-                }
 
-                /// <summary>
-                /// Find the previous location.
-                /// </summary>
-                /// <returns>The location.</returns>
-                /// <param name="l">The current location.</param>
-                public Location PrevLocation(Location l)
-                {
-                        int idx = this.Board.IndexOf(l) - 1;
-                        if (idx < 0)
-                        {
-                                idx = this.Board.Count - 1;
-                        }
-            
-                        return this.Board[idx];
+                        p.Where = this.Board[idx];
+                        return note;
                 }
 
                 /// <summary>

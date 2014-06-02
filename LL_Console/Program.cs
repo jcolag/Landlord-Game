@@ -22,7 +22,7 @@ namespace LlConsole
                 public static void Main(string[] args)
                 {
                         var gamecfg = new XmlDocument();
-                        var g = new Game();
+                        Game g;
                         string playerName = string.Empty;
 
                         foreach (string arg in args)
@@ -36,48 +36,11 @@ namespace LlConsole
 
                         if (gamecfg != null)
                         {
-                                XmlNodeList dice = gamecfg.GetElementsByTagName("Dice");
-                                if (dice.Count > 0)
-                                {
-                                        int diceCount = g.DiceCount;
-                                        int diceSides = g.DiceSides;
-                                        diceCount = XmlHelper.FromXmlIfExists<int>(dice[0], "Count", diceCount);
-                                        diceSides = XmlHelper.FromXmlIfExists<int>(dice[0], "Sides", diceSides);
-                                        g.DiceCount = diceCount;
-                                        g.DiceSides = diceSides;
-                                }
-
-                                XmlNodeList props = gamecfg.GetElementsByTagName("Location");
-                                foreach (XmlNode prop in props)
-                                {
-                                        var l = new Location(prop);
-                                        g.Add(l);
-                                }
-
-                                XmlNodeList peeps = gamecfg.GetElementsByTagName("Player");
-                                foreach (XmlNode pers in peeps)
-                                {
-                                        var p = new Player(pers);
-                                        p.Where = g.Board[0];
-                                        g.Add(p);
-                                }
-
-                                XmlNodeList cards = gamecfg.GetElementsByTagName("FirstCard");
-                                foreach (XmlNode card in cards)
-                                {
-                                        var c = new Card(card);
-                                        g.Add(c, false);
-                                }
-                                
-                                cards = gamecfg.GetElementsByTagName("SecondCard");
-                                foreach (XmlNode card in cards)
-                                {
-                                        var c = new Card(card);
-                                        g.Add(c, true);
-                                }
+                                g = new Game(gamecfg);
                         }
                         else
                         {
+                                g = new Game();
                                 for (int i = 0; i < 40; i++)
                                 {
                                         var l = new Location(
@@ -123,7 +86,7 @@ namespace LlConsole
                                         Console.WriteLine(player.Name + " is in jail!");
                                 }
 
-                                Console.WriteLine("Rolls a " + g.Roll(out answer).ToString());
+                                answer = g.Roll();
                                 Console.Write(answer);
                                 landing = g.Where();
                                 Console.WriteLine("Lands on " + landing.Name);
