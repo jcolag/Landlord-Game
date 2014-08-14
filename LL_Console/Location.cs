@@ -558,6 +558,11 @@ namespace LlConsole
                 /// <param name="answer">The player's answer.</param>
                 private string BuyLocation(Player p, string answer)
                 {
+                        if (string.IsNullOrWhiteSpace(answer))
+                        {
+                                return string.Empty;
+                        }
+
                         if (answer.ToLower(System.Globalization.CultureInfo.CurrentCulture).StartsWith("y", StringComparison.CurrentCulture))
                         {
                                 p.Withdraw(this.PriceSale);
