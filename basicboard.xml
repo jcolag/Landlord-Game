@@ -1,0 +1,50 @@
+<Game Name="The Landlord's Game">
+    <Dice Count="2" Sides="6" />
+    <Locations>
+        <Location Name="Mother Earth" PropertyType="MotherEarth" Salary="200" SalaryOver="200" xLeft="0" xRight="0" yTop="0" yBottom="0" />
+        <Location Name="Property #2" PropertyType="Residential" PriceSale="110" PriceRent="11" xLeft="0" xRight="0" yTop="0" yBottom="0" />
+        <Location Name="Property #3" PropertyType="Residential" PriceSale="120" PriceRent="12" xLeft="0" xRight="0" yTop="0" yBottom="0" />
+        <Location Name="Property #4" PropertyType="Residential" PriceSale="130" PriceRent="13" xLeft="0" xRight="0" yTop="0" yBottom="0" />
+        <Location Name="Property #5" PropertyType="Residential" PriceSale="140" PriceRent="14" xLeft="0" xRight="0" yTop="0" yBottom="0" />
+        <Location Name="Property #6" PropertyType="Residential" PriceSale="150" PriceRent="15" xLeft="0" xRight="0" yTop="0" yBottom="0" />
+        <Location Name="Property #7" PropertyType="Residential" PriceSale="160" PriceRent="16" xLeft="0" xRight="0" yTop="0" yBottom="0" />
+        <Location Name="Property #8" PropertyType="Residential" PriceSale="170" PriceRent="17" xLeft="0" xRight="0" yTop="0" yBottom="0" />
+        <Location Name="Property #9" PropertyType="Residential" PriceSale="180" PriceRent="18" xLeft="0" xRight="0" yTop="0" yBottom="0" />
+        <Location Name="Property #10" PropertyType="Residential" PriceSale="190" PriceRent="19" xLeft="0" xRight="0" yTop="0" yBottom="0" />
+        <Location Name="Property #11" PropertyType="Residential" PriceSale="200" PriceRent="20" xLeft="0" xRight="0" yTop="0" yBottom="0" Jail="True" />
+        <Location Name="Property #12" PropertyType="Residential" PriceSale="210" PriceRent="21" xLeft="0" xRight="0" yTop="0" yBottom="0" />
+        <Location Name="Property #13" PropertyType="Residential" PriceSale="220" PriceRent="22" xLeft="0" xRight="0" yTop="0" yBottom="0" />
+        <Location Name="Property #14" PropertyType="Residential" PriceSale="230" PriceRent="23" xLeft="0" xRight="0" yTop="0" yBottom="0" />
+        <Location Name="Property #15" PropertyType="Residential" PriceSale="240" PriceRent="24" xLeft="0" xRight="0" yTop="0" yBottom="0" />
+        <Location Name="Property #16" PropertyType="Residential" PriceSale="250" PriceRent="25" xLeft="0" xRight="0" yTop="0" yBottom="0" />
+        <Location Name="Property #17" PropertyType="Residential" PriceSale="260" PriceRent="26" xLeft="0" xRight="0" yTop="0" yBottom="0" />
+        <Location Name="Property #18" PropertyType="Residential" PriceSale="270" PriceRent="27" xLeft="0" xRight="0" yTop="0" yBottom="0" />
+        <Location Name="Property #19" PropertyType="Residential" PriceSale="280" PriceRent="28" xLeft="0" xRight="0" yTop="0" yBottom="0" />
+        <Location Name="Property #20" PropertyType="Residential" PriceSale="290" PriceRent="29" xLeft="0" xRight="0" yTop="0" yBottom="0" />
+        <Location Name="Property #21" PropertyType="Residential" PriceSale="300" PriceRent="30" xLeft="0" xRight="0" yTop="0" yBottom="0" />
+        <Location Name="Property #22" PropertyType="Residential" PriceSale="310" PriceRent="31" xLeft="0" xRight="0" yTop="0" yBottom="0" />
+        <Location Name="Property #23" PropertyType="Residential" PriceSale="320" PriceRent="32" xLeft="0" xRight="0" yTop="0" yBottom="0" />
+        <Location Name="Property #24" PropertyType="Residential" PriceSale="330" PriceRent="33" xLeft="0" xRight="0" yTop="0" yBottom="0" />
+        <Location Name="Property #25" PropertyType="Residential" PriceSale="340" PriceRent="34" xLeft="0" xRight="0" yTop="0" yBottom="0" />
+        <Location Name="Property #26" PropertyType="Residential" PriceSale="350" PriceRent="35" xLeft="0" xRight="0" yTop="0" yBottom="0" />
+        <Location Name="Property #27" PropertyType="Residential" PriceSale="360" PriceRent="36" xLeft="0" xRight="0" yTop="0" yBottom="0" />
+        <Location Name="Property #28" PropertyType="Residential" PriceSale="370" PriceRent="37" xLeft="0" xRight="0" yTop="0" yBottom="0" />
+        <Location Name="Property #29" PropertyType="Residential" PriceSale="380" PriceRent="38" xLeft="0" xRight="0" yTop="0" yBottom="0" />
+        <Location Name="Property #30" PropertyType="Residential" PriceSale="390" PriceRent="39" xLeft="0" xRight="0" yTop="0" yBottom="0" />
+        <Location Name="Property #31" PropertyType="Residential" PriceSale="400" PriceRent="40" xLeft="0" xRight="0" yTop="0" yBottom="0" />
+        <Location Name="Property #32" PropertyType="Residential" PriceSale="410" PriceRent="41" xLeft="0" xRight="0" yTop="0" yBottom="0" />
+        <Location Name="Property #33" PropertyType="Residential" PriceSale="420" PriceRent="42" xLeft="0" xRight="0" yTop="0" yBottom="0" />
+        <Location Name="Property #34" PropertyType="Residential" PriceSale="430" PriceRent="43" xLeft="0" xRight="0" yTop="0" yBottom="0" />
+        <Location Name="Property #35" PropertyType="Residential" PriceSale="440" PriceRent="44" xLeft="0" xRight="0" yTop="0" yBottom="0" />
+        <Location Name="Property #36" PropertyType="Residential" PriceSale="450" PriceRent="45" xLeft="0" xRight="0" yTop="0" yBottom="0" />
+        <Location Name="Property #37" PropertyType="Residential" PriceSale="460" PriceRent="46" xLeft="0" xRight="0" yTop="0" yBottom="0" />
+        <Location Name="Property #38" PropertyType="Residential" PriceSale="470" PriceRent="47" xLeft="0" xRight="0" yTop="0" yBottom="0" />
+        <Location Name="Property #39" PropertyType="Residential" PriceSale="480" PriceRent="48" xLeft="0" xRight="0" yTop="0" yBottom="0" />
+        <Location Name="Property #40" PropertyType="Residential" PriceSale="490" PriceRent="49" xLeft="0" xRight="0" yTop="0" yBottom="0" />
+    </Locations>
+    <Players>
+        <Player Name="Me" />
+        <Player Name="You" />
+    </Players>
+</Game>
+
